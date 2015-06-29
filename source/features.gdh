@@ -1,0 +1,49 @@
+#define LG_USENG 1033
+
+table(feature);
+
+style
+{
+	id = "form";
+	name.LG_USENG = string("Character Style");
+	default = hindi;
+	settings
+	{
+		hindi
+		{
+			value = 0;
+			name.LG_USENG = string("Hindi");
+		}
+
+		nepali
+		{
+			value = 1;
+			name.LG_USENG = string("Nepali");
+		}
+
+		archaic
+		{
+			value = 2;
+			name.LG_USENG = string("Archaic");
+		}
+	}
+}
+
+endtable;
+
+table(language);
+
+hindi
+{
+	languages = ("hin");
+	style=hindi;
+};
+
+nepali
+{
+	languages = ("nep");
+	style=nepali;
+};
+
+endtable;
+

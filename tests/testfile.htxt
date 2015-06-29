@@ -1,0 +1,236 @@
+This file describes the common features of the Devanagari writing system. Since each feature is provided with possible characters in those sections, this file also can be used as a document for testing the fonts you're building.
+
+Introduction
+
+Devanagari is the writing system used for writing the Sanscrit language. It is believed that this writing system is derived from the ancient Brahmi writing system. 
+
+Devanagari is used for writing many languages in India such as Hindi, Marathi, Rajastani and many more. These languages may not uses all the characters in the Devanagari writing system. This document has a section on describing the language level features of the major languages.
+
+2. Features of Devanagari.
+The unicode features used in Devanagari are listed below in the order of execution
+
+2.1 Nukta
+Nukta is represented as a small dot in Devanagari. Nukta is a voice modifier diacritic which means that a character with Nukta indicates a slight change in the way we pronounce the base character. This feature can be achieved by both Substitution Lookups (GSUB) and Positioning Lookups (GPOS). However there are some characters with Nukta are encoded in to the codepage and those characters should be given as composed glyphs (NFC).
+
+In NLCI's build system we use GPOS for implementing the Nukta. So this implimentation is discussed under the GPOS-blwm positioning lookup section of this document.
+\u0915\u093C \u0916\u093C \u0917\u093C \u0918\u093C \u0919\u093C \u091A\u093C \u091B\u093C \u091C\u093C \u091D\u093C \u091E\u093C \u091F\u093C \u0920\u093C \u0921\u093C \u0922\u093C \u0923\u093C \u0924\u093C \u0925\u093C \u0926\u093C \u0927\u093C \u0928\u0929\u093C \u092A\u093C \u092B\u093C \u092C\u093C \u092D\u093C \u092E\u093C \u092F\u093C \u0930\u093C \u0931\u093C \u0932\u093C \u0933\u093C \u0934\u093C \u0935\u093C \u0936\u093C \u0937\u093C \u0938\u093C \u0939\u093C 
+
+2.2 Akhands
+There are two Akhand ligatures are there in Indic scripts such as क्ष and ज्ञ. Akhands represents a special case of conjuncts in Indic languages. These are primarily constructed using the same biconsonantal ligature formation rules however the difference is that, these characters are not derived from their respective base forms. So these characters are treated separately in devanagari.
+
+क् ष => क्ष
+क्  ष़ => क्ष़
+ज् ञ => ज्ञ  
+(Unicode: u+0915 u+094D u+0937)
+(Unicode: u+091C u+094D u+091E)
+
+In Fontforge these rules should be added under GSUB > Ligature substitution > 'akhn' feature. Also ensure that the deva{dflt,HIN,NEP} dev2{dflt,HIN,NEP} languages are selected for this feature. 
+
+2.3 Reph
+Reph is a mark form of the rakar in Devanagari. When ra and a virama followed by a consonant, it takes the shape of a hook and be place above the consonant. This form of the rakar is known as reph.
+
+The reph rule of Devanagari specifies the formation of reph mark. 
+र्  
+र् क => र्क
+(Unicode: u+0930 u+094D)
+र्क र्ख र्ग र्घ र्ङ र्च र्छ र्ज र्झ र्ञ र्ट र्ठ र्ड र्ढ र्ण र्त र्थ र्द र्ध र्न र्ऩ र्प र्फ र्ब र्भ र्म र्य र्र र्ऱ र्ल र्ळ र्ऴ र्व र्श र्ष र्स र्ह 
+
+2.4 Below Base Form (blwf)
+Below base form is a substitution lookup for placing marks under the base form. The major below base form in Devanagari is the Vattu form of Raakar. The actual implimentation of the Vattu form is under the 'vatu' lookup. However the blwf should have a rule changing virama rakar into the vatu mark form of the Raakar. In most of the Devanagari (and also in other Indo-Arian Scripts, you'll find only one, the following, rule under the blwf lookup)  
+
+\u0915\u094D\u0930 \u0916\u094D\u0930 \u0917\u094D\u0930 \u0918\u094D\u0930 \u0919\u094D\u0930 \u091A\u094D\u0930 \u091B\u094D\u0930 \u091C\u094D\u0930 \u091D\u094D\u0930 \u091E\u094D\u0930 \u091F\u094D\u0930 \u0920\u094D\u0930 \u0921\u094D\u0930 \u0922\u094D\u0930 \u0923\u094D\u0930 \u0924\u094D\u0930 \u0925\u094D\u0930 \u0926\u094D\u0930 \u0927\u094D\u0930 \u0928\u0929\u094D\u0930 \u092A\u094D\u0930 \u092B\u094D\u0930 \u092C\u094D\u0930 \u092D\u094D\u0930 \u092E\u094D\u0930 \u092F\u094D\u0930 \u0930\u094D\u0930 \u0931\u094D\u0930 \u0932\u094D\u0930 \u0933\u094D\u0930 \u0934\u094D\u0930 \u0935\u094D\u0930 \u0936\u094D\u0930 \u0937\u094D\u0930 \u0938\u094D\u0930 \u0939\u094D\u0930
+
+2.5 Half forms (half)
+In Devanagari every consonant is pronounced with an inherent 'schwa' vowel. The virama (or halant) effectively deletes this inherent vowel. So when a consonant is followed by a virama, there are three possible shaping can happen.
+* If the character have a vertical stem on it, the stem is removed (ख्क त्क ध्क न्क प्क)
+* For most other characters a visible virama is displayed after the consonant (ट्क ठ्क ढ्क)
+* For a few characters, it's shape is changed (क्क क्ख छ्क फ्क ऱ्क)
+Half forms of the consonant chracters are given below
+क्स ख्स ग्स घ्स ङ्स
+च्स छ्स ज्स झ्स ञ्स
+ट्स ठ्स ड्स ढ्स ण्स
+त्स थ्स द्स ध्स न्स
+प्स फ्स ब्स भ्स म्स
+य्स र्स ल्स व्स श्स ष्स स्स ह्स ळ्स 
+क्ष्स ज्ञ्स
+
+2.6 Vattu forms (vatu)
+When a consonant followed by a Virama and a Raakar, the 'Virama Rakar' part takes a special form named Vattu and be placed below the base form. Vattu appears in two different forms in Devanagari. 
+
+* With ट ठ ड ढ ङ छ it takes a form or two line (almost like an upside down 'V') to form ट्र ठ्र ड्र ढ्र ङ्र छ्र
+* For all other characters it takes a form of a diagonal line in the left down direction क्र ग्र भ्र 
+	* When it followed by त, the shape of त is changed to make त्र.
+
+Below are the full list Vattu form
+क्र ख्र ग्र घ्र ङ्र 
+च्र छ्र ज्र झ्र ञ्र
+ट्र ठ्र ड्र ढ्र ण्र
+त्र थ्र द्र ध्र न्र 
+प्र फ्र ब्र भ्र म्र
+य्र र्र ल्र व्र श्र ष्र ळ्र ह्र क्ष्र ज्ञ्र 
+
+The first form of vattu (ra.alt) can be easily positioned (you don't need to add a new anchor point for this, you can just use the anchor point you've created for other below base marks and matras)
+
+For the second form of the vattu (ra.vattu), at least for some glyphs, you may have to use a substitution lookup. 
+* Add a below base form substitution lookup, virama ra into ra.alt
+* Then after the half form lookups add a 'vatu' lookup. In this lookup you may have to handle your glyphs in two different way.
+	* The glyphs that are changed into the half forms in the 'half' lookup, you rule will be cons.half ra => cons.vatu
+	* The glyphs that are not changed, use the rule cons virama ra => cons.vatu
+* You can do this using GPOS lookups also. In that case you will have to use a special contextual chaining substitution lookup in your GSUB. The contextual table substitution lookup is used for context based substitution of glyphs. We need to replace the ra.alt form with ra.vatu form in the context of it followed by certain glyphs. To achieve this follow the steps below.
+* Add a new 'Single Substitution' lookup (without adding to any feature) to replace vatu with it's variant. ra.vatu { ra.alt. Give a name to this lookup and click ok to exit.
+* Now we need to add our special 'Contextual Chaining Substitution' lookup and add it to the blwf feature. 
+* Then make a subtable and choose by Classes. This is where we will specify our context (or environment) to trigger this lookup. We need two classes here. The first one with the glyphs ra.alt (class1) in it and this is what initiate this lookup. Add another class with the environment or context glyphs (in other words with all the glyphs (class2) that you want to check against in this lookup). 
+* After adding these two classes now we need to write a rule to say look for the match class (class1), if the glyph just before this one is a member of the context class (class2) execute the Single Substitution lookup we've created in the step 1. To do this add a new List of lists of class numbers, in the match class type 1 (for class1) and then click on the back track tab and type 2 (for class2). click on the Match tab again, and click on New under the 'ordered list of sequence postions and lookup tab' (foget about the is rather confusing title. what it says is to pickup the lookup you want execute if there's a match) select the sequence number '0' and under lookup, choose the lookup we've created in the step 1.
+
+So whenever a ra.alt glyph is found in the text
+
+
+2.7 Pre-base substitution (pres)
+A lot of consonants in Devanagari form a conjunct character when it is followed by a virama and another consonants. These conjunct characters are being substituted in this sections. Examples for such conjuncts are:
+क्क ङ्ङ च्च ज्ज
+ड्ड ट्ट ठ्ठ ल्ल ढ्ढ 
+ङ्क ङ्ख ङ्ग ङ्घ ङ्म ङ्क्ष ङ्ह
+द्ब द्भ द्व द्ध द्घ द्म द्व द्य
+ट्ठ ट्य ट्व ठ्य ड्ढ ड्ट ड्य  
+श्र श्च श्व ष्ट ष्ट्व ष्ठ 
+क्त त्प प्त त्त ह्ल ह्म ह्न ह्ण ह्व ह्य 
+
+2.8 Other Conjuncts
+ष्ट्व ष्ट्व्र् ष्ट्र् ष्टि ष्टी ष्ट्वि ष्ट्वी
+अन्तर्राष्ट्रीय 
+अन्तराष्ठ्रीय माम्ला अन्तराष्ट्व्र
+
+
+3 Matra and Mark substitutions
+While processing the text, the shaping engine reorders text into a more simple form of sequences, which is easier for a font engineer to write rules. This reordering is done based the syllablic rules of Devanagari (for that matter the language it deals with). For example the sequence to produce the Devanagari conjunct \u0930\u094D\u0915\u0940\u0902 (ra.vir.ka.iimatra.anusvara) the underlying characters are sequenced in the following way \u0930 \u094D \u0915 \u0940 \u0902. However, during the shaping process the shaping engine reorders this sequence into \u0940 (\u0930\u094D) \u0902 \u0915, ie iimatra.reph.anusvara.ka since in Devanagari writing system the reph mark ra.vir combines into the following vowel matra to form a conjunct. Now it is easy for the developer to write the rules, as for a substitution rule, he can write imatra reph anusvara into imatra.reph.anusvara conjunct form.
+
+
+3.1 Matra-Marks Ligature Formation
+
+3.1.1 Right Side Matra Ligature Formation
+3.1.1a iimatra
+The iimatra participate in the ligature formation with reph, anusvara and candrabindu and combinations of these. This ligature formation is done in the post base substitution lookup. Here are some examples:
+
+\u0930 \u094D \u0915 \u0940 \u0901 > \u0930\u094D\u0915\u0940\u0901
+\u0930 \u094D \u0915 \u0940 \u0902 > \u0930\u094D\u0915\u0940\u0902
+\u0930 \u094D \u0915 \u0940 > \u0930\u094D\u0915\u0940
+\u0915 \u0940 \u0901 > \u0915\u0940\u0901
+\u0915 \u0940 \u0902 > \u0915\u0940\u0902
+
+3.1.1b ecandramatra \u0945
+\u0930 \u094D\u0915 \u0945 \u0902 > \u0930\u094D\u0915\u0945\u0902
+\u0930 \u094D \u0915 \u0945  > \u0930\u094D\u0915\u0945
+3.1.1c eshortmatra \u0946
+\u0930 \u094D\u0915 \u0946 \u0902 > \u0930\u094D\u0915\u0946\u0902
+\u0930 \u094D \u0915 \u0946  > \u0930\u094D\u0915\u0946
+\u0915 \u0946 \u0902 > \u0915\u0946\u0902
+
+3.1.1d ematra \u0947
+\u0930 \u094D\u0915 \u0947 \u0902 > \u0930\u094D\u0915\u0947\u0902
+\u0930 \u094D \u0915 \u0947  > \u0930\u094D\u0915\u0947
+\u0915 \u0947 \u0902 > \u0915\u0947\u0902
+
+3.1.1e aimatra \u0948
+\u0930 \u094D\u0915 \u0948 \u0902 > \u0930\u094D\u0915\u0948\u0902
+\u0930 \u094D \u0915 \u0948  > \u0930\u094D\u0915\u0948
+\u0915 \u0948 \u0902 > \u0915\u0948\u0902
+
+3.1.1f ocandramatra \u0949
+\u0930 \u094D\u0915 \u0949 \u0902 > \u0930\u094D\u0915\u0949\u0902
+\u0930 \u094D \u0915 \u0949  > \u0930\u094D\u0915\u0949
+\u0915 \u0949 \u0902 > \u0915\u0949\u0902
+
+3.1.1g oshortmatra \u094A
+\u0930 \u094D\u0915 \u094A \u0902 > \u0930\u094D\u0915\u094A\u0902
+\u0930 \u094D \u0915 \u094A  > \u0930\u094D\u0915\u094A
+\u0915 \u094A \u0902 > \u0915\u094A\u0902
+
+3.1.1h omatra \u094B
+\u0930 \u094D\u0915 \u094B \u0902 > \u0930\u094D\u0915\u094B\u0902
+\u0930 \u094D \u0915 \u094B  > \u0930\u094D\u0915\u094B
+\u0915 \u094B \u0902 > \u0915\u094B\u0902
+
+3.1.1i aumatra \u094C
+\u0930 \u094D\u0915 \u094C \u0902 > \u0930\u094D\u0915\u094C\u0902
+\u0930 \u094D \u0915 \u094C  > \u0930\u094D\u0915\u094C
+\u0915 \u094C \u0902 > \u0915\u094C\u0902
+
+3.1.1j reph anusvara
+\u0930 \u094D \u0915 \u0902 > \u0930\u094D\u0915\u0902
+
+3.1.2 ru, ruu and hR
+\u0930 \u0941 > \u0930\u0941
+\u0930 \u0942 > \u0930\u0942
+\u0939 \u0943 > \u0939\u0943
+
+3.1.x Substitution of short imatra in the context of wide glyphs
+Rule: imatra => imatra.wide/[wide glyphs]*
+क्त्र्क्र क्त्र्क्रिं ष्ट्विं ष्ट्व्र \u0915\u094D\u0915\u093C \u0915\u093C\u094D\u0915\u093F\u0901
+In Devanagari the matras are positioned in such way that it anchored on the stem (the vertical line) if the character has one. Even in this case there are two types of characters, one with stems coming at the end of the character such as ख ग ज घ and the second set having the stem through the middle of the character क फ. 
+  
+example: \u0915\u093F ह्मि कि ख़ि ह्मिं किं ख़िं र्कि र्खि र्किं र्खिं र्क्षिं
+
+3.2 Bindu with Vowel Ma	tras
+
+ Bindu, or anusvara, in Devanagari represents a nasalization on the vowel preceding it.
+ Candrabindu reprents a stronger nasalization                                          
+
+कि की किं कीं र्कि र्की र्किं र्कीं
+ख़ि ख़ी खिं खीं र्खि र्खी र्खिं र्खीं
+गि गी गिं गीं र्गि र्गी र्गिं र्गीं 
+
+\u0930\u094D\u0917\u0940
+
+4 Mark to Mark positioning
+
+4.1 Combined form of below base vowel matra with Vattu and/or Nukta 
+ङ्र छ्र ट्र ठ्र ड्र ढ्र ळ्र 
+
+
+
+5 Adding support for multiple languages
+An advantage of using opentype fonts is that the same font can be used for more than one language. For example, the same panini font can be used for any language that uses Devanagari as it's writing system. However, in certain cases some of the characters in one particular language may differ from other languages. For example, Nepali uses Devanagari as it's writing system. But the conjunct Jha, numbers 5, 8 and 9 are written differently in Nepali. This section talks about how we can generate fonts defaults to Hindi and Nepali from the same source font. Remember that both the fonts still supports Hindi and Nepali forms of these characters, the difference is which of this language is our font default to.
+
+In order to achive this we will have to make changes to the configuration file 'wscript' with right commands read the OpenType table and generate two fonts. Before doing that, we need to edit the font source file and add lookups to map these characters back and forth. Add a 'locl' lookup and map it with rules such as Jha to Jha.nep. Add another 'locl' lookup and map it with the reverse rules. After doing this we need to edit the wscript file and configure it to process the remapping of the glyphs. The following configuration will automatically generate an additional font defaulting to the NEP.  
+
+Let us have close look at this configuration:
+%font(target=process("paninep.ttf", cmd('ttfdeflang -d NEP ${DEP} ${TGT}'), cmd('ttfremap -r -c ${SRC[0].bldpath()} ${DEP} ${TGT}', ['font-source/nepali_chars.lst'])),
+%	source="panini.ttf",
+%	opentype=internal(),
+%	graphite=internal(),
+%	script="deva")
+
+It says to build a font "paninep.ttf" from "panini.ttf" (not panini.src.sfd) by running "ttfdeflang" command (this command will make the NEP rules as the default rules) and the "ttfremap" command (this will rewrite the CMAP of the font. CMAP holds the mapping of the Unicode codepoint to the glyph name) which will remap the CMAP table to the NEP glyphnames to the corresponding Unicode codepoints.
+
+X Notes
+
+Whiile merging the fonts (master with design set) SFDMeld try to identify the changes in both the fonts, and automatically create a combined form. This is a complex process and it is build upon the assumptions such as:
+master will win in the following conditions 
+
+* If a new glyph is added in the master file, the same will be created automatically in the design fonts also.
+* If a glyph is deleted from the master, it will get deleted from the design fonts too.
+* If a glyph is renamed in the master, 
+	- If the glyph is in a unicode codepoint, the glyph on the same unicode codepoint also get renamed
+	- if it is not, then the renamed glyph will be added into the desing font as a new glyph and the glyph with old name will be deleted from the design glyph. *** Caution: if you rename a glyph in the master file, inform the design team and make them also rename the glyph into the same name before merging the font. Otherwise this will lead to undesired result after merging.
+* If a new anchor point added in the master, same will be added in the design fonts too.
+
+Testing gdl
+
+Preparing your computer for testing gdl fonts
+
+* Get/Install following packages or programs
+663  hg clone http://hg.palaso.org/palaso-python
+666  apt-cache search pyrex
+670  sudo apt-get install build-essential
+673  sudo apt-get install libkmflcomp-dev libkmfl-dev
+
+Then run the following commands to test the font
+  679  grfonttest panini.ttf -codes `getclip -s`
+	this command will test a font against a given sequence given after the codes. In this case, a unicode string is copied into the clipboard and a utility named getclip used to get the codepoints of the copied glyph.
+  681  less grSegmentLog.txt 
+	This file will show the way the gdl rules applied on the given sequence.
+
+There are few other files that can be checked for debugging. Those are
+	dbg-enginecode.txt
+	dbg-fsm.txt
+These files can be found under the build directory. The debugging option can be turned on by adding a 'params="-d"' to the gdl line of the wscript file.
