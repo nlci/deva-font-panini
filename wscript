@@ -38,7 +38,7 @@ tuned = 'Nepali'
 
 for f in faces:
     for (s, sn) in zip(styles, stylesName):
-        font(target = process(tag + f + '-' + sn + '.ttf',
+        font(target = process(tag + f + '-' + sn.replace(' ', '') + '.ttf',
                 cmd('psfix ${DEP} ${TGT}'),
                 name(tag + ' ' + f, lang='en-US', subfamily=(sn))
                 ),
@@ -61,7 +61,7 @@ for f in faces:
             )
 
         # Generate the Nepali (NEP) version from the newly created font
-        font(target = process(tag + f + tuned + '-' + sn + '.ttf',
+        font(target = process(tag + f + tuned + '-' + sn.replace(' ', '') + '.ttf',
                 cmd('ttfdeflang -d NEP ${DEP} ${TGT}'),
                 cmd('ttfremap -r -c ${SRC[0].bldpath()} ${DEP} ${TGT}', [fontbase + 'nepali_chars.lst']),
                 name(tag + ' ' + f + ' ' + tuned, lang='en-US', subfamily=(sn))
