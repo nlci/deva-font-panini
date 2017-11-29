@@ -63,41 +63,41 @@ Lookup: 4 0 0 "'pres' Pre Base Substitutions lookup 7" { "'pres' Pre Base Substi
 Lookup: 4 0 0 "'abvs' Above Base Substitutions lookup 7" { "'abvs' Above Base Substitutions lookup 7-1"  } ['abvs' ('DFLT' <'dflt' > 'dev2' <'HIN ' 'NEP ' 'dflt' > 'deva' <'HIN ' 'NEP ' 'dflt' > ) ]
 Lookup: 4 0 0 "'abvs' righ side matra ligature form" { "'abvs' iimatra"  "'abvs' ecandramatra"  "'abvs' eshortmatra"  "'abvs' ematra"  "'abvs' aimatra"  "'abvs' ocandramatra"  "'abvs' shortomatra"  "'abvs' omatra"  "'abvs' aumatra"  } ['abvs' ('DFLT' <'dflt' > 'dev2' <'HIN ' 'NEP ' 'dflt' > 'deva' <'HIN ' 'NEP ' 'dflt' > ) ]
 Lookup: 4 0 0 "'blws' ru ruu and hR" { "'blws' ru ruu and hR-1"  } ['blws' ('DFLT' <'dflt' > 'dev2' <'HIN ' 'NEP ' 'dflt' > 'deva' <'HIN ' 'NEP ' 'dflt' > ) ]
-Lookup: 1 0 0 "ra.alt to ra.vatu" { "ra.alt to ra.vatu-1"  } []
-Lookup: 6 0 0 "'blwf' ra.vatu contextual" { "'blwm' Below Base Mark in Devanagari lookup 9-1"  } ['blwf' ('DFLT' <'dflt' > 'deva' <'HIN ' 'NEP ' 'dflt' > ) ]
+Lookup: 1 0 0 "ra.alt to u0930.vatu" { "ra.alt to u0930.vatu-1"  } []
+Lookup: 6 0 0 "'blwf' u0930.vatu contextual" { "'blwm' Below Base Mark in Devanagari lookup 9-1"  } ['blwf' ('DFLT' <'dflt' > 'deva' <'HIN ' 'NEP ' 'dflt' > ) ]
 Lookup: 4 0 0 "'psts' Vowel Matra and Marks conjunct" { "'psts' Post Base Substitutions lookup 11-1"  } ['psts' ('DFLT' <'dflt' > 'dev2' <'HIN ' 'NEP ' 'dflt' > 'deva' <'HIN ' 'NEP ' 'dflt' > ) ]
-Lookup: 1 0 0 "imatra to imatra.wide" { "imatra to imatra.wide-1"  } []
-Lookup: 6 0 0 "'psts' imatra imatra.wide" { "'psts' imatra imatra.wide-1"  } ['psts' ('DFLT' <'dflt' > 'dev2' <'HIN ' 'NEP ' 'dflt' > 'deva' <'HIN ' 'NEP ' 'dflt' > ) ]
+Lookup: 1 0 0 "imatra to u093F.wide" { "imatra to u093F.wide-1"  } []
+Lookup: 6 0 0 "'psts' u093F u093F.wide" { "'psts' u093F u093F.wide-1"  } ['psts' ('DFLT' <'dflt' > 'dev2' <'HIN ' 'NEP ' 'dflt' > 'deva' <'HIN ' 'NEP ' 'dflt' > ) ]
 Lookup: 260 0 0 "'abvm' Above Base Mark lookup 2" { "'abvm' Above Base Mark lookup 2-1"  } ['abvm' ('DFLT' <'dflt' > 'cyrl' <'dflt' > 'deva' <'HIN ' 'NEP ' 'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 260 0 0 "'blwm' Below Base Mark in Devanagari lookup 0" { "'blwm' Below Base Mark in Devanagari lookup 0 subtable"  } ['blwm' ('deva' <'HIN ' 'NEP ' 'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
-ChainSub2: class "'psts' imatra imatra.wide-1" 3 1 3 1
-  Class: 49 imatra imatra.bindu imatra.reph imatra.bindu.reph
-  Class: 67 kha da_vir_ma ha_vir_ma tta_vir_ya ttha_vir_ya dda_vir_ya ca_vir_ca
-  FClass: 49 imatra imatra.bindu imatra.reph imatra.bindu.reph
-  FClass: 67 kha da_vir_ma ha_vir_ma tta_vir_ya ttha_vir_ya dda_vir_ya ca_vir_ca
+ChainSub2: class "'psts' u093F u093F.wide-1" 3 1 3 1
+  Class: 49 u093F u093F.bindu u093F.reph u093F.bindu.reph
+  Class: 67 u0916 u0926_u094D_u092E u0939_u094D_u092E u091F_u094D_u092F u0920_u094D_u092F u0921_u094D_u092F u091A_u094D_u091A
+  FClass: 49 u093F u093F.bindu u093F.reph u093F.bindu.reph
+  FClass: 67 u0916 u0926_u094D_u092E u0939_u094D_u092E u091F_u094D_u092F u0920_u094D_u092F u0921_u094D_u092F u091A_u094D_u091A
  1 0 1
   ClsList: 1
   BClsList:
   FClsList: 2
  1
-  SeqLookup: 0 "imatra to imatra.wide"
+  SeqLookup: 0 "imatra to u093F.wide"
   ClassNames: "0" "1" "2"
   BClassNames: "0"
   FClassNames: "0" "1" "2"
 EndFPST
 ChainSub2: class "'blwm' Below Base Mark in Devanagari lookup 9-1" 3 3 1 1
-  Class: 6 ra.alt
-  Class: 25 nya nna la ssa ka_vir_ssa
-  BClass: 6 ra.alt
-  BClass: 25 nya nna la ssa ka_vir_ssa
+  Class: 6 u0930.alt
+  Class: 25 u091E u0923 u0932 u0937 u0915_u094D_u0937
+  BClass: 6 u0930.alt
+  BClass: 25 u091E u0923 u0932 u0937 u0915_u094D_u0937
  1 1 0
   ClsList: 1
   BClsList: 2
   FClsList:
  1
-  SeqLookup: 0 "ra.alt to ra.vatu"
+  SeqLookup: 0 "ra.alt to u0930.vatu"
   ClassNames: "0" "1" "2"
   BClassNames: "0" "1" "2"
   FClassNames: "0"
@@ -3865,7 +3865,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: zwspace
+StartChar: u200B
 Encoding: 213 8203 78
 Width: 0
 VWidth: 1559
@@ -3876,7 +3876,7 @@ Back
 Fore
 EndChar
 
-StartChar: zwnj
+StartChar: u200C
 Encoding: 214 8204 79
 Width: 0
 VWidth: 1559
@@ -3887,7 +3887,7 @@ Back
 Fore
 EndChar
 
-StartChar: zwj
+StartChar: u200D
 Encoding: 215 8205 80
 Width: 0
 VWidth: 1559
@@ -3898,7 +3898,7 @@ Back
 Fore
 EndChar
 
-StartChar: wordjoiner
+StartChar: u2060
 Encoding: 220 8288 81
 Width: 0
 VWidth: 1559
@@ -4073,7 +4073,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: om
+StartChar: u0950
 Encoding: 172 2384 86
 Width: 2092
 VWidth: 1559
@@ -4131,7 +4131,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: avagraha
+StartChar: u093D
 Encoding: 154 2365 87
 Width: 1040
 VWidth: 1560
@@ -4163,7 +4163,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: visarga
+StartChar: u0903
 Encoding: 98 2307 88
 Width: 556
 VWidth: 1559
@@ -4282,7 +4282,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: danda
+StartChar: u0964
 Encoding: 190 2404 92
 Width: 1186
 VWidth: 1559
@@ -4302,7 +4302,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: oshortvowel
+StartChar: u0912
 Encoding: 113 2322 93
 Width: 2106
 VWidth: 1559
@@ -4317,7 +4317,7 @@ Refer: 109 2310 N 1 0 0 1 0 0 2
 Refer: 360 2374 N 1 0 0 1 1835 0 0
 EndChar
 
-StartChar: oshortvowel.bindu
+StartChar: u0912.bindu
 Encoding: 225 -1 94
 Width: 2054
 VWidth: 1559
@@ -4332,7 +4332,7 @@ Refer: 109 2310 N 1 0 0 1 0 0 2
 Refer: 361 -1 S 1 0 0 1 1969 0 0
 EndChar
 
-StartChar: oshortvowel.reph
+StartChar: u0912.reph
 Encoding: 226 -1 95
 Width: 2054
 VWidth: 1559
@@ -4347,7 +4347,7 @@ Refer: 109 2310 N 1 0 0 1 0 0 2
 Refer: 362 -1 S 1 0 0 1 1701 -17 0
 EndChar
 
-StartChar: oshortvowel.bindu.reph
+StartChar: u0912.bindu.reph
 Encoding: 227 -1 96
 Width: 2054
 VWidth: 1559
@@ -4362,7 +4362,7 @@ Refer: 109 2310 N 1 0 0 1 0 0 2
 Refer: 363 -1 S 1 0 0 1 1603 -23 0
 EndChar
 
-StartChar: ovowel
+StartChar: u0913
 Encoding: 114 2323 97
 Width: 2106
 VWidth: 1559
@@ -4377,7 +4377,7 @@ Refer: 109 2310 N 1 0 0 1 0 0 2
 Refer: 364 2375 N 1 0 0 1 1717 -38 0
 EndChar
 
-StartChar: ovowel.bindu
+StartChar: u0913.bindu
 Encoding: 228 -1 98
 Width: 2054
 VWidth: 1559
@@ -4392,7 +4392,7 @@ Refer: 109 2310 N 1 0 0 1 0 0 2
 Refer: 365 -1 S 1 0 0 1 1841 2 0
 EndChar
 
-StartChar: ovowel.reph
+StartChar: u0913.reph
 Encoding: 229 -1 99
 Width: 2054
 VWidth: 1559
@@ -4407,7 +4407,7 @@ Refer: 109 2310 N 1 0 0 1 0 0 2
 Refer: 366 -1 N 1 0 0 1 1659 -2 0
 EndChar
 
-StartChar: ovowel.bindu.reph
+StartChar: u0913.bindu.reph
 Encoding: 230 -1 100
 Width: 2106
 VWidth: 1559
@@ -4422,7 +4422,7 @@ Refer: 109 2310 N 1 0 0 1 0 0 2
 Refer: 367 -1 S 1 0 0 1 1594 -28 0
 EndChar
 
-StartChar: auvowel
+StartChar: u0914
 Encoding: 115 2324 101
 Width: 2106
 VWidth: 1559
@@ -4437,7 +4437,7 @@ Refer: 109 2310 N 1 0 0 1 0 0 2
 Refer: 368 2376 N 1 0 0 1 2031 0 0
 EndChar
 
-StartChar: auvowel.bindu
+StartChar: u0914.bindu
 Encoding: 231 -1 102
 Width: 2133
 VWidth: 1559
@@ -4452,7 +4452,7 @@ Refer: 109 2310 N 1 0 0 1 0 0 2
 Refer: 369 -1 S 1 0 0 1 1759 0 0
 EndChar
 
-StartChar: auvowel.reph
+StartChar: u0914.reph
 Encoding: 232 -1 103
 Width: 2133
 VWidth: 1559
@@ -4467,7 +4467,7 @@ Refer: 109 2310 N 1 0 0 1 0 0 2
 Refer: 370 -1 N 1 0 0 1 1716 0 0
 EndChar
 
-StartChar: auvowel.bindu.reph
+StartChar: u0914.bindu.reph
 Encoding: 233 -1 104
 Width: 2106
 VWidth: 1559
@@ -4482,7 +4482,7 @@ Refer: 109 2310 N 1 0 0 1 0 0 2
 Refer: 371 -1 S 1 0 0 1 1538 -35 0
 EndChar
 
-StartChar: ocandravowel
+StartChar: u0911
 Encoding: 112 2321 105
 Width: 2023
 VWidth: 1559
@@ -4497,7 +4497,7 @@ Refer: 109 2310 N 1 0 0 1 0 0 2
 Refer: 372 2373 N 1 0 0 1 1845 0 0
 EndChar
 
-StartChar: ocandravowel.bindu
+StartChar: u0911.bindu
 Encoding: 234 -1 106
 Width: 2106
 VWidth: 1559
@@ -4512,7 +4512,7 @@ Refer: 109 2310 N 1 0 0 1 0 0 2
 Refer: 372 2373 S 1 0 0 1 1790 0 2
 EndChar
 
-StartChar: ocandravowel.reph
+StartChar: u0911.reph
 Encoding: 235 -1 107
 Width: 2154
 VWidth: 1559
@@ -4527,7 +4527,7 @@ Refer: 109 2310 N 1 0 0 1 0 0 2
 Refer: 374 -1 S 1 0 0 1 1323 0 0
 EndChar
 
-StartChar: ocandravowel.bindu.reph
+StartChar: u0911.bindu.reph
 Encoding: 236 -1 108
 Width: 2148
 VWidth: 1559
@@ -4542,7 +4542,7 @@ Refer: 109 2310 N 1 0 0 1 0 0 2
 Refer: 375 -1 N 1 0 0 1 1349 0 0
 EndChar
 
-StartChar: aavowel
+StartChar: u0906
 Encoding: 101 2310 109
 Width: 2106
 VWidth: 1559
@@ -4572,7 +4572,7 @@ Refer: 112 2309 N 1 0 0 1 0 0 0
 Refer: 372 2373 N 1 0 0 1 1313 0 0
 EndChar
 
-StartChar: ashortvowel
+StartChar: u0904
 Encoding: 99 2308 111
 Width: 1499
 VWidth: 1559
@@ -4587,7 +4587,7 @@ Refer: 112 2309 N 1 0 0 1 0 0 0
 Refer: 360 2374 N 1 0 0 1 1478 0 0
 EndChar
 
-StartChar: avowel
+StartChar: u0905
 Encoding: 100 2309 112
 Width: 1499
 VWidth: 1559
@@ -4734,7 +4734,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: zerodeva
+StartChar: u0966
 Encoding: 192 2406 117
 Width: 912
 VWidth: 1559
@@ -4759,7 +4759,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: onedeva
+StartChar: u0967
 Encoding: 193 2407 118
 Width: 865
 VWidth: 1559
@@ -4790,7 +4790,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: twodeva
+StartChar: u0968
 Encoding: 194 2408 119
 Width: 1045
 VWidth: 1559
@@ -4819,7 +4819,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: threedeva
+StartChar: u0969
 Encoding: 195 2409 120
 Width: 1071
 VWidth: 1559
@@ -4856,7 +4856,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: fourdeva
+StartChar: u096A
 Encoding: 196 2410 121
 Width: 1045
 VWidth: 1559
@@ -4887,7 +4887,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: fivedeva
+StartChar: u096B
 Encoding: 197 2411 122
 Width: 1087
 VWidth: 1559
@@ -4915,10 +4915,10 @@ SplineSet
  666 690 814 652 814 538 c 0
  814 495 794 449 755 398 c 1
 EndSplineSet
-Substitution2: "'locl' Jha to nep" fivedeva.nep
+Substitution2: "'locl' Jha to nep" u096B.nep
 EndChar
 
-StartChar: sixdeva
+StartChar: u096C
 Encoding: 198 2412 123
 Width: 1045
 VWidth: 1559
@@ -4957,7 +4957,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: sevendeva
+StartChar: u096D
 Encoding: 199 2413 124
 Width: 1214
 VWidth: 1559
@@ -4988,7 +4988,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: eightdeva
+StartChar: u096E
 Encoding: 200 2414 125
 Width: 1045
 VWidth: 1559
@@ -5020,10 +5020,10 @@ SplineSet
  218.971 153.86 288.474 89.8584 407.839 89.8584 c 0
  524.827 89.8584 689.711 151.337 884 341 c 1
 EndSplineSet
-Substitution2: "'locl' Jha to nep" eightdeva.nep
+Substitution2: "'locl' Jha to nep" u096E.nep
 EndChar
 
-StartChar: ninedeva
+StartChar: u096F
 Encoding: 201 2415 126
 Width: 878
 VWidth: 1559
@@ -5052,7 +5052,7 @@ SplineSet
  363.379 1083.05 222.564 976.336 222.564 828.05 c 0
  222.564 775.053 245.729 717.21 304 658 c 1
 EndSplineSet
-Substitution2: "'locl' Jha to nep" ninedeva.nep
+Substitution2: "'locl' Jha to nep" u096F.nep
 EndChar
 
 StartChar: colon
@@ -5155,7 +5155,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: iivowel
+StartChar: u0908
 Encoding: 103 2312 129
 Width: 1026
 VWidth: 1559
@@ -5170,7 +5170,7 @@ Refer: 130 2311 N 1 0 0 1 0 0 2
 Refer: 321 -1 N 1 0 0 1 726 -5 2
 EndChar
 
-StartChar: ivowel
+StartChar: u0907
 Encoding: 102 2311 130
 Width: 1026
 VWidth: 1559
@@ -5215,7 +5215,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: uvowel
+StartChar: u0909
 Encoding: 104 2313 131
 Width: 1077
 VWidth: 1559
@@ -5249,7 +5249,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: uuvowel
+StartChar: u090A
 Encoding: 105 2314 132
 Width: 1485
 VWidth: 1559
@@ -5291,7 +5291,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: rvocalicvowel
+StartChar: u090B
 Encoding: 106 2315 133
 Width: 1753
 VWidth: 1559
@@ -5346,7 +5346,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: rrvocalicvowel
+StartChar: u0960
 Encoding: 186 2400 134
 Width: 1772
 VWidth: 1559
@@ -5404,7 +5404,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: eshortvowel
+StartChar: u090E
 Encoding: 109 2318 135
 Width: 1049
 VWidth: 1559
@@ -5419,7 +5419,7 @@ Refer: 360 2374 S 1 0 0 1 1010 0 2
 Refer: 138 2319 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: aivowel
+StartChar: u0910
 Encoding: 111 2320 136
 Width: 1049
 VWidth: 1559
@@ -5434,7 +5434,7 @@ Refer: 138 2319 N 1 0 0 1 0 0 0
 Refer: 364 2375 S 1 0 0 1 955 0 0
 EndChar
 
-StartChar: ecandravowel
+StartChar: u090D
 Encoding: 108 2317 137
 Width: 1049
 VWidth: 1559
@@ -5449,7 +5449,7 @@ Refer: 138 2319 N 1 0 0 1 0 0 0
 Refer: 372 2373 S 1 0 0 1 1022 0 0
 EndChar
 
-StartChar: evowel
+StartChar: u090F
 Encoding: 110 2319 138
 Width: 1084
 VWidth: 1559
@@ -5490,7 +5490,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ka.half
+StartChar: u0915.half
 Encoding: 237 -1 139
 Width: 1135
 VWidth: 1559
@@ -5529,10 +5529,10 @@ SplineSet
  597 292 735 441 804 521 c 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" ka vir
+Ligature2: "'half' Half Forms lookup 2-1" u0915 u094D
 EndChar
 
-StartChar: ka
+StartChar: u0915
 Encoding: 116 2325 140
 Width: 1511
 VWidth: 1559
@@ -5577,7 +5577,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: qa
+StartChar: u0958
 Encoding: 178 2392 141
 Width: 1511
 VWidth: 1559
@@ -5598,7 +5598,7 @@ EndSplineSet
 Refer: 140 2325 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: ka.vatu
+StartChar: u0915.vatu
 Encoding: 238 -1 142
 Width: 1511
 VWidth: 1559
@@ -5619,10 +5619,10 @@ SplineSet
 EndSplineSet
 Refer: 140 2325 N 1 0 0 1 0 0 2
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" ka ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u0915 u0930.alt
 EndChar
 
-StartChar: ka_vir_ta
+StartChar: u0915_u094D_u0924
 Encoding: 239 -1 143
 Width: 1595
 VWidth: 1559
@@ -5664,10 +5664,10 @@ SplineSet
  373 505 397 565 452 608 c 1xbe
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" ka.half ta
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0915.half u0924
 EndChar
 
-StartChar: ka_vir_ssa
+StartChar: u0915_u094D_u0937
 Encoding: 240 -1 144
 Width: 1321
 VWidth: 1559
@@ -5685,10 +5685,10 @@ Fore
 Refer: 145 -1 N 1 0 0 1 11 0 0
 Refer: 339 2366 N 1 0 0 1 784 0 0
 LCarets2: 2 0 0
-Ligature2: "'akhn' Akhand lookup 1-1" ka vir ssa
+Ligature2: "'akhn' Akhand lookup 1-1" u0915 u094D u0937
 EndChar
 
-StartChar: ka_vir_ssa.half
+StartChar: u0915_u094D_u0937.half
 Encoding: 241 -1 145
 Width: 962
 VWidth: 1559
@@ -5731,10 +5731,10 @@ SplineSet
  699 788 631 707 523 627 c 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" ka_vir_ssa vir
+Ligature2: "'half' Half Forms lookup 2-1" u0915_u094D_u0937 u094D
 EndChar
 
-StartChar: kha
+StartChar: u0916
 Encoding: 117 2326 146
 Width: 1589
 VWidth: 1559
@@ -5752,7 +5752,7 @@ Refer: 147 -1 N 1 0 0 1 0 -3 0
 Refer: 339 2366 N 1 0 0 1 1052 0 0
 EndChar
 
-StartChar: kha.half
+StartChar: u0916.half
 Encoding: 242 -1 147
 Width: 1264
 VWidth: 1559
@@ -5796,10 +5796,10 @@ SplineSet
  540 1015 l 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" kha vir
+Ligature2: "'half' Half Forms lookup 2-1" u0916 u094D
 EndChar
 
-StartChar: kha.vatu
+StartChar: u0916.vatu
 Encoding: 243 -1 148
 Width: 1526
 VWidth: 1559
@@ -5813,10 +5813,10 @@ Fore
 Refer: 149 -1 N 1 0 0 1 0 0 0
 Refer: 339 2366 N 1 0 0 1 989 0 0
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" kha ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u0916 u0930.alt
 EndChar
 
-StartChar: kha.half.vatu
+StartChar: u0916.half.vatu
 Encoding: 244 -1 149
 Width: 1187
 VWidth: 1559
@@ -5884,7 +5884,7 @@ Refer: 339 2366 N 1 0 0 1 717.334 0 2
 Refer: 152 -1 N 1 0 0 1 160.334 0 2
 EndChar
 
-StartChar: ga
+StartChar: u0917
 Encoding: 118 2327 151
 Width: 1188
 VWidth: 1559
@@ -5902,7 +5902,7 @@ Refer: 152 -1 N 1 0 0 1 0 0 0
 Refer: 339 2366 N 1 0 0 1 651 0 0
 EndChar
 
-StartChar: ga.half
+StartChar: u0917.half
 Encoding: 245 -1 152
 Width: 566
 VWidth: 1559
@@ -5930,11 +5930,11 @@ SplineSet
  311 1015 l 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" ga vir
-Ligature2: "'half' Half Forms lookup 2-1" gha vir
+Ligature2: "'half' Half Forms lookup 2-1" u0917 u094D
+Ligature2: "'half' Half Forms lookup 2-1" u0918 u094D
 EndChar
 
-StartChar: ghha
+StartChar: u095A
 Encoding: 180 2394 153
 Width: 1109
 VWidth: 1559
@@ -5949,7 +5949,7 @@ Refer: 154 -1 N 1 0 0 1 43 0 0
 Refer: 339 2366 N 1 0 0 1 654 0 0
 EndChar
 
-StartChar: ghha.half
+StartChar: u095A.half
 Encoding: 246 -1 154
 Width: 526
 VWidth: 1559
@@ -5965,7 +5965,7 @@ Refer: 317 2364 N 1 0 0 1 608 0 2
 Refer: 152 -1 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: ga.vatu
+StartChar: u0917.vatu
 Encoding: 247 -1 155
 Width: 1077
 VWidth: 1559
@@ -5979,10 +5979,10 @@ Fore
 Refer: 156 -1 N 1 0 0 1 0 0 0
 Refer: 339 2366 N 1 0 0 1 542 0 0
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" ga ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u0917 u0930.alt
 EndChar
 
-StartChar: ga.half.vatu
+StartChar: u0917.half.vatu
 Encoding: 248 -1 156
 Width: 711
 VWidth: 1559
@@ -6004,7 +6004,7 @@ EndSplineSet
 Refer: 152 -1 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: gha
+StartChar: u0918
 Encoding: 119 2328 157
 Width: 1159
 VWidth: 1559
@@ -6022,7 +6022,7 @@ Refer: 158 -1 N 1 0 0 1 39.6172 0 0
 Refer: 339 2366 N 1 0 0 1 727.617 0 0
 EndChar
 
-StartChar: gha.half
+StartChar: u0918.half
 Encoding: 249 -1 158
 Width: 810
 VWidth: 1559
@@ -6058,10 +6058,10 @@ SplineSet
  163 568 207 641 301 695 c 1xe8
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" gha vir
+Ligature2: "'half' Half Forms lookup 2-1" u0918 u094D
 EndChar
 
-StartChar: gha.vatu
+StartChar: u0918.vatu
 Encoding: 250 -1 159
 Width: 1032
 VWidth: 1559
@@ -6075,10 +6075,10 @@ Fore
 Refer: 160 -1 N 1 0 0 1 0 0 0
 Refer: 339 2366 N 1 0 0 1 702 0 0
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" gha ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u0918 u0930.alt
 EndChar
 
-StartChar: gha.half.vatu
+StartChar: u0918.half.vatu
 Encoding: 251 -1 160
 Width: 765
 VWidth: 1559
@@ -6118,7 +6118,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: nga
+StartChar: u0919
 Encoding: 120 2329 161
 Width: 1423
 VWidth: 1559
@@ -6142,7 +6142,7 @@ EndSplineSet
 Refer: 189 2337 N 1 0 0 1 -25 0 2
 EndChar
 
-StartChar: ca
+StartChar: u091A
 Encoding: 121 2330 162
 Width: 1251
 VWidth: 1559
@@ -6160,7 +6160,7 @@ Refer: 163 -1 N 1 0 0 1 -34.5381 0 0
 Refer: 339 2366 N 1 0 0 1 836.462 0 0
 EndChar
 
-StartChar: ca.half
+StartChar: u091A.half
 Encoding: 252 -1 163
 Width: 974
 VWidth: 1559
@@ -6193,10 +6193,10 @@ SplineSet
  718.466 304 850.732 370.88 1044.54 581.724 c 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" ca vir
+Ligature2: "'half' Half Forms lookup 2-1" u091A u094D
 EndChar
 
-StartChar: ca.vatu
+StartChar: u091A.vatu
 Encoding: 253 -1 164
 Width: 1196
 VWidth: 1559
@@ -6210,10 +6210,10 @@ Fore
 Refer: 165 -1 N 1 0 0 1 0 0 0
 Refer: 339 2366 N 1 0 0 1 870 0 0
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" ca ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u091A u0930.alt
 EndChar
 
-StartChar: ca.half.vatu
+StartChar: u091A.half.vatu
 Encoding: 254 -1 165
 Width: 977
 VWidth: 1559
@@ -6249,7 +6249,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: cha
+StartChar: u091B
 Encoding: 122 2331 166
 Width: 1419
 VWidth: 1559
@@ -6351,7 +6351,7 @@ Refer: 339 2366 N 1 0 0 1 899 0 2
 Refer: 170 -1 N 1 0 0 1 -31 0 2
 EndChar
 
-StartChar: ja
+StartChar: u091C
 Encoding: 123 2332 169
 Width: 1277
 VWidth: 1559
@@ -6369,7 +6369,7 @@ Refer: 170 -1 N 1 0 0 1 -31 0 0
 Refer: 339 2366 N 1 0 0 1 862 0 0
 EndChar
 
-StartChar: ja.half
+StartChar: u091C.half
 Encoding: 255 -1 170
 Width: 943
 VWidth: 1559
@@ -6401,11 +6401,11 @@ SplineSet
  696.729 500.314 644.836 634.389 509 757.956 c 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" ja vir
-Ligature2: "'half' Half Forms lookup 2-1" jha vir
+Ligature2: "'half' Half Forms lookup 2-1" u091C u094D
+Ligature2: "'half' Half Forms lookup 2-1" u091D u094D
 EndChar
 
-StartChar: za
+StartChar: u095B
 Encoding: 181 2395 171
 Width: 1338
 VWidth: 1559
@@ -6420,7 +6420,7 @@ Refer: 172 -1 N 1 0 0 1 -31 0 0
 Refer: 339 2366 N 1 0 0 1 883 0 0
 EndChar
 
-StartChar: za.half
+StartChar: u095B.half
 Encoding: 256 -1 172
 Width: 1103
 VWidth: 1559
@@ -6435,7 +6435,7 @@ Refer: 317 2364 N 1 0 0 1 772 -259 2
 Refer: 170 -1 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: ja.vatu
+StartChar: u091C.vatu
 Encoding: 257 -1 173
 Width: 1248
 VWidth: 1559
@@ -6449,10 +6449,10 @@ Fore
 Refer: 174 -1 N 1 0 0 1 0 0 0
 Refer: 339 2366 N 1 0 0 1 913 0 0
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" ja ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u091C u0930.alt
 EndChar
 
-StartChar: ja.half.vatu
+StartChar: u091C.half.vatu
 Encoding: 258 -1 174
 Width: 898
 VWidth: 1559
@@ -6473,7 +6473,7 @@ EndSplineSet
 Refer: 170 -1 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: ja_vir_nya
+StartChar: u091C_u094D_u091E
 Encoding: 259 -1 175
 Width: 1068
 VWidth: 1559
@@ -6488,10 +6488,10 @@ Fore
 Refer: 176 -1 N 1 0 0 1 0 0 0
 Refer: 339 2366 N 1 0 0 1 737 0 0
 LCarets2: 2 0 0
-Ligature2: "'akhn' Akhand lookup 1-1" ja vir nya
+Ligature2: "'akhn' Akhand lookup 1-1" u091C u094D u091E
 EndChar
 
-StartChar: ja_vir_nya.half
+StartChar: u091C_u094D_u091E.half
 Encoding: 260 -1 176
 Width: 766
 VWidth: 1559
@@ -6528,10 +6528,10 @@ SplineSet
 348 1015 m 1024
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" ja_vir_nya vir
+Ligature2: "'half' Half Forms lookup 2-1" u091C_u094D_u091E u094D
 EndChar
 
-StartChar: jha
+StartChar: u091D
 Encoding: 124 2333 177
 Width: 1429
 VWidth: 1559
@@ -6547,10 +6547,10 @@ Back
 Fore
 Refer: 339 2366 N 1 0 0 1 892 0 0
 Refer: 178 -1 N 1 0 0 1 0 0 0
-Substitution2: "'locl' Jha to nep" jha.nep
+Substitution2: "'locl' Jha to nep" u091D.nep
 EndChar
 
-StartChar: jha.half
+StartChar: u091D.half
 Encoding: 261 -1 178
 Width: 1019
 VWidth: 1559
@@ -6606,10 +6606,10 @@ SplineSet
  879 453 l 1x0f80
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" jha vir
+Ligature2: "'half' Half Forms lookup 2-1" u091D u094D
 EndChar
 
-StartChar: jha.vatu
+StartChar: u091D.vatu
 Encoding: 262 -1 179
 Width: 1468
 VWidth: 1559
@@ -6623,10 +6623,10 @@ Fore
 Refer: 180 -1 N 1 0 0 1 0 0 2
 Refer: 339 2366 N 1 0 0 1 933 3 0
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" jha ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u091D u0930.alt
 EndChar
 
-StartChar: jha.half.vatu
+StartChar: u091D.half.vatu
 Encoding: 263 -1 180
 Width: 916
 VWidth: 1559
@@ -6647,7 +6647,7 @@ EndSplineSet
 Refer: 178 -1 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: nya
+StartChar: u091E
 Encoding: 125 2334 181
 Width: 1238
 VWidth: 1559
@@ -6666,7 +6666,7 @@ Refer: 182 -1 N 1 0 0 1 -27.4697 0 0
 Refer: 339 2366 N 1 0 0 1 823.53 0 0
 EndChar
 
-StartChar: nya.half
+StartChar: u091E.half
 Encoding: 264 -1 182
 Width: 947
 VWidth: 1559
@@ -6700,10 +6700,10 @@ SplineSet
  714.729 822.376 879.47 753 898.47 555 c 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" nya vir
+Ligature2: "'half' Half Forms lookup 2-1" u091E u094D
 EndChar
 
-StartChar: tta
+StartChar: u091F
 Encoding: 126 2335 183
 Width: 1227
 VWidth: 1559
@@ -6740,7 +6740,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: tta_vir_tta
+StartChar: u091F_u094D_u091F
 Encoding: 265 -1 184
 Width: 886
 VWidth: 1559
@@ -6785,10 +6785,10 @@ SplineSet
  692.591 -1.42871 778.972 45.8281 779 45.8398 c 1xec
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" tta vir tta
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u091F u094D u091F
 EndChar
 
-StartChar: tta_vir_ttha
+StartChar: u091F_u094D_u0920
 Encoding: 266 -1 185
 Width: 956
 VWidth: 1559
@@ -6834,10 +6834,10 @@ SplineSet
  755 1015 l 1
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" tta vir ttha
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u091F u094D u0920
 EndChar
 
-StartChar: ttha
+StartChar: u0920
 Encoding: 127 2336 186
 Width: 1292
 VWidth: 1559
@@ -6875,7 +6875,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ttha_vir_ttha
+StartChar: u0920_u094D_u0920
 Encoding: 267 -1 187
 Width: 855
 VWidth: 1559
@@ -6925,7 +6925,7 @@ SplineSet
  549.453 592.591 660.225 648.914 660.225 750.32 c 0
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" ttha vir ttha
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0920 u094D u0920
 EndChar
 
 StartChar: u097E
@@ -6949,7 +6949,7 @@ EndSplineSet
 Refer: 189 2337 N 1 0 0 1 0 0 0
 EndChar
 
-StartChar: dda
+StartChar: u0921
 Encoding: 128 2337 189
 Width: 1189
 VWidth: 1559
@@ -6995,7 +6995,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: dddha
+StartChar: u095C
 Encoding: 182 2396 190
 Width: 1189
 VWidth: 1559
@@ -7010,7 +7010,7 @@ Refer: 189 2337 N 1 0 0 1 0 0 2
 Refer: 317 2364 N 1 0 0 1 882 -314 2
 EndChar
 
-StartChar: dda_vir_dda
+StartChar: u0921_u094D_u0921
 Encoding: 268 -1 191
 Width: 920
 VWidth: 1559
@@ -7073,10 +7073,10 @@ SplineSet
  583 744 611 749 630 749 c 0
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" dda vir dda
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0921 u094D u0921
 EndChar
 
-StartChar: dda_vir_ddha
+StartChar: u0921_u094D_u0922
 Encoding: 269 -1 192
 Width: 922
 VWidth: 1559
@@ -7138,10 +7138,10 @@ SplineSet
  476 -61 486 -101 512 -151 c 1
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" dda vir ddha
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0921 u094D u0922
 EndChar
 
-StartChar: ddha
+StartChar: u0922
 Encoding: 129 2338 193
 Width: 1209
 VWidth: 1559
@@ -7184,7 +7184,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: rha
+StartChar: u095D
 Encoding: 183 2397 194
 Width: 1209
 VWidth: 1559
@@ -7199,7 +7199,7 @@ Refer: 317 2364 N 1 0 0 1 863 -312 2
 Refer: 193 2338 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: nna
+StartChar: u0923
 Encoding: 130 2339 195
 Width: 1327
 VWidth: 1559
@@ -7218,7 +7218,7 @@ Refer: 196 -1 N 1 0 0 1 51 0 0
 Refer: 339 2366 N 1 0 0 1 912 0 0
 EndChar
 
-StartChar: nna.half
+StartChar: u0923.half
 Encoding: 270 -1 196
 Width: 792
 VWidth: 1559
@@ -7249,10 +7249,10 @@ SplineSet
  244 525 l 2
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" nna vir
+Ligature2: "'half' Half Forms lookup 2-1" u0923 u094D
 EndChar
 
-StartChar: ta
+StartChar: u0924
 Encoding: 131 2340 197
 Width: 1103
 VWidth: 1559
@@ -7270,7 +7270,7 @@ Refer: 198 -1 N 1 0 0 1 38 0 0
 Refer: 339 2366 N 1 0 0 1 688 0 0
 EndChar
 
-StartChar: ta.half
+StartChar: u0924.half
 Encoding: 271 -1 198
 Width: 613
 VWidth: 1559
@@ -7299,10 +7299,10 @@ SplineSet
  160 248 122 410 122 533 c 0
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" ta vir
+Ligature2: "'half' Half Forms lookup 2-1" u0924 u094D
 EndChar
 
-StartChar: ta.vatu
+StartChar: u0924.vatu
 Encoding: 272 -1 199
 Width: 968
 VWidth: 1559
@@ -7316,10 +7316,10 @@ Fore
 Refer: 200 -1 N 1 0 0 1 0 0 0
 Refer: 339 2366 N 1 0 0 1 640 0 0
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" ta ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u0924 u0930.alt
 EndChar
 
-StartChar: ta.half.vatu
+StartChar: u0924.half.vatu
 Encoding: 273 -1 200
 Width: 842
 VWidth: 1559
@@ -7349,7 +7349,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ta_vir_ta
+StartChar: u0924_u094D_u0924
 Encoding: 274 -1 201
 Width: 1155
 VWidth: 1559
@@ -7363,10 +7363,10 @@ Fore
 Refer: 202 -1 N 1 0 0 1 0 0 0
 Refer: 339 2366 N 1 0 0 1 719 0 0
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" ta.half ta
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0924.half u0924
 EndChar
 
-StartChar: ta_vir_ta.half
+StartChar: u0924_u094D_u0924.half
 Encoding: 275 -1 202
 Width: 873
 VWidth: 1559
@@ -7398,7 +7398,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: tha
+StartChar: u0925
 Encoding: 132 2341 203
 Width: 1168
 VWidth: 1559
@@ -7416,7 +7416,7 @@ Refer: 204 -1 N 1 0 0 1 10 -10 0
 Refer: 339 2366 N 1 0 0 1 753 0 0
 EndChar
 
-StartChar: tha.half
+StartChar: u0925.half
 Encoding: 276 -1 204
 Width: 984
 VWidth: 1559
@@ -7449,10 +7449,10 @@ SplineSet
  419.129 754.249 437.422 756.795 457.5 762.5 c 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" tha vir
+Ligature2: "'half' Half Forms lookup 2-1" u0925 u094D
 EndChar
 
-StartChar: tha.vatu
+StartChar: u0925.vatu
 Encoding: 277 -1 205
 Width: 1098
 VWidth: 1559
@@ -7466,10 +7466,10 @@ Fore
 Refer: 206 -1 N 1 0 0 1 19 0 0
 Refer: 339 2366 N 1 0 0 1 773 0 0
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" tha ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u0925 u0930.alt
 EndChar
 
-StartChar: tha.half.vatu
+StartChar: u0925.half.vatu
 Encoding: 278 -1 206
 Width: 953
 VWidth: 1559
@@ -7490,7 +7490,7 @@ EndSplineSet
 Refer: 204 -1 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: da
+StartChar: u0926
 Encoding: 133 2342 207
 Width: 1014
 VWidth: 1559
@@ -7533,7 +7533,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: da_rvocalicmatra
+StartChar: u0926_u0943
 Encoding: 279 -1 208
 Width: 1046
 VWidth: 1559
@@ -7580,7 +7580,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: da.vatu
+StartChar: u0926.vatu
 Encoding: 280 -1 209
 Width: 1014
 VWidth: 1559
@@ -7601,10 +7601,10 @@ SplineSet
 EndSplineSet
 Refer: 207 2342 N 1 0 0 1 0 0 2
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" da ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u0926 u0930.alt
 EndChar
 
-StartChar: da_vir_da
+StartChar: u0926_u094D_u0926
 Encoding: 281 -1 210
 Width: 998
 VWidth: 1559
@@ -7650,10 +7650,10 @@ SplineSet
  881 118 855 88 802 60 c 1xf6
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" da vir da
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0926 u094D u0926
 EndChar
 
-StartChar: da_vir_dha
+StartChar: u0926_u094D_u0927
 Encoding: 282 -1 211
 Width: 1452
 VWidth: 1559
@@ -7712,10 +7712,10 @@ SplineSet
  303.294 358.474 319.631 325.303 361 296 c 1
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" da vir dha
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0926 u094D u0927
 EndChar
 
-StartChar: da_vir_ma
+StartChar: u0926_u094D_u092E
 Encoding: 283 -1 212
 Width: 1253
 VWidth: 1559
@@ -7762,10 +7762,10 @@ SplineSet
  716 1015 l 1
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" da vir ma
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0926 u094D u092E
 EndChar
 
-StartChar: da_vir_ya
+StartChar: u0926_u094D_u092F
 Encoding: 284 -1 213
 Width: 1172
 VWidth: 1559
@@ -7809,10 +7809,10 @@ SplineSet
  899 1150 l 1
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" da vir ya
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0926 u094D u092F
 EndChar
 
-StartChar: da_vir_va
+StartChar: u0926_u094D_u0935
 Encoding: 285 -1 214
 Width: 994
 VWidth: 1559
@@ -7860,10 +7860,10 @@ SplineSet
  120 685 184 867 536 867 c 2
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" da vir va
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0926 u094D u0935
 EndChar
 
-StartChar: dha
+StartChar: u0927
 Encoding: 134 2343 215
 Width: 1089
 VWidth: 1559
@@ -7882,7 +7882,7 @@ Refer: 216 -1 N 1 0 0 1 10 0 0
 Refer: 339 2366 N 1 0 0 1 674 0 0
 EndChar
 
-StartChar: dha.half
+StartChar: u0927.half
 Encoding: 286 -1 216
 Width: 888
 VWidth: 1559
@@ -7924,10 +7924,10 @@ SplineSet
  465.111 1041.74 426.486 1056.86 387.323 1056.86 c 0
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" dha vir
+Ligature2: "'half' Half Forms lookup 2-1" u0927 u094D
 EndChar
 
-StartChar: na
+StartChar: u0928
 Encoding: 135 2344 217
 Width: 1047
 VWidth: 1559
@@ -7946,7 +7946,7 @@ Refer: 218 -1 N 1 0 0 1 41 0 2
 Refer: 339 2366 N 1 0 0 1 632 0 0
 EndChar
 
-StartChar: na.half
+StartChar: u0928.half
 Encoding: 287 -1 218
 Width: 613
 VWidth: 1559
@@ -7975,10 +7975,10 @@ SplineSet
  267 347 119 564 119 610 c 0
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" na vir
+Ligature2: "'half' Half Forms lookup 2-1" u0928 u094D
 EndChar
 
-StartChar: na.vatu
+StartChar: u0928.vatu
 Encoding: 288 -1 219
 Width: 935
 VWidth: 1559
@@ -7992,10 +7992,10 @@ Fore
 Refer: 220 -1 S 1 0 0 1 0 0 0
 Refer: 339 2366 N 1 0 0 1 611 0 0
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" na ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u0928 u0930.alt
 EndChar
 
-StartChar: na.half.vatu
+StartChar: u0928.half.vatu
 Encoding: 289 -1 220
 Width: 810
 VWidth: 1559
@@ -8028,7 +8028,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: na_vir_na
+StartChar: u0928_u094D_u0928
 Encoding: 290 -1 221
 Width: 1019
 VWidth: 1559
@@ -8042,10 +8042,10 @@ Fore
 Refer: 222 -1 N 1 0 0 1 0 0 0
 Refer: 339 2366 N 1 0 0 1 691 0 0
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" na.half na
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0928.half u0928
 EndChar
 
-StartChar: na_vir_na.half
+StartChar: u0928_u094D_u0928.half
 Encoding: 291 -1 222
 Width: 890
 VWidth: 1559
@@ -8078,10 +8078,10 @@ SplineSet
  122 736 184 766 306 766 c 0xa0
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" na_vir_na vir
+Ligature2: "'half' Half Forms lookup 2-1" u0928_u094D_u0928 u094D
 EndChar
 
-StartChar: nnna
+StartChar: u0929
 Encoding: 136 2345 223
 Width: 1025
 VWidth: 1559
@@ -8098,7 +8098,7 @@ Refer: 339 2366 N 1 0 0 1 610 0 2
 Refer: 224 -1 N 1 0 0 1 41 0 2
 EndChar
 
-StartChar: nnna.half
+StartChar: u0929.half
 Encoding: 292 -1 224
 Width: 570
 VWidth: 1559
@@ -8114,7 +8114,7 @@ Refer: 317 2364 S 1 0 0 1 561 0 2
 Refer: 218 -1 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: pa
+StartChar: u092A
 Encoding: 137 2346 225
 Width: 972
 VWidth: 1559
@@ -8132,7 +8132,7 @@ Refer: 226 -1 N 1 0 0 1 38 0 0
 Refer: 339 2366 N 1 0 0 1 557 0 0
 EndChar
 
-StartChar: pa.half
+StartChar: u092A.half
 Encoding: 293 -1 226
 Width: 705
 VWidth: 1559
@@ -8160,10 +8160,10 @@ SplineSet
  460 439 578 468 692 588 c 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" pa vir
+Ligature2: "'half' Half Forms lookup 2-1" u092A u094D
 EndChar
 
-StartChar: pa.vatu
+StartChar: u092A.vatu
 Encoding: 294 -1 227
 Width: 827
 VWidth: 1559
@@ -8177,10 +8177,10 @@ Fore
 Refer: 228 -1 N 1 0 0 1 0 0 0
 Refer: 339 2366 N 1 0 0 1 503 0 0
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" pa ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u092A u0930.alt
 EndChar
 
-StartChar: pa.half.vatu
+StartChar: u092A.half.vatu
 Encoding: 295 -1 228
 Width: 706
 VWidth: 1559
@@ -8210,7 +8210,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: pha.half
+StartChar: u092B.half
 Encoding: 296 -1 229
 Width: 839
 VWidth: 1559
@@ -8247,10 +8247,10 @@ SplineSet
  439 410 525 462 627 545 c 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" pha vir
+Ligature2: "'half' Half Forms lookup 2-1" u092B u094D
 EndChar
 
-StartChar: fa.half
+StartChar: u095E.half
 Encoding: 297 -1 230
 Width: 1105
 VWidth: 1559
@@ -8795,7 +8795,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: llvocalicvowel
+StartChar: u0961
 Encoding: 187 2401 241
 Width: 1613
 VWidth: 1559
@@ -8847,7 +8847,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: lvocalicvowel
+StartChar: u090C
 Encoding: 107 2316 242
 Width: 1480
 VWidth: 1560
@@ -8894,7 +8894,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ka_vir_ka
+StartChar: u0915_u094D_u0915
 Encoding: 298 -1 243
 Width: 1341
 VWidth: 1559
@@ -8952,10 +8952,10 @@ SplineSet
  419.903 168 532.903 269 634.903 369 c 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" ka.half ka
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0915.half u0915
 EndChar
 
-StartChar: ka_vir_va
+StartChar: u0915_u094D_u0935
 Encoding: 299 -1 244
 Width: 1331
 VWidth: 1559
@@ -9006,7 +9006,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ddha_vir_ddha
+StartChar: u0922_u094D_u0922
 Encoding: 300 -1 245
 Width: 837
 VWidth: 1559
@@ -9064,10 +9064,10 @@ SplineSet
  514.918 560.301 509.392 560.529 503.748 561 c 1
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" ddha vir ddha
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0922 u094D u0922
 EndChar
 
-StartChar: ka.vatu.alt
+StartChar: u0915.vatu.alt
 Encoding: 301 -1 246
 Width: 1532
 VWidth: 1559
@@ -9109,7 +9109,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: da_vir_gha
+StartChar: u0926_u094D_u0918
 Encoding: 302 -1 247
 Width: 1240
 VWidth: 1559
@@ -9162,10 +9162,10 @@ SplineSet
  118 345 191 437 301 464 c 1
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" da vir gha
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0926 u094D u0918
 EndChar
 
-StartChar: da_vir_ba
+StartChar: u0926_u094D_u092C
 Encoding: 303 -1 248
 Width: 1000
 VWidth: 1559
@@ -9216,10 +9216,10 @@ SplineSet
  453 -137 471 -135 497 -129 c 1
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" da vir ba
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0926 u094D u092C
 EndChar
 
-StartChar: da_vir_bha
+StartChar: u0926_u094D_u092D
 Encoding: 304 -1 249
 Width: 1452
 VWidth: 1559
@@ -9273,10 +9273,10 @@ SplineSet
  220 356 265 298 377 298 c 0
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" da vir bha
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0926 u094D u092D
 EndChar
 
-StartChar: dda_vir_tta
+StartChar: u0921_u094D_u091F
 Encoding: 305 -1 250
 Width: 863
 VWidth: 1559
@@ -9331,10 +9331,10 @@ SplineSet
  670.4 1015 l 1xf580
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" dda vir tta
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0921 u094D u091F
 EndChar
 
-StartChar: anudatta.alt
+StartChar: u0952.alt
 Encoding: 306 -1 251
 Width: 26
 VWidth: 1559
@@ -9353,7 +9353,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: udatta
+StartChar: u0951
 Encoding: 173 2385 252
 Width: 489
 VWidth: 1559
@@ -9373,7 +9373,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: anudatta
+StartChar: u0952
 Encoding: 174 2386 253
 Width: 0
 VWidth: 1559
@@ -9431,7 +9431,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: abbreviationsign
+StartChar: u0970
 Encoding: 202 2416 256
 Width: 736
 VWidth: 1559
@@ -9456,7 +9456,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ssa_vir_tta_vir_va
+StartChar: u0937_u094D_u091F_u094D_u0935
 Encoding: 307 -1 257
 Width: 1027
 VWidth: 1559
@@ -9510,10 +9510,10 @@ SplineSet
  522 -179 680 -82 710 94 c 1
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' thripple consonant clustors" ssa_vir_tta vir va
+Ligature2: "'pres' thripple consonant clustors" u0937_u094D_u091F u094D u0935
 EndChar
 
-StartChar: ha_vir_la
+StartChar: u0939_u094D_u0932
 Encoding: 308 -1 258
 Width: 1214
 VWidth: 1559
@@ -9566,10 +9566,10 @@ SplineSet
  185 605 133 675 133 762 c 0xbde0
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" ha.half la
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0939.half u0932
 EndChar
 
-StartChar: ha_vir_va
+StartChar: u0939_u094D_u0935
 Encoding: 309 -1 259
 Width: 1219
 VWidth: 1559
@@ -9619,10 +9619,10 @@ SplineSet
  723 404 651 334 651 272 c 0
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" ha.half va
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0939.half u0935
 EndChar
 
-StartChar: sha.half.alt
+StartChar: u0936.half.alt
 Encoding: 310 -1 260
 Width: 1305
 VWidth: 1559
@@ -9653,7 +9653,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: pha
+StartChar: u092B
 Encoding: 138 2347 261
 Width: 1438
 VWidth: 1559
@@ -9697,7 +9697,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: fa
+StartChar: u095E
 Encoding: 184 2398 262
 Width: 1438
 VWidth: 1559
@@ -9712,7 +9712,7 @@ Refer: 317 2364 N 1 0 0 1 544 0 2
 Refer: 261 2347 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: pha.vatu
+StartChar: u092B.vatu
 Encoding: 311 -1 263
 Width: 1579
 VWidth: 1559
@@ -9754,7 +9754,7 @@ SplineSet
  489 339 l 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" pha ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u092B u0930.alt
 EndChar
 
 StartChar: u097F
@@ -9778,7 +9778,7 @@ EndSplineSet
 Refer: 265 2348 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: ba
+StartChar: u092C
 Encoding: 139 2348 265
 Width: 1108
 VWidth: 1559
@@ -9796,7 +9796,7 @@ Refer: 266 -1 N 1 0 0 1 39 0 0
 Refer: 339 2366 N 1 0 0 1 641 0 0
 EndChar
 
-StartChar: ba.half
+StartChar: u092C.half
 Encoding: 312 -1 266
 Width: 805
 VWidth: 1559
@@ -9832,10 +9832,10 @@ SplineSet
  909 1015 l 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" ba vir
+Ligature2: "'half' Half Forms lookup 2-1" u092C u094D
 EndChar
 
-StartChar: ba.vatu
+StartChar: u092C.vatu
 Encoding: 313 -1 267
 Width: 918
 VWidth: 1559
@@ -9849,10 +9849,10 @@ Fore
 Refer: 268 -1 N 1 0 0 1 0 0 0
 Refer: 339 2366 N 1 0 0 1 589 0 0
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" ba ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u092C u0930.alt
 EndChar
 
-StartChar: ba.half.vatu
+StartChar: u092C.half.vatu
 Encoding: 314 -1 268
 Width: 694
 VWidth: 1559
@@ -9891,7 +9891,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: bha
+StartChar: u092D
 Encoding: 140 2349 269
 Width: 1213
 VWidth: 1559
@@ -9909,7 +9909,7 @@ Refer: 270 -1 N 1 0 0 1 10 0 0
 Refer: 339 2366 N 1 0 0 1 798 0 0
 EndChar
 
-StartChar: bha.half
+StartChar: u092D.half
 Encoding: 315 -1 270
 Width: 942
 VWidth: 1559
@@ -9948,10 +9948,10 @@ SplineSet
  247 894 309 804 461 747 c 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" bha vir
+Ligature2: "'half' Half Forms lookup 2-1" u092D u094D
 EndChar
 
-StartChar: bha.vatu
+StartChar: u092D.vatu
 Encoding: 316 -1 271
 Width: 1115
 VWidth: 1559
@@ -9965,10 +9965,10 @@ Fore
 Refer: 272 -1 N 1 0 0 1 0 0 0
 Refer: 339 2366 N 1 0 0 1 788 0 0
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" bha ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u092D u0930.alt
 EndChar
 
-StartChar: bha.half.vatu
+StartChar: u092D.half.vatu
 Encoding: 317 -1 272
 Width: 924
 VWidth: 1559
@@ -9990,7 +9990,7 @@ EndSplineSet
 Refer: 270 -1 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: ma
+StartChar: u092E
 Encoding: 141 2350 273
 Width: 1207
 VWidth: 1559
@@ -10009,7 +10009,7 @@ Refer: 274 -1 N 1 0 0 1 39 0 0
 Refer: 339 2366 N 1 0 0 1 792 0 0
 EndChar
 
-StartChar: ma.half
+StartChar: u092E.half
 Encoding: 318 -1 274
 Width: 793
 VWidth: 1559
@@ -10041,10 +10041,10 @@ SplineSet
  420 427 l 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" ma vir
+Ligature2: "'half' Half Forms lookup 2-1" u092E u094D
 EndChar
 
-StartChar: ma.vatu
+StartChar: u092E.vatu
 Encoding: 319 -1 275
 Width: 1215
 VWidth: 1559
@@ -10058,10 +10058,10 @@ Fore
 Refer: 276 -1 N 1 0 0 1 0 0 0
 Refer: 339 2366 S 1 0 0 1 678 0 0
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" ma ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u092E u0930.alt
 EndChar
 
-StartChar: ma.half.vatu
+StartChar: u092E.half.vatu
 Encoding: 320 -1 276
 Width: 747
 VWidth: 1559
@@ -10082,7 +10082,7 @@ EndSplineSet
 Refer: 274 -1 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: yya
+StartChar: u095F
 Encoding: 185 2399 277
 Width: 1106
 VWidth: 1559
@@ -10097,7 +10097,7 @@ Refer: 280 2351 N 1 0 0 1 0 0 2
 Refer: 317 2364 N 1 0 0 1 624 -26 0
 EndChar
 
-StartChar: yya.half
+StartChar: u095F.half
 Encoding: 321 -1 278
 Width: 682
 VWidth: 1559
@@ -10133,7 +10133,7 @@ EndSplineSet
 Refer: 280 2351 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: ya
+StartChar: u092F
 Encoding: 142 2351 280
 Width: 1066
 VWidth: 1559
@@ -10152,7 +10152,7 @@ Refer: 281 -1 N 1 0 0 1 -32 0 0
 Refer: 339 2366 N 1 0 0 1 651 0 0
 EndChar
 
-StartChar: ya.half
+StartChar: u092F.half
 Encoding: 322 -1 281
 Width: 798
 VWidth: 1559
@@ -10182,10 +10182,10 @@ SplineSet
  287 384 394 368 455 368 c 0
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" ya vir
+Ligature2: "'half' Half Forms lookup 2-1" u092F u094D
 EndChar
 
-StartChar: ya.vatu
+StartChar: u092F.vatu
 Encoding: 323 -1 282
 Width: 654
 VWidth: 1559
@@ -10200,10 +10200,10 @@ Refer: 449 -1 N 1 0 0 1 849 3 2
 Refer: 339 2366 N 1 0 0 1 642 0 2
 Refer: 281 -1 N 1 0 0 1 0 0 2
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" ya ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u092F u0930.alt
 EndChar
 
-StartChar: ya.half.vatu
+StartChar: u092F.half.vatu
 Encoding: 324 -1 283
 Width: 770
 VWidth: 1559
@@ -10234,7 +10234,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ya.alt
+StartChar: u092F.alt
 Encoding: 325 -1 284
 Width: 1612
 VWidth: 1559
@@ -10249,7 +10249,7 @@ Refer: 285 -1 N 1 0 0 1 0 0 2
 Refer: 339 2366 N 1 0 0 1 1075 0 2
 EndChar
 
-StartChar: ya.half.alt
+StartChar: u092F.half.alt
 Encoding: 326 -1 285
 Width: 1210
 VWidth: 1559
@@ -10282,7 +10282,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ra_vir_zwj
+StartChar: u0930_u094D_u200D
 Encoding: 327 -1 286
 Width: 652
 VWidth: 1559
@@ -10308,7 +10308,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ra
+StartChar: u0930
 Encoding: 143 2352 287
 Width: 834
 VWidth: 1559
@@ -10341,7 +10341,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: rra
+StartChar: u0931
 Encoding: 144 2353 288
 Width: 834
 VWidth: 1559
@@ -10356,7 +10356,7 @@ Refer: 317 2364 N 1 0 0 1 449 -404 2
 Refer: 287 2352 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: ra_umatra
+StartChar: u0930_u0941
 Encoding: 328 -1 289
 Width: 1142
 VWidth: 1559
@@ -10393,10 +10393,10 @@ SplineSet
  691 668 544 582 519 562 c 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'blws' ru ruu and hR-1" ra umatra
+Ligature2: "'blws' ru ruu and hR-1" u0930 u0941
 EndChar
 
-StartChar: ra_uumatra
+StartChar: u0930_u0942
 Encoding: 329 -1 290
 Width: 1458
 VWidth: 1559
@@ -10436,10 +10436,10 @@ SplineSet
  525 856 524 925 522 1015 c 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'blws' ru ruu and hR-1" ra uumatra
+Ligature2: "'blws' ru ruu and hR-1" u0930 u0942
 EndChar
 
-StartChar: la
+StartChar: u0932
 Encoding: 145 2354 291
 Width: 1403
 VWidth: 1559
@@ -10458,7 +10458,7 @@ Refer: 292 -1 N 1 0 0 1 36 0 0
 Refer: 339 2366 N 1 0 0 1 988 0 0
 EndChar
 
-StartChar: la.half
+StartChar: u0932.half
 Encoding: 330 -1 292
 Width: 1061
 VWidth: 1559
@@ -10493,10 +10493,10 @@ SplineSet
  1000 838 1057 823 1101 797 c 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" la vir
+Ligature2: "'half' Half Forms lookup 2-1" u0932 u094D
 EndChar
 
-StartChar: lla.half
+StartChar: u0933.half
 Encoding: 331 -1 293
 Width: 1507
 VWidth: 1559
@@ -10535,10 +10535,10 @@ SplineSet
  378 642 244 519 244 358 c 0
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" lla vir
+Ligature2: "'half' Half Forms lookup 2-1" u0933 u094D
 EndChar
 
-StartChar: lla
+StartChar: u0933
 Encoding: 146 2355 294
 Width: 1593
 VWidth: 1559
@@ -10582,7 +10582,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: llla
+StartChar: u0934
 Encoding: 147 2356 295
 Width: 1593
 VWidth: 1559
@@ -10597,7 +10597,7 @@ Refer: 294 2355 N 1 0 0 1 0 0 2
 Refer: 317 2364 N 1 0 0 1 1004 -227 2
 EndChar
 
-StartChar: va
+StartChar: u0935
 Encoding: 148 2357 296
 Width: 1170
 VWidth: 1559
@@ -10616,7 +10616,7 @@ Refer: 297 -1 N 1 0 0 1 41 0 0
 Refer: 339 2366 N 1 0 0 1 675 0 0
 EndChar
 
-StartChar: va.half
+StartChar: u0935.half
 Encoding: 332 -1 297
 Width: 846
 VWidth: 1559
@@ -10647,10 +10647,10 @@ SplineSet
  677.998 1015 l 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" va vir
+Ligature2: "'half' Half Forms lookup 2-1" u0935 u094D
 EndChar
 
-StartChar: sha
+StartChar: u0936
 Encoding: 149 2358 298
 Width: 1325
 VWidth: 1559
@@ -10669,7 +10669,7 @@ Refer: 299 -1 N 1 0 0 1 39 0 0
 Refer: 339 2366 N 1 0 0 1 910 0 0
 EndChar
 
-StartChar: sha.half
+StartChar: u0936.half
 Encoding: 333 -1 299
 Width: 919
 VWidth: 1559
@@ -10707,10 +10707,10 @@ SplineSet
  672 884 622 1015 486 1015 c 0
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" sha vir
+Ligature2: "'half' Half Forms lookup 2-1" u0936 u094D
 EndChar
 
-StartChar: sha_vir_va
+StartChar: u0936_u094D_u0935
 Encoding: 334 -1 300
 Width: 1376
 VWidth: 1559
@@ -10724,10 +10724,10 @@ Fore
 Refer: 339 2366 N 1 0 0 1 839 0 2
 Refer: 301 -1 N 1 0 0 1 -61 0 2
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" sha.half va
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0936.half u0935
 EndChar
 
-StartChar: sha_vir_va.half
+StartChar: u0936_u094D_u0935.half
 Encoding: 335 -1 301
 Width: 1092
 VWidth: 1559
@@ -10767,7 +10767,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: sha.vatu
+StartChar: u0936.vatu
 Encoding: 336 -1 302
 Width: 1446
 VWidth: 1559
@@ -10781,10 +10781,10 @@ Fore
 Refer: 339 2366 N 1 0 0 1 909 0 2
 Refer: 303 -1 N 1 0 0 1 -29 0 2
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" sha ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u0936 u0930.alt
 EndChar
 
-StartChar: sha.half.vatu
+StartChar: u0936.half.vatu
 Encoding: 337 -1 303
 Width: 1105
 VWidth: 1559
@@ -10818,7 +10818,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ssa
+StartChar: u0937
 Encoding: 150 2359 304
 Width: 987
 VWidth: 1559
@@ -10837,7 +10837,7 @@ Refer: 305 -1 N 1 0 0 1 40 0 0
 Refer: 339 2366 N 1 0 0 1 572 0 0
 EndChar
 
-StartChar: ssa.half
+StartChar: u0937.half
 Encoding: 338 -1 305
 Width: 688
 VWidth: 1559
@@ -10868,10 +10868,10 @@ SplineSet
  256 905 l 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" ssa vir
+Ligature2: "'half' Half Forms lookup 2-1" u0937 u094D
 EndChar
 
-StartChar: sa
+StartChar: u0938
 Encoding: 151 2360 306
 Width: 1203
 VWidth: 1559
@@ -10890,7 +10890,7 @@ Refer: 307 -1 N 1 0 0 1 40 0 0
 Refer: 339 2366 N 1 0 0 1 788 0 0
 EndChar
 
-StartChar: sa.half
+StartChar: u0938.half
 Encoding: 339 -1 307
 Width: 856
 VWidth: 1559
@@ -10927,10 +10927,10 @@ SplineSet
  661.305 542.872 773.443 577.005 932 695 c 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" sa vir
+Ligature2: "'half' Half Forms lookup 2-1" u0938 u094D
 EndChar
 
-StartChar: sa.vatu
+StartChar: u0938.vatu
 Encoding: 340 -1 308
 Width: 1278
 VWidth: 1559
@@ -10944,10 +10944,10 @@ Fore
 Refer: 339 2366 N 1 0 0 1 740 0 2
 Refer: 309 -1 N 1 0 0 1 0 0 2
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" sa ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u0938 u0930.alt
 EndChar
 
-StartChar: sa.half.vatu
+StartChar: u0938.half.vatu
 Encoding: 341 -1 309
 Width: 942
 VWidth: 1559
@@ -10968,7 +10968,7 @@ EndSplineSet
 Refer: 307 -1 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: ha.half
+StartChar: u0939.half
 Encoding: 342 -1 310
 Width: 1013
 VWidth: 1559
@@ -11010,10 +11010,10 @@ SplineSet
  124 811 217 915 389 915 c 2xfa
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" ha vir
+Ligature2: "'half' Half Forms lookup 2-1" u0939 u094D
 EndChar
 
-StartChar: ha
+StartChar: u0939
 Encoding: 152 2361 311
 Width: 1043
 VWidth: 1559
@@ -11058,7 +11058,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ha_rvocalicmatra
+StartChar: u0939_u0943
 Encoding: 343 -1 312
 Width: 1062
 VWidth: 1559
@@ -11111,10 +11111,10 @@ SplineSet
  442.784 706.32 328.349 660.057 260 590 c 1xf7
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'blws' ru ruu and hR-1" ha rvocalicmatra
+Ligature2: "'blws' ru ruu and hR-1" u0939 u0943
 EndChar
 
-StartChar: ha.vatu
+StartChar: u0939.vatu
 Encoding: 344 -1 313
 Width: 1043
 VWidth: 1559
@@ -11134,10 +11134,10 @@ SplineSet
 EndSplineSet
 Refer: 311 2361 N 1 0 0 1 0 0 2
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" ha ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u0939 u0930.alt
 EndChar
 
-StartChar: ha_vir_ma
+StartChar: u0939_u094D_u092E
 Encoding: 345 -1 314
 Width: 1376
 VWidth: 1559
@@ -11188,10 +11188,10 @@ SplineSet
  773.118 422 l 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" ha.half ma
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0939.half u092E
 EndChar
 
-StartChar: ha_vir_ya
+StartChar: u0939_u094D_u092F
 Encoding: 346 -1 315
 Width: 1333
 VWidth: 1559
@@ -11240,10 +11240,10 @@ SplineSet
  1210 1015 l 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" ha.half ya
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0939.half u092F
 EndChar
 
-StartChar: vir
+StartChar: u094D
 Encoding: 170 2381 316
 Width: 0
 VWidth: 1559
@@ -11265,7 +11265,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: nukta
+StartChar: u093C
 Encoding: 153 2364 317
 Width: 0
 VWidth: 1559
@@ -11286,7 +11286,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: candrabindu
+StartChar: u0901
 Encoding: 96 2305 318
 Width: 26
 VWidth: 1559
@@ -11309,7 +11309,7 @@ EndSplineSet
 Refer: 320 2306 N 1 0 0 1 55 0 2
 EndChar
 
-StartChar: ra.alt
+StartChar: u0930.alt
 Encoding: 347 -1 319
 Width: 26
 VWidth: 1559
@@ -11329,12 +11329,12 @@ SplineSet
  -282 35 l 5
  0 -264 l 5
 EndSplineSet
-Substitution2: "ra.alt to ra.vatu-1" ra.vatu
+Substitution2: "ra.alt to u0930.vatu-1" u0930.vatu
 LCarets2: 1 0
-Ligature2: "'blwf' Below Base Forms lookup 5-1" ra vir
+Ligature2: "'blwf' Below Base Forms lookup 5-1" u0930 u094D
 EndChar
 
-StartChar: anusvara
+StartChar: u0902
 Encoding: 97 2306 320
 Width: 26
 VWidth: 1559
@@ -11354,7 +11354,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ra.reph
+StartChar: u0930.reph
 Encoding: 348 -1 321
 Width: 26
 VWidth: 1559
@@ -11378,10 +11378,10 @@ SplineSet
  -38 1600 24 1570 81 1508 c 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'rphf' Reph Form lookup 3-1" ra vir
+Ligature2: "'rphf' Reph Form lookup 3-1" u0930 u094D
 EndChar
 
-StartChar: ra.bindu.reph
+StartChar: u0930.bindu.reph
 Encoding: 349 -1 322
 Width: 26
 VWidth: 1559
@@ -11396,7 +11396,7 @@ Refer: 321 -1 N 1 0 0 1 0 0 2
 Refer: 320 2306 N 1 0 0 1 176 -105 2
 EndChar
 
-StartChar: oshortmatra
+StartChar: u094A
 Encoding: 167 2378 323
 Width: 455
 VWidth: 1559
@@ -11411,7 +11411,7 @@ Refer: 360 2374 S 1 0 0 1 441 0 2
 Refer: 339 2366 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: oshortmatra.bindu
+StartChar: u094A.bindu
 Encoding: 350 -1 324
 Width: 536
 VWidth: 1559
@@ -11426,10 +11426,10 @@ Refer: 339 2366 N 1 0 0 1 0 0 2
 Refer: 360 2374 N 1 0 0 1 481 0 2
 Refer: 320 2306 N 1 0 0 1 505 23 2
 LCarets2: 1 0
-Ligature2: "'abvs' shortomatra" oshortmatra anusvara
+Ligature2: "'abvs' shortomatra" u094A u0902
 EndChar
 
-StartChar: oshortmatra.reph
+StartChar: u094A.reph
 Encoding: 351 -1 325
 Width: 455
 VWidth: 1559
@@ -11443,10 +11443,10 @@ Fore
 Refer: 339 2366 N 1 0 0 1 1 0 2
 Refer: 362 -1 S 1 0 0 1 409 -16 2
 LCarets2: 1 0
-Ligature2: "'abvs' shortomatra" oshortmatra ra.reph
+Ligature2: "'abvs' shortomatra" u094A u0930.reph
 EndChar
 
-StartChar: oshortmatra.bindu.reph
+StartChar: u094A.bindu.reph
 Encoding: 352 -1 326
 Width: 455
 VWidth: 1559
@@ -11460,10 +11460,10 @@ Fore
 Refer: 322 -1 N 1 0 0 1 460 0 2
 Refer: 323 2378 N 1 0 0 1 1 0 2
 LCarets2: 2 0 0
-Ligature2: "'abvs' shortomatra" oshortmatra ra.reph anusvara
+Ligature2: "'abvs' shortomatra" u094A u0930.reph u0902
 EndChar
 
-StartChar: omatra
+StartChar: u094B
 Encoding: 168 2379 327
 Width: 455
 VWidth: 1559
@@ -11478,7 +11478,7 @@ Refer: 339 2366 N 1 0 0 1 0 0 0
 Refer: 364 2375 S 1 0 0 1 390 0 0
 EndChar
 
-StartChar: omatra.bindu
+StartChar: u094B.bindu
 Encoding: 353 -1 328
 Width: 455
 VWidth: 1559
@@ -11493,10 +11493,10 @@ Refer: 339 2366 N 1 0 0 1 0 0 2
 Refer: 364 2375 N 1 0 0 1 388 0 2
 Refer: 320 2306 N 1 0 0 1 491 -7 2
 LCarets2: 1 0
-Ligature2: "'abvs' omatra" omatra anusvara
+Ligature2: "'abvs' omatra" u094B u0902
 EndChar
 
-StartChar: omatra.reph
+StartChar: u094B.reph
 Encoding: 354 -1 329
 Width: 455
 VWidth: 1559
@@ -11510,10 +11510,10 @@ Fore
 Refer: 366 -1 S 1 0 0 1 386 -1 2
 Refer: 339 2366 N 1 0 0 1 0 0 2
 LCarets2: 1 0
-Ligature2: "'abvs' omatra" omatra ra.reph
+Ligature2: "'abvs' omatra" u094B u0930.reph
 EndChar
 
-StartChar: omatra.bindu.reph
+StartChar: u094B.bindu.reph
 Encoding: 355 -1 330
 Width: 455
 VWidth: 1559
@@ -11527,10 +11527,10 @@ Fore
 Refer: 322 -1 N 1 0 0 1 463 0 2
 Refer: 327 2379 N 1 0 0 1 0 0 2
 LCarets2: 2 0 0
-Ligature2: "'abvs' omatra" omatra ra.reph anusvara
+Ligature2: "'abvs' omatra" u094B u0930.reph u0902
 EndChar
 
-StartChar: aumatra
+StartChar: u094C
 Encoding: 169 2380 331
 Width: 455
 VWidth: 1559
@@ -11545,7 +11545,7 @@ Refer: 339 2366 N 1 0 0 1 0 0 0
 Refer: 368 2376 S 1 0 0 1 386 0 0
 EndChar
 
-StartChar: aumatra.bindu
+StartChar: u094C.bindu
 Encoding: 356 -1 332
 Width: 463
 VWidth: 1559
@@ -11569,10 +11569,10 @@ SplineSet
 EndSplineSet
 Refer: 369 -1 S 1 0 0 1 440 0 2
 LCarets2: 1 0
-Ligature2: "'abvs' aumatra" aumatra anusvara
+Ligature2: "'abvs' aumatra" u094C u0902
 EndChar
 
-StartChar: aumatra.reph
+StartChar: u094C.reph
 Encoding: 357 -1 333
 Width: 455
 VWidth: 1559
@@ -11586,10 +11586,10 @@ Fore
 Refer: 321 -1 N 1 0 0 1 483 0 2
 Refer: 331 2380 N 1 0 0 1 4 0 2
 LCarets2: 1 0
-Ligature2: "'abvs' aumatra" aumatra ra.reph
+Ligature2: "'abvs' aumatra" u094C u0930.reph
 EndChar
 
-StartChar: aumatra.bindu.reph
+StartChar: u094C.bindu.reph
 Encoding: 358 -1 334
 Width: 455
 VWidth: 1559
@@ -11603,10 +11603,10 @@ Fore
 Refer: 322 -1 N 1 0 0 1 477 0 2
 Refer: 331 2380 N 1 0 0 1 0 0 2
 LCarets2: 2 0 0
-Ligature2: "'abvs' aumatra" aumatra ra.reph anusvara
+Ligature2: "'abvs' aumatra" u094C u0930.reph u0902
 EndChar
 
-StartChar: ocandramatra
+StartChar: u0949
 Encoding: 166 2377 335
 Width: 455
 VWidth: 1559
@@ -11621,7 +11621,7 @@ Refer: 339 2366 N 1 0 0 1 0 0 0
 Refer: 372 2373 S 1 0 0 1 495 0 0
 EndChar
 
-StartChar: ocandramatra.bindu
+StartChar: u0949.bindu
 Encoding: 359 -1 336
 Width: 789
 VWidth: 1559
@@ -11646,10 +11646,10 @@ EndSplineSet
 Refer: 372 2373 N 1 0 0 1 476 0 2
 Refer: 320 2306 N 1 0 0 1 949 -133 2
 LCarets2: 1 0
-Ligature2: "'abvs' ocandramatra" ocandramatra anusvara
+Ligature2: "'abvs' ocandramatra" u0949 u0902
 EndChar
 
-StartChar: ocandramatra.reph
+StartChar: u0949.reph
 Encoding: 360 -1 337
 Width: 790
 VWidth: 1559
@@ -11663,10 +11663,10 @@ Fore
 Refer: 339 2366 N 1 0 0 1 0 0 2
 Refer: 374 -1 N 1 0 0 1 353 0 2
 LCarets2: 1 0
-Ligature2: "'abvs' ocandramatra" ocandramatra ra.reph
+Ligature2: "'abvs' ocandramatra" u0949 u0930.reph
 EndChar
 
-StartChar: ocandramatra.bindu.reph
+StartChar: u0949.bindu.reph
 Encoding: 361 -1 338
 Width: 361
 VWidth: 1559
@@ -11680,10 +11680,10 @@ Fore
 Refer: 375 -1 N 1 0 0 1 272 0 2
 Refer: 339 2366 N 1 0 0 1 0 0 2
 LCarets2: 2 0 0
-Ligature2: "'abvs' ocandramatra" ocandramatra ra.reph anusvara
+Ligature2: "'abvs' ocandramatra" u0949 u0930.reph u0902
 EndChar
 
-StartChar: aamatra
+StartChar: u093E
 Encoding: 155 2366 339
 Width: 455
 VWidth: 1559
@@ -11707,7 +11707,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: imatra
+StartChar: u093F
 Encoding: 156 2367 340
 Width: 468
 VWidth: 1559
@@ -11737,10 +11737,10 @@ SplineSet
  137.669 1511.89 281.913 1600 467.146 1600 c 0
  710.161 1600 1077.67 1428 1312.67 1126 c 5xe0
 EndSplineSet
-Substitution2: "imatra to imatra.wide-1" imatra.wide
+Substitution2: "imatra to u093F.wide-1" u093F.wide
 EndChar
 
-StartChar: imatra.bindu
+StartChar: u093F.bindu
 Encoding: 362 -1 341
 Width: 468
 VWidth: 1559
@@ -11754,12 +11754,12 @@ Fore
 Refer: 340 2367 N 1 0 0 1 0 0 2
 Refer: 320 2306 S 1 0 0 1 1438 -6 2
 LCarets2: 1 0
-Ligature2: "'psts' Post Base Substitutions lookup 11-1" anusvara imatra
-Substitution2: "imatra to imatra.wide-1" imatra.wide.bindu
-Ligature2: "'abvs' Above Base Substitutions lookup 7-1" imatra anusvara
+Ligature2: "'psts' Post Base Substitutions lookup 11-1" u0902 u093F
+Substitution2: "imatra to u093F.wide-1" u093F.wide.bindu
+Ligature2: "'abvs' Above Base Substitutions lookup 7-1" u093F u0902
 EndChar
 
-StartChar: imatra.reph
+StartChar: u093F.reph
 Encoding: 363 -1 342
 Width: 316
 VWidth: 1559
@@ -11773,12 +11773,12 @@ Fore
 Refer: 340 2367 N 1 0 0 1 0 0 2
 Refer: 321 -1 N 1 0 0 1 1501 -36 2
 LCarets2: 1 0
-Ligature2: "'psts' Post Base Substitutions lookup 11-1" ra.reph imatra
-Substitution2: "imatra to imatra.wide-1" imatra.wide.reph
-Ligature2: "'abvs' Above Base Substitutions lookup 7-1" imatra ra.reph
+Ligature2: "'psts' Post Base Substitutions lookup 11-1" u0930.reph u093F
+Substitution2: "imatra to u093F.wide-1" u093F.wide.reph
+Ligature2: "'abvs' Above Base Substitutions lookup 7-1" u093F u0930.reph
 EndChar
 
-StartChar: imatra.bindu.reph
+StartChar: u093F.bindu.reph
 Encoding: 364 -1 343
 Width: 319
 VWidth: 1559
@@ -11792,12 +11792,12 @@ Fore
 Refer: 320 2306 N 1 0 0 1 1676 -161 2
 Refer: 342 -1 N 1 0 0 1 0 0 2
 LCarets2: 2 0 0
-Ligature2: "'psts' Post Base Substitutions lookup 11-1" ra.reph anusvara imatra
-Substitution2: "imatra to imatra.wide-1" imatra.wide.bindu.reph
-Ligature2: "'abvs' Above Base Substitutions lookup 7-1" imatra ra.reph anusvara
+Ligature2: "'psts' Post Base Substitutions lookup 11-1" u0930.reph u0902 u093F
+Substitution2: "imatra to u093F.wide-1" u093F.wide.bindu.reph
+Ligature2: "'abvs' Above Base Substitutions lookup 7-1" u093F u0930.reph u0902
 EndChar
 
-StartChar: imatra.wide
+StartChar: u093F.wide
 Encoding: 365 -1 344
 Width: 536
 VWidth: 1559
@@ -11829,7 +11829,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: imatra.wide.bindu
+StartChar: u093F.wide.bindu
 Encoding: 366 -1 345
 Width: 534
 VWidth: 1559
@@ -11844,7 +11844,7 @@ Refer: 344 -1 N 1 0 0 1 0 0 2
 Refer: 320 2306 N 1 0 0 1 1993 -9 2
 EndChar
 
-StartChar: imatra.wide.reph
+StartChar: u093F.wide.reph
 Encoding: 367 -1 346
 Width: 309
 VWidth: 1559
@@ -11860,7 +11860,7 @@ Refer: 344 -1 N 1 0 0 1 0 0 2
 Refer: 320 2306 N 1 0 0 1 2187 -127 2
 EndChar
 
-StartChar: imatra.wide.bindu.reph
+StartChar: u093F.wide.bindu.reph
 Encoding: 368 -1 347
 Width: 537
 VWidth: 1559
@@ -11874,7 +11874,7 @@ Fore
 Refer: 346 -1 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: iimatra
+StartChar: u0940
 Encoding: 157 2368 348
 Width: 538
 VWidth: 1559
@@ -11906,7 +11906,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: iimatra.bindu
+StartChar: u0940.bindu
 Encoding: 369 -1 349
 Width: 309
 VWidth: 1559
@@ -11920,10 +11920,10 @@ Fore
 Refer: 348 2368 N 1 0 0 1 0 0 2
 Refer: 320 2306 N 1 0 0 1 565 -24 2
 LCarets2: 1 0
-Ligature2: "'abvs' iimatra" iimatra anusvara
+Ligature2: "'abvs' iimatra" u0940 u0902
 EndChar
 
-StartChar: iimatra.reph
+StartChar: u0940.reph
 Encoding: 370 -1 350
 Width: 538
 VWidth: 1559
@@ -11937,10 +11937,10 @@ Fore
 Refer: 321 -1 N 1 0 0 1 525 0 2
 Refer: 348 2368 N 1 0 0 1 5 0 2
 LCarets2: 1 0
-Ligature2: "'abvs' iimatra" iimatra ra.reph
+Ligature2: "'abvs' iimatra" u0940 u0930.reph
 EndChar
 
-StartChar: iimatra.bindu.reph
+StartChar: u0940.bindu.reph
 Encoding: 371 -1 351
 Width: 538
 VWidth: 1559
@@ -11954,10 +11954,10 @@ Fore
 Refer: 322 -1 N 1 0 0 1 527 0 2
 Refer: 348 2368 N 1 0 0 1 7 0 2
 LCarets2: 2 0 0
-Ligature2: "'abvs' iimatra" iimatra ra.reph anusvara
+Ligature2: "'abvs' iimatra" u0940 u0930.reph u0902
 EndChar
 
-StartChar: umatra
+StartChar: u0941
 Encoding: 158 2369 352
 Width: 0
 VWidth: 1559
@@ -11984,7 +11984,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: umatra.nukta
+StartChar: u0941.u093C
 Encoding: 372 -1 353
 Width: 26
 VWidth: 1559
@@ -12016,7 +12016,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: umatra.vatu
+StartChar: u0941.vatu
 Encoding: 373 -1 354
 Width: 26
 VWidth: 1559
@@ -12050,7 +12050,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: uumatra
+StartChar: u0942
 Encoding: 159 2370 355
 Width: 172
 VWidth: 1559
@@ -12079,7 +12079,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: uumatra.nukta
+StartChar: u0942.u093C
 Encoding: 374 -1 356
 Width: 26
 VWidth: 1559
@@ -12111,7 +12111,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: uumatra.vatu
+StartChar: u0942.vatu
 Encoding: 375 -1 357
 Width: 26
 VWidth: 1559
@@ -12145,7 +12145,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: rvocalicmatra
+StartChar: u0943
 Encoding: 160 2371 358
 Width: 0
 VWidth: 1559
@@ -12170,7 +12170,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: rrvocalicmatra
+StartChar: u0944
 Encoding: 161 2372 359
 Width: 0
 VWidth: 1559
@@ -12204,7 +12204,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: eshortmatra
+StartChar: u0946
 Encoding: 163 2374 360
 Width: 26
 VWidth: 1559
@@ -12231,7 +12231,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: eshortmatra.bindu
+StartChar: u0946.bindu
 Encoding: 376 -1 361
 Width: 26
 VWidth: 1559
@@ -12246,10 +12246,10 @@ Fore
 Refer: 360 2374 N 1 0 0 1 0 0 2
 Refer: 320 2306 N 1 0 0 1 19 7 2
 LCarets2: 1 0
-Ligature2: "'abvs' eshortmatra" eshortmatra anusvara
+Ligature2: "'abvs' eshortmatra" u0946 u0902
 EndChar
 
-StartChar: eshortmatra.reph
+StartChar: u0946.reph
 Encoding: 377 -1 362
 Width: 26
 VWidth: 1559
@@ -12274,10 +12274,10 @@ SplineSet
 EndSplineSet
 Refer: 360 2374 N 1 0 0 1 0 0 2
 LCarets2: 1 0
-Ligature2: "'abvs' eshortmatra" eshortmatra ra.reph
+Ligature2: "'abvs' eshortmatra" u0946 u0930.reph
 EndChar
 
-StartChar: eshortmatra.bindu.reph
+StartChar: u0946.bindu.reph
 Encoding: 378 -1 363
 Width: 26
 VWidth: 1559
@@ -12292,10 +12292,10 @@ Fore
 Refer: 322 -1 N 1 0 0 1 47 -1 2
 Refer: 360 2374 N 1 0 0 1 0 0 2
 LCarets2: 2 0 0
-Ligature2: "'abvs' eshortmatra" eshortmatra ra.reph anusvara
+Ligature2: "'abvs' eshortmatra" u0946 u0930.reph u0902
 EndChar
 
-StartChar: ematra
+StartChar: u0947
 Encoding: 164 2375 364
 Width: 0
 VWidth: 1559
@@ -12318,7 +12318,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ematra.bindu
+StartChar: u0947.bindu
 Encoding: 379 -1 365
 Width: 0
 VWidth: 1559
@@ -12333,10 +12333,10 @@ Fore
 Refer: 364 2375 N 1 0 0 1 0 0 2
 Refer: 320 2306 S 1 0 0 1 89 -8 2
 LCarets2: 1 0
-Ligature2: "'abvs' ematra" ematra anusvara
+Ligature2: "'abvs' ematra" u0947 u0902
 EndChar
 
-StartChar: ematra.reph
+StartChar: u0947.reph
 Encoding: 380 -1 366
 Width: 0
 VWidth: 1559
@@ -12351,10 +12351,10 @@ Fore
 Refer: 321 -1 N 1 0 0 1 78 0 2
 Refer: 364 2375 N 1 0 0 1 0 0 2
 LCarets2: 1 0
-Ligature2: "'abvs' ematra" ematra ra.reph
+Ligature2: "'abvs' ematra" u0947 u0930.reph
 EndChar
 
-StartChar: ematra.bindu.reph
+StartChar: u0947.bindu.reph
 Encoding: 381 -1 367
 Width: 0
 VWidth: 1559
@@ -12369,10 +12369,10 @@ Fore
 Refer: 322 -1 S 1 0 0 1 80 0 2
 Refer: 364 2375 N 1 0 0 1 0 0 2
 LCarets2: 2 0 0
-Ligature2: "'abvs' ematra" ematra ra.reph anusvara
+Ligature2: "'abvs' ematra" u0947 u0930.reph u0902
 EndChar
 
-StartChar: aimatra
+StartChar: u0948
 Encoding: 165 2376 368
 Width: 0
 VWidth: 1559
@@ -12399,7 +12399,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: aimatra.bindu
+StartChar: u0948.bindu
 Encoding: 382 -1 369
 Width: 0
 VWidth: 1559
@@ -12414,10 +12414,10 @@ Fore
 Refer: 368 2376 N 1 0 0 1 -25 0 2
 Refer: 320 2306 N 1 0 0 1 127 -12 2
 LCarets2: 1 0
-Ligature2: "'abvs' aimatra" aimatra anusvara
+Ligature2: "'abvs' aimatra" u0948 u0902
 EndChar
 
-StartChar: aimatra.reph
+StartChar: u0948.reph
 Encoding: 383 -1 370
 Width: 0
 VWidth: 1559
@@ -12432,10 +12432,10 @@ Fore
 Refer: 321 -1 N 1 0 0 1 78 -2 2
 Refer: 368 2376 N 1 0 0 1 -15 0 2
 LCarets2: 1 0
-Ligature2: "'abvs' aimatra" aimatra ra.reph
+Ligature2: "'abvs' aimatra" u0948 u0930.reph
 EndChar
 
-StartChar: aimatra.bindu.reph
+StartChar: u0948.bindu.reph
 Encoding: 384 -1 371
 Width: 0
 VWidth: 1559
@@ -12450,10 +12450,10 @@ Fore
 Refer: 368 2376 N 1 0 0 1 -33 0 2
 Refer: 322 -1 S 1 0 0 1 57 0 2
 LCarets2: 2 0 0
-Ligature2: "'abvs' aimatra" aimatra ra.reph anusvara
+Ligature2: "'abvs' aimatra" u0948 u0930.reph u0902
 EndChar
 
-StartChar: ecandramatra
+StartChar: u0945
 Encoding: 162 2373 372
 Width: 0
 VWidth: 1559
@@ -12476,7 +12476,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: candrabindu.alt
+StartChar: u0901.alt
 Encoding: 385 -1 373
 Width: 351
 VWidth: 1559
@@ -12498,7 +12498,7 @@ EndSplineSet
 Refer: 318 2305 N 1 0 0 1 358 0 2
 EndChar
 
-StartChar: ecandramatra.reph
+StartChar: u0945.reph
 Encoding: 386 -1 374
 Width: 351
 VWidth: 1559
@@ -12521,10 +12521,10 @@ EndSplineSet
 Refer: 321 -1 N 1 0 0 1 387 0 2
 Refer: 372 2373 S 1 0 0 1 76 0 2
 LCarets2: 1 0
-Ligature2: "'abvs' ecandramatra" ecandramatra ra.reph
+Ligature2: "'abvs' ecandramatra" u0945 u0930.reph
 EndChar
 
-StartChar: ecandramatra.bindu.reph
+StartChar: u0945.bindu.reph
 Encoding: 387 -1 375
 Width: 351
 VWidth: 1559
@@ -12548,10 +12548,10 @@ Refer: 321 -1 N 1 0 0 1 400 0 2
 Refer: 372 2373 S 1 0 0 1 91 0 2
 Refer: 320 2306 N 1 0 0 1 565 -131 2
 LCarets2: 2 0 0
-Ligature2: "'abvs' ecandramatra" ecandramatra ra.reph anusvara
+Ligature2: "'abvs' ecandramatra" u0945 u0930.reph u0902
 EndChar
 
-StartChar: doublesvarita
+StartChar: u1CDA
 Encoding: 212 7386 376
 Width: 454
 VWidth: 1559
@@ -12576,7 +12576,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: dbldanda
+StartChar: u0965
 Encoding: 191 2405 377
 Width: 969
 VWidth: 1559
@@ -12600,7 +12600,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: qa.half
+StartChar: u0958.half
 Encoding: 388 -1 378
 Width: 1038
 VWidth: 1559
@@ -12644,7 +12644,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: khha
+StartChar: u0959
 Encoding: 179 2393 379
 Width: 1492
 VWidth: 1559
@@ -12659,7 +12659,7 @@ Refer: 380 -1 N 1 0 0 1 74 0 0
 Refer: 339 2366 N 1 0 0 1 1037 0 0
 EndChar
 
-StartChar: khha.half
+StartChar: u0959.half
 Encoding: 389 -1 380
 Width: 1041
 VWidth: 1559
@@ -12707,7 +12707,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: dha.vatu
+StartChar: u0927.vatu
 Encoding: 390 -1 381
 Width: 1227
 VWidth: 1559
@@ -12721,10 +12721,10 @@ Fore
 Refer: 339 2366 N 1 0 0 1 691 -1 2
 Refer: 382 -1 N 1 0 0 1 1 -2 2
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" dha ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u0927 u0930.alt
 EndChar
 
-StartChar: dha.half.vatu
+StartChar: u0927.half.vatu
 Encoding: 391 -1 382
 Width: 656
 VWidth: 1559
@@ -12767,7 +12767,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: va.vatu
+StartChar: u0935.vatu
 Encoding: 392 -1 383
 Width: 940
 VWidth: 1559
@@ -12781,10 +12781,10 @@ Fore
 Refer: 384 -1 N 1 0 0 1 0 0 0
 Refer: 339 2366 N 1 0 0 1 615 0 0
 LCarets2: 1 0
-Ligature2: "'vatu' Vattu Variants lookup 6-1" va ra.alt
+Ligature2: "'vatu' Vattu Variants lookup 6-1" u0935 u0930.alt
 EndChar
 
-StartChar: va.half.vatu
+StartChar: u0935.half.vatu
 Encoding: 393 -1 384
 Width: 842
 VWidth: 1559
@@ -12817,7 +12817,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: invertedcandrabindu
+StartChar: u0900
 Encoding: 95 2304 385
 Width: 722
 VWidth: 2048
@@ -12828,7 +12828,7 @@ Back
 Fore
 EndChar
 
-StartChar: eprishthamatra
+StartChar: u094E
 Encoding: 171 2382 386
 Width: 235
 VWidth: 1559
@@ -12850,7 +12850,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: candralongematra
+StartChar: u0955
 Encoding: 177 2389 387
 Width: 576
 VWidth: 1559
@@ -12890,7 +12890,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: lvocalicmatra
+StartChar: u0962
 Encoding: 188 2402 389
 Width: 762
 VWidth: 1559
@@ -12962,7 +12962,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: llvocalicmatra
+StartChar: u0963
 Encoding: 189 2403 391
 Width: 785
 VWidth: 1559
@@ -13064,7 +13064,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ma_vir_la
+StartChar: u092E_u094D_u0932
 Encoding: 394 -1 394
 Width: 886
 VWidth: 1559
@@ -13112,10 +13112,10 @@ SplineSet
  739 682 l 1
 EndSplineSet
 LCarets2: 2 12 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" ma vir la
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u092E u094D u0932
 EndChar
 
-StartChar: jha.nep
+StartChar: u091D.nep
 Encoding: 395 -1 395
 Width: 1690
 VWidth: 1559
@@ -13171,10 +13171,10 @@ SplineSet
  1230 1150 l 1
  1300 1015 l 1xdf80
 EndSplineSet
-Substitution2: "'locl' to Hindi-1" jha
+Substitution2: "'locl' to Hindi-1" u091D
 EndChar
 
-StartChar: jha.archaic
+StartChar: u091D.archaic
 Encoding: 396 -1 396
 Width: 1302
 VWidth: 1559
@@ -13217,7 +13217,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: fivedeva.nep
+StartChar: u096B.nep
 Encoding: 397 -1 397
 Width: 1454
 VWidth: 1559
@@ -13252,10 +13252,10 @@ SplineSet
  411 361 497 389 638 389 c 0
  679 389 747 382 793 369 c 1
 EndSplineSet
-Substitution2: "'locl' to Hindi-1" fivedeva
+Substitution2: "'locl' to Hindi-1" u096B
 EndChar
 
-StartChar: eightdeva.nep
+StartChar: u096E.nep
 Encoding: 398 -1 398
 Width: 1041
 VWidth: 1559
@@ -13289,10 +13289,10 @@ SplineSet
  -83 1015 l 1
  -150 1150 l 1
 EndSplineSet
-Substitution2: "'locl' to Hindi-1" eightdeva
+Substitution2: "'locl' to Hindi-1" u096E
 EndChar
 
-StartChar: ninedeva.nep
+StartChar: u096F.nep
 Encoding: 399 -1 399
 Width: 1004
 VWidth: 1559
@@ -13322,10 +13322,10 @@ SplineSet
  800 -1 827 1 854 3 c 1
  831 122 l 1xe8
 EndSplineSet
-Substitution2: "'locl' to Hindi-1" ninedeva
+Substitution2: "'locl' to Hindi-1" u096F
 EndChar
 
-StartChar: visarga.alt
+StartChar: u0903.alt
 Encoding: 400 -1 400
 Width: 635
 VWidth: 1559
@@ -13350,7 +13350,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ashortvowel.archaic
+StartChar: u0904.archaic
 Encoding: 401 -1 401
 Width: 974
 VWidth: 1559
@@ -13400,7 +13400,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: nna.archaic
+StartChar: u0923.archaic
 Encoding: 402 -1 402
 Width: 1070
 VWidth: 1559
@@ -13439,7 +13439,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ka_vir_ssa.alt
+StartChar: u0915_u094D_u0937.alt
 Encoding: 403 -1 403
 Width: 1105
 VWidth: 1559
@@ -13482,7 +13482,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: nga_vir_ka
+StartChar: u0919_u094D_u0915
 Encoding: 404 -1 404
 Width: 1076
 VWidth: 1559
@@ -13550,10 +13550,10 @@ SplineSet
  50 -79 125 -100 174 -100 c 0
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" nga vir ka
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0919 u094D u0915
 EndChar
 
-StartChar: nga_vir_kha
+StartChar: u0919_u094D_u0916
 Encoding: 405 -1 405
 Width: 1289
 VWidth: 1559
@@ -13627,10 +13627,10 @@ SplineSet
  1221 670 l 1
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" nga vir kha
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0919 u094D u0916
 EndChar
 
-StartChar: nga_vir_ga
+StartChar: u0919_u094D_u0917
 Encoding: 406 -1 406
 Width: 1092
 VWidth: 1559
@@ -13689,10 +13689,10 @@ SplineSet
  1004 657 l 1
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" nga vir ga
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0919 u094D u0917
 EndChar
 
-StartChar: nga_vir_gha
+StartChar: u0919_u094D_u0918
 Encoding: 407 -1 407
 Width: 1090
 VWidth: 1559
@@ -13760,10 +13760,10 @@ SplineSet
  1001 689 l 1
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" nga vir gha
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0919 u094D u0918
 EndChar
 
-StartChar: nga_vir_nga
+StartChar: u0919_u094D_u0919
 Encoding: 408 -1 408
 Width: 1102
 VWidth: 1559
@@ -13839,10 +13839,10 @@ SplineSet
  1014 652 l 1
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" nga vir nga
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0919 u094D u0919
 EndChar
 
-StartChar: nga_vir_ha
+StartChar: u0919_u094D_u0939
 Encoding: 409 -1 409
 Width: 1085
 VWidth: 1559
@@ -13911,10 +13911,10 @@ SplineSet
  999 755 l 1
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" nga vir ha
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0919 u094D u0939
 EndChar
 
-StartChar: nga_vir_ma
+StartChar: u0919_u094D_u092E
 Encoding: 410 -1 410
 Width: 1093
 VWidth: 1559
@@ -13977,10 +13977,10 @@ SplineSet
  1004 658 l 1
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" nga vir ma
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0919 u094D u092E
 EndChar
 
-StartChar: nga_vir_ka_vir_ssa
+StartChar: u0919_u094D_u0915_u094D_u0937
 Encoding: 411 -1 411
 Width: 1088
 VWidth: 1559
@@ -14058,10 +14058,10 @@ SplineSet
  1002 725 l 1
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" nga vir ka_vir_ssa
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0919 u094D u0915_u094D_u0937
 EndChar
 
-StartChar: ca_vir_ca
+StartChar: u091A_u094D_u091A
 Encoding: 412 -1 412
 Width: 1213
 VWidth: 1559
@@ -14108,10 +14108,10 @@ SplineSet
  961 1015 l 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" ca.half ca
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u091A.half u091A
 EndChar
 
-StartChar: ta_vir_pa
+StartChar: u0924_u094D_u092A
 Encoding: 413 -1 413
 Width: 1222
 VWidth: 1559
@@ -14149,10 +14149,10 @@ SplineSet
 EndSplineSet
 Refer: 339 2366 N 1 0 0 1 897 0 2
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" ta.half pa
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0924.half u092A
 EndChar
 
-StartChar: la_vir_la
+StartChar: u0932_u094D_u0932
 Encoding: 414 -1 414
 Width: 1050
 VWidth: 1559
@@ -14203,10 +14203,10 @@ SplineSet
  833 76 l 1x2e
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" la.half la
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0932.half u0932
 EndChar
 
-StartChar: sha_vir_ca
+StartChar: u0936_u094D_u091A
 Encoding: 415 -1 415
 Width: 1143
 VWidth: 1559
@@ -14256,10 +14256,10 @@ SplineSet
  442 1061 382 982 382 902 c 0
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" sha.half ca
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0936.half u091A
 EndChar
 
-StartChar: ssa_vir_ttha
+StartChar: u0937_u094D_u0920
 Encoding: 416 -1 416
 Width: 890
 VWidth: 1559
@@ -14304,10 +14304,10 @@ SplineSet
  219 907 l 1,39,-1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" ssa.half ttha
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0937.half u0920
 EndChar
 
-StartChar: ssa_vir_tta
+StartChar: u0937_u094D_u091F
 Encoding: 417 -1 417
 Width: 852
 VWidth: 1559
@@ -14349,10 +14349,10 @@ SplineSet
  347 440 213 359 213 237 c 0xf4
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" ssa.half tta
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0937.half u091F
 EndChar
 
-StartChar: sa_vir_na
+StartChar: u0938_u094D_u0928
 Encoding: 418 -1 418
 Width: 1277
 VWidth: 1559
@@ -14400,10 +14400,10 @@ SplineSet
  1094 1150 l 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" sa.half na
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0938.half u0928
 EndChar
 
-StartChar: ha_vir_na
+StartChar: u0939_u094D_u0928
 Encoding: 419 -1 419
 Width: 1193
 VWidth: 1559
@@ -14430,10 +14430,10 @@ SplineSet
 EndSplineSet
 Refer: 311 2361 N 1 0 0 1 0 0 2
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" ha.half na
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0939.half u0928
 EndChar
 
-StartChar: ha_vir_nna
+StartChar: u0939_u094D_u0923
 Encoding: 420 -1 420
 Width: 1185
 VWidth: 1559
@@ -14483,10 +14483,10 @@ SplineSet
  918 438 886 499 838 541 c 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" ha.half nna
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0939.half u0923
 EndChar
 
-StartChar: ca_vir_ca.alt
+StartChar: u091A_u094D_u091A.alt
 Encoding: 421 -1 421
 Width: 1906
 VWidth: 1559
@@ -14530,7 +14530,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ja_vir_ja
+StartChar: u091C_u094D_u091C
 Encoding: 422 -1 422
 Width: 1721
 VWidth: 1559
@@ -14573,10 +14573,10 @@ SplineSet
  1164 486 1138 600 1085 655 c 1
 EndSplineSet
 LCarets2: 1 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" ja.half ja
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u091C.half u091C
 EndChar
 
-StartChar: tta_vir_ya
+StartChar: u091F_u094D_u092F
 Encoding: 423 -1 423
 Width: 2004
 VWidth: 1559
@@ -14610,10 +14610,10 @@ SplineSet
 EndSplineSet
 Refer: 183 2335 N 1 0 0 1 0 -1 2
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" tta vir ya
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u091F u094D u092F
 EndChar
 
-StartChar: ttha_vir_ya
+StartChar: u0920_u094D_u092F
 Encoding: 424 -1 424
 Width: 2104
 VWidth: 1559
@@ -14649,10 +14649,10 @@ SplineSet
 EndSplineSet
 Refer: 186 2336 N 1 0 0 1 14 0 2
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" ttha vir ya
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0920 u094D u092F
 EndChar
 
-StartChar: dda_vir_ya
+StartChar: u0921_u094D_u092F
 Encoding: 425 -1 425
 Width: 2126
 VWidth: 1559
@@ -14715,10 +14715,10 @@ SplineSet
  508 604 533 530 640 530 c 0x2fe0
 EndSplineSet
 LCarets2: 2 0 0
-Ligature2: "'pres' Pre Base Substitutions lookup 7-1" dda vir ya
+Ligature2: "'pres' Pre Base Substitutions lookup 7-1" u0921 u094D u092F
 EndChar
 
-StartChar: ka_vir_ssa.archaic.half
+StartChar: u0915_u094D_u0937.archaic.half
 Encoding: 426 -1 426
 Width: 1122
 VWidth: 1559
@@ -14757,7 +14757,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: nna.archaic.half
+StartChar: u0923.archaic.half
 Encoding: 427 -1 427
 Width: 854
 VWidth: 1559
@@ -14792,7 +14792,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: na.half.alt
+StartChar: u0928.half.alt
 Encoding: 428 -1 428
 Width: 1223
 VWidth: 1559
@@ -14813,7 +14813,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: jha.nep.half
+StartChar: u091D.nep.half
 Encoding: 429 -1 429
 Width: 1335
 VWidth: 1559
@@ -14835,10 +14835,10 @@ SplineSet
 EndSplineSet
 Refer: 269 2349 N 1 0 0 1 0 0 2
 LCarets2: 1 0
-Ligature2: "'half' Half Forms lookup 2-1" jha.nep vir
+Ligature2: "'half' Half Forms lookup 2-1" u091D.nep u094D
 EndChar
 
-StartChar: jha.archaic.half
+StartChar: u091D.archaic.half
 Encoding: 430 -1 430
 Width: 1500
 VWidth: 1559
@@ -14875,7 +14875,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ja_vir_nya.vatu
+StartChar: u091C_u094D_u091E.vatu
 Encoding: 431 -1 431
 Width: 1205
 VWidth: 1559
@@ -14917,7 +14917,7 @@ EndSplineSet
 Refer: 339 2366 N 1 0 0 1 782 0 2
 EndChar
 
-StartChar: sha.alt.vatu
+StartChar: u0936.alt.vatu
 Encoding: 432 -1 432
 Width: 1325
 VWidth: 1559
@@ -14938,7 +14938,7 @@ EndSplineSet
 Refer: 298 2358 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: iimatra.wide
+StartChar: u0940.wide
 Encoding: 433 -1 433
 Width: 543
 VWidth: 1559
@@ -14970,7 +14970,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: iimatra.wide.reph.bindu
+StartChar: u0940.wide.reph.bindu
 Encoding: 434 -1 434
 Width: 504
 VWidth: 1559
@@ -14986,7 +14986,7 @@ Refer: 322 -1 N 1 0 0 1 498 -35 2
 Refer: 433 -1 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: iimatra.reph.candrabindu
+StartChar: u0940.reph.u0901
 Encoding: 435 -1 435
 Width: 504
 VWidth: 1559
@@ -15000,10 +15000,10 @@ Fore
 Refer: 318 2305 N 1 0 0 1 842 -47 2
 Refer: 350 -1 S 1 0 0 1 0 0 2
 LCarets2: 2 0 0
-Ligature2: "'abvs' iimatra" iimatra ra.reph candrabindu
+Ligature2: "'abvs' iimatra" u0940 u0930.reph u0901
 EndChar
 
-StartChar: iimatra.wide.reph.candrabindu
+StartChar: u0940.wide.reph.u0901
 Encoding: 436 -1 436
 Width: 504
 VWidth: 1559
@@ -15019,7 +15019,7 @@ Refer: 320 2306 N 1 0 0 1 916 -74 2
 Refer: 447 -1 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: eshortmatra.reph.candrabindu
+StartChar: u0946.reph.u0901
 Encoding: 437 -1 437
 Width: 768
 VWidth: 1559
@@ -15034,7 +15034,7 @@ Refer: 362 -1 N 1 0 0 1 733 0 2
 Refer: 318 2305 S 1 0 0 1 1083 -87 2
 EndChar
 
-StartChar: ematra.reph.candrabindu
+StartChar: u0947.reph.u0901
 Encoding: 438 -1 438
 Width: 822
 VWidth: 1559
@@ -15049,7 +15049,7 @@ Refer: 318 2305 S 1 0 0 1 1181 -81 2
 Refer: 366 -1 N 1 0 0 1 746 0 2
 EndChar
 
-StartChar: aimatra.reph.candrabindu
+StartChar: u0948.reph.u0901
 Encoding: 439 -1 439
 Width: 926
 VWidth: 1559
@@ -15064,7 +15064,7 @@ Refer: 370 -1 N 1 0 0 1 772 0 2
 Refer: 318 2305 S 1 0 0 1 1193 -79 2
 EndChar
 
-StartChar: oshortmatra.reph.candrabindu
+StartChar: u094A.reph.u0901
 Encoding: 440 -1 440
 Width: 463
 VWidth: 1559
@@ -15079,7 +15079,7 @@ Refer: 318 2305 S 1 0 0 1 853 -71 2
 Refer: 325 -1 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: omatra.reph.candrabindu
+StartChar: u094B.reph.u0901
 Encoding: 441 -1 441
 Width: 541
 VWidth: 1559
@@ -15094,7 +15094,7 @@ Refer: 318 2305 N 1 0 0 1 855 -64 2
 Refer: 329 -1 N 1 0 0 1 -1 0 2
 EndChar
 
-StartChar: aumatra.reph.candrabindu
+StartChar: u094C.reph.u0901
 Encoding: 442 -1 442
 Width: 463
 VWidth: 1559
@@ -15157,7 +15157,7 @@ Refer: 121 2410 N 0.599976 0 0 0.599976 654 0 2
 Refer: 120 2409 N 0.519958 0 0 0.519958 -54 418 2
 EndChar
 
-StartChar: iimatra.wide.bindu
+StartChar: u0940.wide.bindu
 Encoding: 446 -1 446
 Width: 329
 VWidth: 1559
@@ -15172,7 +15172,7 @@ Refer: 320 2306 S 1 0 0 1 532 -49 2
 Refer: 433 -1 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: iimatra.wide.reph
+StartChar: u0940.wide.reph
 Encoding: 447 -1 447
 Width: 504
 VWidth: 1559
@@ -15224,7 +15224,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: ra.vatu
+StartChar: u0930.vatu
 Encoding: 449 -1 449
 Width: 0
 VWidth: 1559
@@ -15245,7 +15245,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: iimatra.candrabindu
+StartChar: u0940.u0901
 Encoding: 450 -1 450
 Width: 538
 VWidth: 1559
@@ -15259,7 +15259,7 @@ Fore
 Refer: 318 2305 N 0.745946 0 0 0.768508 614 256 2
 Refer: 348 2368 N 1 0 0 1 0 0 2
 LCarets2: 1 0
-Ligature2: "'abvs' iimatra" iimatra candrabindu
+Ligature2: "'abvs' iimatra" u0940 u0901
 EndChar
 
 StartChar: endash
@@ -15334,7 +15334,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: imatra.med
+StartChar: u093F.med
 Encoding: 454 -1 454
 Width: 535
 VWidth: 1559
@@ -15365,7 +15365,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: imatra.med.reph
+StartChar: u093F.med.reph
 Encoding: 456 -1 455
 Width: 319
 VWidth: 1559
@@ -15379,7 +15379,7 @@ Refer: 321 -1 N 1 0 0 1 1902 -39 2
 Refer: 454 -1 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: imatra.med.bindu.reph
+StartChar: u093F.med.bindu.reph
 Encoding: 457 -1 456
 Width: 337
 VWidth: 1559
@@ -15394,7 +15394,7 @@ Refer: 454 -1 N 1 0 0 1 0 0 2
 Refer: 321 -1 N 1 0 0 1 1901 -36 2
 EndChar
 
-StartChar: imatra.med.candrabindu.reph
+StartChar: u093F.med.u0901.reph
 Encoding: 458 -1 457
 Width: 319
 VWidth: 1559
