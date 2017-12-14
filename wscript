@@ -33,6 +33,7 @@ stylesName = ('Regular',)
 
 # set build parameters
 fontbase = 'source/'
+generated = 'generated/'
 tag = script.upper()
 tuned = 'Nepali'
 
@@ -45,6 +46,12 @@ for f in faces:
             source = fontbase + f + s + '.sfd',
             sfd_master = fontbase + 'master.sfd',
             opentype = internal(),
+            # opentype = fea(fontbase + 'master.fea', no_make = True),
+            # opentype = fea(generated + f + s + '.fea',
+            #     old_make_fea = True,
+            #     master = fontbase + 'master.fea',
+            #     make_params = '' # might need -z 8 to work around a FontForge bug
+            #     ),
             #graphite = gdl(fontbase + f + s + '.gdl',
             #    master = fontbase + 'master.gdl',
             #    make_params = '-p 1 -s 2 -l first',

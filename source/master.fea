@@ -1,0 +1,901 @@
+languagesystem DFLT dflt;
+languagesystem cyrl dflt;
+languagesystem dev2 dflt;
+languagesystem dev2 HIN ;
+languagesystem dev2 NEP ;
+languagesystem deva dflt;
+languagesystem deva HIN ;
+languagesystem deva NEP ;
+languagesystem latn dflt;
+
+
+# GSUB 
+
+
+lookup locltoNepali {
+  lookupflag 0;
+    sub \u096B by \u096B.nep ;
+    sub \u096E by \u096E.nep ;
+    sub \u096F by \u096F.nep ;
+    sub \u091D by \u091D.nep ;
+} locltoNepali;
+
+lookup locltoHindi {
+  lookupflag 0;
+    sub \u091D.nep by \u091D ;
+    sub \u096B.nep by \u096B ;
+    sub \u096E.nep by \u096E ;
+    sub \u096F.nep by \u096F ;
+} locltoHindi;
+
+lookup akhnAkhandlookup1 {
+  lookupflag 0;
+    sub \u0915 \u094D \u0937  by \u0915_u094D_u0937;
+    sub \u091C \u094D \u091E  by \u091C_u094D_u091E;
+} akhnAkhandlookup1;
+
+lookup rphfRephFormlookup3 {
+  lookupflag 0;
+    sub \u0930 \u094D  by \u0930.reph;
+} rphfRephFormlookup3;
+
+lookup blwfBelowBaseFormslookup5 {
+  lookupflag 0;
+    sub \u0930 \u094D  by \u0930.alt;
+} blwfBelowBaseFormslookup5;
+
+lookup halfHalfFormslookup2 {
+  lookupflag 0;
+    sub \u0915 \u094D  by \u0915.half;
+    sub \u0915_u094D_u0937 \u094D  by \u0915_u094D_u0937.half;
+    sub \u0916 \u094D  by \u0916.half;
+    sub \u0917 \u094D  by \u0917.half;
+    sub \u0918 \u094D  by \u0917.half;
+    sub \u0918 \u094D  by \u0918.half;
+    sub \u091A \u094D  by \u091A.half;
+    sub \u091C \u094D  by \u091C.half;
+    sub \u091D \u094D  by \u091C.half;
+    sub \u091C_u094D_u091E \u094D  by \u091C_u094D_u091E.half;
+    sub \u091D \u094D  by \u091D.half;
+    sub \u091E \u094D  by \u091E.half;
+    sub \u0923 \u094D  by \u0923.half;
+    sub \u0924 \u094D  by \u0924.half;
+    sub \u0925 \u094D  by \u0925.half;
+    sub \u0927 \u094D  by \u0927.half;
+    sub \u0928 \u094D  by \u0928.half;
+    sub \u0928_u094D_u0928 \u094D  by \u0928_u094D_u0928.half;
+    sub \u092A \u094D  by \u092A.half;
+    sub \u092B \u094D  by \u092B.half;
+    sub \u092C \u094D  by \u092C.half;
+    sub \u092D \u094D  by \u092D.half;
+    sub \u092E \u094D  by \u092E.half;
+    sub \u092F \u094D  by \u092F.half;
+    sub \u0932 \u094D  by \u0932.half;
+    sub \u0933 \u094D  by \u0933.half;
+    sub \u0935 \u094D  by \u0935.half;
+    sub \u0936 \u094D  by \u0936.half;
+    sub \u0937 \u094D  by \u0937.half;
+    sub \u0938 \u094D  by \u0938.half;
+    sub \u0939 \u094D  by \u0939.half;
+    sub \u091D.nep \u094D  by \u091D.nep.half;
+} halfHalfFormslookup2;
+
+lookup vatuVattuVariantslookup6 {
+  lookupflag 0;
+    sub \u0915 \u0930.alt  by \u0915.vatu;
+    sub \u0916 \u0930.alt  by \u0916.vatu;
+    sub \u0917 \u0930.alt  by \u0917.vatu;
+    sub \u0918 \u0930.alt  by \u0918.vatu;
+    sub \u091A \u0930.alt  by \u091A.vatu;
+    sub \u091C \u0930.alt  by \u091C.vatu;
+    sub \u091D \u0930.alt  by \u091D.vatu;
+    sub \u0924 \u0930.alt  by \u0924.vatu;
+    sub \u0925 \u0930.alt  by \u0925.vatu;
+    sub \u0926 \u0930.alt  by \u0926.vatu;
+    sub \u0928 \u0930.alt  by \u0928.vatu;
+    sub \u092A \u0930.alt  by \u092A.vatu;
+    sub \u092B \u0930.alt  by \u092B.vatu;
+    sub \u092C \u0930.alt  by \u092C.vatu;
+    sub \u092D \u0930.alt  by \u092D.vatu;
+    sub \u092E \u0930.alt  by \u092E.vatu;
+    sub \u092F \u0930.alt  by \u092F.vatu;
+    sub \u0936 \u0930.alt  by \u0936.vatu;
+    sub \u0938 \u0930.alt  by \u0938.vatu;
+    sub \u0939 \u0930.alt  by \u0939.vatu;
+    sub \u0927 \u0930.alt  by \u0927.vatu;
+    sub \u0935 \u0930.alt  by \u0935.vatu;
+} vatuVattuVariantslookup6;
+
+lookup presPreBaseSubstitutionslookup7 {
+  lookupflag 0;
+    sub \u0915.half \u0924  by \u0915_u094D_u0924;
+    sub \u091F \u094D \u091F  by \u091F_u094D_u091F;
+    sub \u091F \u094D \u0920  by \u091F_u094D_u0920;
+    sub \u0920 \u094D \u0920  by \u0920_u094D_u0920;
+    sub \u0921 \u094D \u0921  by \u0921_u094D_u0921;
+    sub \u0921 \u094D \u0922  by \u0921_u094D_u0922;
+    sub \u0924.half \u0924  by \u0924_u094D_u0924;
+    sub \u0926 \u094D \u0926  by \u0926_u094D_u0926;
+    sub \u0926 \u094D \u0927  by \u0926_u094D_u0927;
+    sub \u0926 \u094D \u092E  by \u0926_u094D_u092E;
+    sub \u0926 \u094D \u092F  by \u0926_u094D_u092F;
+    sub \u0926 \u094D \u0935  by \u0926_u094D_u0935;
+    sub \u0928.half \u0928  by \u0928_u094D_u0928;
+    sub \u0915.half \u0915  by \u0915_u094D_u0915;
+    sub \u0922 \u094D \u0922  by \u0922_u094D_u0922;
+    sub \u0926 \u094D \u0918  by \u0926_u094D_u0918;
+    sub \u0926 \u094D \u092C  by \u0926_u094D_u092C;
+    sub \u0926 \u094D \u092D  by \u0926_u094D_u092D;
+    sub \u0921 \u094D \u091F  by \u0921_u094D_u091F;
+    sub \u0939.half \u0932  by \u0939_u094D_u0932;
+    sub \u0939.half \u0935  by \u0939_u094D_u0935;
+    sub \u0936.half \u0935  by \u0936_u094D_u0935;
+    sub \u0939.half \u092E  by \u0939_u094D_u092E;
+    sub \u0939.half \u092F  by \u0939_u094D_u092F;
+    sub \u092E \u094D \u0932  by \u092E_u094D_u0932;
+    sub \u0919 \u094D \u0915  by \u0919_u094D_u0915;
+    sub \u0919 \u094D \u0916  by \u0919_u094D_u0916;
+    sub \u0919 \u094D \u0917  by \u0919_u094D_u0917;
+    sub \u0919 \u094D \u0918  by \u0919_u094D_u0918;
+    sub \u0919 \u094D \u0919  by \u0919_u094D_u0919;
+    sub \u0919 \u094D \u0939  by \u0919_u094D_u0939;
+    sub \u0919 \u094D \u092E  by \u0919_u094D_u092E;
+    sub \u0919 \u094D \u0915_u094D_u0937  by \u0919_u094D_u0915_u094D_u0937;
+    sub \u091A.half \u091A  by \u091A_u094D_u091A;
+    sub \u0924.half \u092A  by \u0924_u094D_u092A;
+    sub \u0932.half \u0932  by \u0932_u094D_u0932;
+    sub \u0936.half \u091A  by \u0936_u094D_u091A;
+    sub \u0937.half \u0920  by \u0937_u094D_u0920;
+    sub \u0937.half \u091F  by \u0937_u094D_u091F;
+    sub \u0938.half \u0928  by \u0938_u094D_u0928;
+    sub \u0939.half \u0928  by \u0939_u094D_u0928;
+    sub \u0939.half \u0923  by \u0939_u094D_u0923;
+    sub \u091C.half \u091C  by \u091C_u094D_u091C;
+    sub \u091F \u094D \u092F  by \u091F_u094D_u092F;
+    sub \u0920 \u094D \u092F  by \u0920_u094D_u092F;
+    sub \u0921 \u094D \u092F  by \u0921_u094D_u092F;
+    sub \u0937_u094D_u091F \u094D \u0935  by \u0937_u094D_u091F_u094D_u0935;
+} presPreBaseSubstitutionslookup7;
+
+lookup abvsAboveBaseSubstitutionslookup7 {
+  lookupflag 0;
+    sub \u093F \u0902  by \u093F.bindu;
+    sub \u093F \u0930.reph  by \u093F.reph;
+    sub \u093F \u0930.reph \u0902  by \u093F.bindu.reph;
+} abvsAboveBaseSubstitutionslookup7;
+
+lookup abvsrighsidematraligatureform {
+  lookupflag 0;
+    sub \u0940 \u0902  by \u0940.bindu;
+    sub \u0940 \u0930.reph  by \u0940.reph;
+    sub \u0940 \u0930.reph \u0902  by \u0940.bindu.reph;
+    sub \u0940 \u0930.reph \u0901  by \u0940.reph.u0901;
+    sub \u0940 \u0901  by \u0940.u0901;
+    sub \u0945 \u0930.reph  by \u0945.reph;
+    sub \u0945 \u0930.reph \u0902  by \u0945.bindu.reph;
+    sub \u0946 \u0902  by \u0946.bindu;
+    sub \u0946 \u0930.reph  by \u0946.reph;
+    sub \u0946 \u0930.reph \u0902  by \u0946.bindu.reph;
+    sub \u0947 \u0902  by \u0947.bindu;
+    sub \u0947 \u0930.reph  by \u0947.reph;
+    sub \u0947 \u0930.reph \u0902  by \u0947.bindu.reph;
+    sub \u0948 \u0902  by \u0948.bindu;
+    sub \u0948 \u0930.reph  by \u0948.reph;
+    sub \u0948 \u0930.reph \u0902  by \u0948.bindu.reph;
+    sub \u0949 \u0902  by \u0949.bindu;
+    sub \u0949 \u0930.reph  by \u0949.reph;
+    sub \u0949 \u0930.reph \u0902  by \u0949.bindu.reph;
+    sub \u094A \u0902  by \u094A.bindu;
+    sub \u094A \u0930.reph  by \u094A.reph;
+    sub \u094A \u0930.reph \u0902  by \u094A.bindu.reph;
+    sub \u094B \u0902  by \u094B.bindu;
+    sub \u094B \u0930.reph  by \u094B.reph;
+    sub \u094B \u0930.reph \u0902  by \u094B.bindu.reph;
+    sub \u094C \u0902  by \u094C.bindu;
+    sub \u094C \u0930.reph  by \u094C.reph;
+    sub \u094C \u0930.reph \u0902  by \u094C.bindu.reph;
+} abvsrighsidematraligatureform;
+
+lookup blwsruruuandhR {
+  lookupflag 0;
+    sub \u0930 \u0941  by \u0930_u0941;
+    sub \u0930 \u0942  by \u0930_u0942;
+    sub \u0939 \u0943  by \u0939_u0943;
+} blwsruruuandhR;
+
+lookup blwfu0930.vatucontextual {
+  lookupflag 0;
+    @cc21_match_1 = [\u0930. ];
+    @cc21_match_2 = [];
+    @cc21_back_1 = [\u091E \u0923 \u0932 \u0937 \u ];
+    @cc21_back_2 = [];
+    ignore sub ;
+} blwfu0930.vatucontextual;
+
+lookup pstsVowelMatraandMarksconjunct {
+  lookupflag 0;
+    sub \u0902 \u093F  by \u093F.bindu;
+    sub \u0930.reph \u093F  by \u093F.reph;
+    sub \u0930.reph \u0902 \u093F  by \u093F.bindu.reph;
+} pstsVowelMatraandMarksconjunct;
+
+lookup pstsu093Fu093F.wide {
+  lookupflag 0;
+    @cc24_match_0 = [\.notdef \.null \nonmarkingreturn \quotedbl \numbersign \dollar 
+	\percent \ampersand \quotesingle \asterisk \plus \less \equal 
+	\greater \at \A \B \D \E \F \G \H \I \J \K \L \M \N \O \P \Q \R 
+	\S \T \U \V \W \X \Y \Z \bracketleft \backslash \bracketright 
+	\asciicircum \underscore \glyph46 \a \b \c \d \e \f \g \h \i \j 
+	\k \l \m \n \o \p \q \r \s \t \u \v \w \x \y \z \braceleft \bar 
+	\braceright \asciitilde \nbspace \u200B \u200C \u200D \u2060 
+	\space \exclam \quoteleft \dottedcircle \u0950 \u093D \u0903 
+	\quoteright \parenleft \parenright \u0964 \u0912 \u0912.bindu 
+	\u0912.reph \u0912.bindu.reph \u0913 \u0913.bindu \u0913.reph 
+	\u0913.bindu.reph \u0914 \u0914.bindu \u0914.reph 
+	\u0914.bindu.reph \u0911 \u0911.bindu \u0911.reph 
+	\u0911.bindu.reph \u0906 \u0972 \u0904 \u0905 \comma \hyphen 
+	\period \slash \u0966 \u0967 \u0968 \u0969 \u096A \u096B \u096C 
+	\u096D \u096E \u096F \colon \semicolon \u0908 \u0907 \u0909 
+	\u090A \u090B \u0960 \u090E \u0910 \u090D \u090F \u0915.half 
+	\u0915 \u0958 \u0915.vatu \u0915_u094D_u0924 \u0915_u094D_u0937 
+	\u0915_u094D_u0937.half \u0916.half \u0916.vatu 
+	\u0916.half.vatu \u097B \u0917 \u0917.half \u095A \u095A.half 
+	\u0917.vatu \u0917.half.vatu \u0918 \u0918.half \u0918.vatu 
+	\u0918.half.vatu \u0919 \u091A \u091A.half \u091A.vatu 
+	\u091A.half.vatu \u091B \u0979 \u097C \u091C \u091C.half \u095B 
+	\u095B.half \u091C.vatu \u091C.half.vatu \u091C_u094D_u091E 
+	\u091C_u094D_u091E.half \u091D \u091D.half \u091D.vatu 
+	\u091D.half.vatu \u091E \u091E.half \u091F \u091F_u094D_u091F 
+	\u091F_u094D_u0920 \u0920 \u0920_u094D_u0920 \u097E \u0921 
+	\u095C \u0921_u094D_u0921 \u0921_u094D_u0922 \u0922 \u095D 
+	\u0923 \u0923.half \u0924 \u0924.half \u0924.vatu 
+	\u0924.half.vatu \u0924_u094D_u0924 \u0924_u094D_u0924.half 
+	\u0925 \u0925.half \u0925.vatu \u0925.half.vatu \u0926 
+	\u0926_u0943 \u0926.vatu \u0926_u094D_u0926 \u0926_u094D_u0927 
+	\u0926_u094D_u092F \u0926_u094D_u0935 \u0927 \u0927.half \u0928 
+	\u0928.half \u0928.vatu \u0928.half.vatu \u0928_u094D_u0928 
+	\u0928_u094D_u0928.half \u0929 \u0929.half \u092A \u092A.half 
+	\u092A.vatu \u092A.half.vatu \u092B.half \u095E.half \zero \one 
+	\two \three \four \five \six \seven \eight \nine \u0961 \u090C 
+	\u0915_u094D_u0915 \u0915_u094D_u0935 \u0922_u094D_u0922 
+	\u0915.vatu.alt \u0926_u094D_u0918 \u0926_u094D_u092C 
+	\u0926_u094D_u092D \u0921_u094D_u091F \u0952.alt \u0951 \u0952 
+	\grave \acute \u0970 \u0937_u094D_u091F_u094D_u0935 
+	\u0939_u094D_u0932 \u0939_u094D_u0935 \u0936.half.alt \u092B 
+	\u095E \u092B.vatu \u097F \u092C \u092C.half \u092C.vatu 
+	\u092C.half.vatu \u092D \u092D.half \u092D.vatu 
+	\u092D.half.vatu \u092E \u092E.half \u092E.vatu 
+	\u092E.half.vatu \u095F \u095F.half \u097A \u092F \u092F.half 
+	\u092F.vatu \u092F.half.vatu \u092F.alt \u092F.half.alt 
+	\u0930_u094D_u200D \u0930 \u0931 \u0930_u0941 \u0930_u0942 
+	\u0932 \u0932.half \u0933.half \u0933 \u0934 \u0935 \u0935.half 
+	\u0936 \u0936.half \u0936_u094D_u0935 \u0936_u094D_u0935.half 
+	\u0936.vatu \u0936.half.vatu \u0937 \u0937.half \u0938 
+	\u0938.half \u0938.vatu \u0938.half.vatu \u0939.half \u0939 
+	\u0939_u0943 \u0939.vatu \u0939_u094D_u092F \u094D \u093C 
+	\u0901 \u0930.alt \u0902 \u0930.reph \u0930.bindu.reph \u094A 
+	\u094A.bindu \u094A.reph \u094A.bindu.reph \u094B \u094B.bindu 
+	\u094B.reph \u094B.bindu.reph \u094C \u094C.bindu \u094C.reph 
+	\u094C.bindu.reph \u0949 \u0949.bindu \u0949.reph 
+	\u0949.bindu.reph \u093E \u093F.bindu.reph \u093F.wide 
+	\u093F.wide.bindu \u093F.wide.reph \u093F.wide.bindu.reph 
+	\u0940 \u0940.bindu \u0940.reph \u0940.bindu.reph \u0941 
+	\u0941.u093C \u0941.vatu \u0942 \u0942.u093C \u0942.vatu \u0943 
+	\u0944 \u0946 \u0946.bindu \u0946.reph \u0946.bindu.reph \u0947 
+	\u0947.bindu \u0947.reph \u0947.bindu.reph \u0948 \u0948.bindu 
+	\u0948.reph \u0948.bindu.reph \u0945 \u0901.alt \u0945.reph 
+	\u0945.bindu.reph \u1CDA \u0965 \u0958.half \u0959 \u0959.half 
+	\u0927.vatu \u0927.half.vatu \u0935.vatu \u0935.half.vatu 
+	\u0900 \u094E \u0955 \high_dot \u0962 \glottal \u0963 
+	\quotedblleft \quotedblright \u092E_u094D_u0932 \u091D.nep 
+	\u091D.archaic \u096B.nep \u096E.nep \u096F.nep \u0903.alt 
+	\u0904.archaic \u0923.archaic \u0915_u094D_u0937.alt 
+	\u0919_u094D_u0915 \u0919_u094D_u0916 \u0919_u094D_u0917 
+	\u0919_u094D_u0918 \u0919_u094D_u0919 \u0919_u094D_u0939 
+	\u0919_u094D_u092E \u0919_u094D_u0915_u094D_u0937 
+	\u091A_u094D_u091A \u0924_u094D_u092A \u0932_u094D_u0932 
+	\u0936_u094D_u091A \u0937_u094D_u0920 \u0937_u094D_u091F 
+	\u0938_u094D_u0928 \u0939_u094D_u0928 \u0939_u094D_u0923 
+	\u091A_u094D_u091A.alt \u091C_u094D_u091C \u0920_u094D_u092F 
+	\u0921_u094D_u092F \u0915_u094D_u0937.archaic.half 
+	\u0923.archaic.half \u0928.half.alt \u091D.nep.half 
+	\u091D.archaic.half \u091C_u094D_u091E.vatu \u0936.alt.vatu 
+	\u0940.wide \u0940.wide.reph.bindu \u0940.reph.u0901 
+	\u0940.wide.reph.u0901 \u0946.reph.u0901 \u0947.reph.u0901 
+	\u0948.reph.u0901 \u094A.reph.u0901 \u094B.reph.u0901 
+	\u094C.reph.u0901 \onefourth \half \threefourth 
+	\u0940.wide.bindu \u0940.wide.reph \INR \u0930.vatu 
+	\u0940.u0901 \endash \emdash \question \u093F.med 
+	\u093F.med.reph \u093F.med.bindu.reph \u093F.med.u0901.reph 
+	\NameMe.459 \NameMe.460 \NameMe.461 \NameMe.462 \NameMe.463 
+	\NameMe.464 \NameMe.465 \NameMe.466 \NameMe.467 \NameMe.468 
+	\NameMe.469 \NameMe.470 \NameMe.471 \NameMe.472 \NameMe.473 
+	\NameMe.475 \NameMe.476 \NameMe.477 \NameMe.478 ];
+    @cc24_match_1 = [\u093F \u093F.bindu \u093F.reph \u093F.bindu.reph
+ \C ];
+    @cc24_match_2 = [\u0916 \u0926_u094D_u092E \u0939_u094D_u092E \u091F_u094D_u092F \u0920_u ];
+    @cc24_ahead_1 = [];
+    @cc24_ahead_2 = [];
+    ignore sub @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' @cc24_match_0' ;
+} pstsu093Fu093F.wide;
+
+feature locl {
+
+ script dev2;
+     language dflt ;
+      lookup locltoHindi;
+     language HIN  exclude_dflt;
+      lookup locltoHindi;
+     language NEP  exclude_dflt;
+      lookup locltoNepali;
+
+ script deva;
+     language dflt ;
+      lookup locltoHindi;
+     language HIN  exclude_dflt;
+      lookup locltoHindi;
+     language NEP  exclude_dflt;
+      lookup locltoNepali;
+} locl;
+
+feature akhn {
+
+ script DFLT;
+     language dflt ;
+      lookup akhnAkhandlookup1;
+
+ script deva;
+     language dflt ;
+      lookup akhnAkhandlookup1;
+     language HIN  exclude_dflt;
+      lookup akhnAkhandlookup1;
+     language NEP  exclude_dflt;
+      lookup akhnAkhandlookup1;
+} akhn;
+
+feature rphf {
+
+ script DFLT;
+     language dflt ;
+      lookup rphfRephFormlookup3;
+
+ script cyrl;
+     language dflt ;
+      lookup rphfRephFormlookup3;
+
+ script deva;
+     language dflt ;
+      lookup rphfRephFormlookup3;
+     language HIN  exclude_dflt;
+      lookup rphfRephFormlookup3;
+     language NEP  exclude_dflt;
+      lookup rphfRephFormlookup3;
+
+ script latn;
+     language dflt ;
+      lookup rphfRephFormlookup3;
+} rphf;
+
+feature blwf {
+
+ script DFLT;
+     language dflt ;
+      lookup blwfBelowBaseFormslookup5;
+      lookup blwfu0930.vatucontextual;
+
+ script dev2;
+     language dflt ;
+      lookup blwfBelowBaseFormslookup5;
+     language HIN  exclude_dflt;
+      lookup blwfBelowBaseFormslookup5;
+     language NEP  exclude_dflt;
+      lookup blwfBelowBaseFormslookup5;
+
+ script deva;
+     language dflt ;
+      lookup blwfBelowBaseFormslookup5;
+      lookup blwfu0930.vatucontextual;
+     language HIN  exclude_dflt;
+      lookup blwfBelowBaseFormslookup5;
+      lookup blwfu0930.vatucontextual;
+     language NEP  exclude_dflt;
+      lookup blwfBelowBaseFormslookup5;
+      lookup blwfu0930.vatucontextual;
+} blwf;
+
+feature half {
+
+ script DFLT;
+     language dflt ;
+      lookup halfHalfFormslookup2;
+
+ script cyrl;
+     language dflt ;
+      lookup halfHalfFormslookup2;
+
+ script deva;
+     language dflt ;
+      lookup halfHalfFormslookup2;
+     language HIN  exclude_dflt;
+      lookup halfHalfFormslookup2;
+     language NEP  exclude_dflt;
+      lookup halfHalfFormslookup2;
+
+ script latn;
+     language dflt ;
+      lookup halfHalfFormslookup2;
+} half;
+
+feature vatu {
+
+ script DFLT;
+     language dflt ;
+      lookup vatuVattuVariantslookup6;
+
+ script dev2;
+     language dflt ;
+      lookup vatuVattuVariantslookup6;
+     language HIN  exclude_dflt;
+      lookup vatuVattuVariantslookup6;
+     language NEP  exclude_dflt;
+      lookup vatuVattuVariantslookup6;
+
+ script deva;
+     language dflt ;
+      lookup vatuVattuVariantslookup6;
+     language HIN  exclude_dflt;
+      lookup vatuVattuVariantslookup6;
+     language NEP  exclude_dflt;
+      lookup vatuVattuVariantslookup6;
+} vatu;
+
+feature pres {
+
+ script DFLT;
+     language dflt ;
+      lookup presPreBaseSubstitutionslookup7;
+
+ script dev2;
+     language dflt ;
+      lookup presPreBaseSubstitutionslookup7;
+     language HIN  exclude_dflt;
+      lookup presPreBaseSubstitutionslookup7;
+     language NEP  exclude_dflt;
+      lookup presPreBaseSubstitutionslookup7;
+
+ script deva;
+     language dflt ;
+      lookup presPreBaseSubstitutionslookup7;
+     language HIN  exclude_dflt;
+      lookup presPreBaseSubstitutionslookup7;
+     language NEP  exclude_dflt;
+      lookup presPreBaseSubstitutionslookup7;
+} pres;
+
+feature abvs {
+
+ script DFLT;
+     language dflt ;
+      lookup abvsAboveBaseSubstitutionslookup7;
+      lookup abvsrighsidematraligatureform;
+
+ script dev2;
+     language dflt ;
+      lookup abvsAboveBaseSubstitutionslookup7;
+      lookup abvsrighsidematraligatureform;
+     language HIN  exclude_dflt;
+      lookup abvsAboveBaseSubstitutionslookup7;
+      lookup abvsrighsidematraligatureform;
+     language NEP  exclude_dflt;
+      lookup abvsAboveBaseSubstitutionslookup7;
+      lookup abvsrighsidematraligatureform;
+
+ script deva;
+     language dflt ;
+      lookup abvsAboveBaseSubstitutionslookup7;
+      lookup abvsrighsidematraligatureform;
+     language HIN  exclude_dflt;
+      lookup abvsAboveBaseSubstitutionslookup7;
+      lookup abvsrighsidematraligatureform;
+     language NEP  exclude_dflt;
+      lookup abvsAboveBaseSubstitutionslookup7;
+      lookup abvsrighsidematraligatureform;
+} abvs;
+
+feature blws {
+
+ script DFLT;
+     language dflt ;
+      lookup blwsruruuandhR;
+
+ script dev2;
+     language dflt ;
+      lookup blwsruruuandhR;
+     language HIN  exclude_dflt;
+      lookup blwsruruuandhR;
+     language NEP  exclude_dflt;
+      lookup blwsruruuandhR;
+
+ script deva;
+     language dflt ;
+      lookup blwsruruuandhR;
+     language HIN  exclude_dflt;
+      lookup blwsruruuandhR;
+     language NEP  exclude_dflt;
+      lookup blwsruruuandhR;
+} blws;
+
+feature psts {
+
+ script DFLT;
+     language dflt ;
+      lookup pstsVowelMatraandMarksconjunct;
+      lookup pstsu093Fu093F.wide;
+
+ script dev2;
+     language dflt ;
+      lookup pstsVowelMatraandMarksconjunct;
+      lookup pstsu093Fu093F.wide;
+     language HIN  exclude_dflt;
+      lookup pstsVowelMatraandMarksconjunct;
+      lookup pstsu093Fu093F.wide;
+     language NEP  exclude_dflt;
+      lookup pstsVowelMatraandMarksconjunct;
+      lookup pstsu093Fu093F.wide;
+
+ script deva;
+     language dflt ;
+      lookup pstsVowelMatraandMarksconjunct;
+      lookup pstsu093Fu093F.wide;
+     language HIN  exclude_dflt;
+      lookup pstsVowelMatraandMarksconjunct;
+      lookup pstsu093Fu093F.wide;
+     language NEP  exclude_dflt;
+      lookup pstsVowelMatraandMarksconjunct;
+      lookup pstsu093Fu093F.wide;
+} psts;
+
+# GPOS 
+
+
+lookup abvmAboveBaseMarklookup2 {
+  lookupflag 0;
+  markClass [\u0930.reph ] <anchor -190 1130> @abvm;
+  markClass [\u0946 ] <anchor -198 1123> @abvm;
+  markClass [\u0946.bindu ] <anchor -198 1116> @abvm;
+  markClass [\u0946.reph ] <anchor -198 1122> @abvm;
+  markClass [\u0946.bindu.reph ] <anchor -198 1128> @abvm;
+  markClass [\u0947 ] <anchor -147 1147> @abvm;
+  markClass [\u0947.bindu ] <anchor -190 1138> @abvm;
+  markClass [\u0947.reph ] <anchor -93 1138> @abvm;
+  markClass [\u0947.bindu.reph ] <anchor -114 1140> @abvm;
+  markClass [\u0948 ] <anchor -220 1135> @abvm;
+  markClass [\u0948.bindu ] <anchor -204 1138> @abvm;
+  markClass [\u0948.reph ] <anchor -187 1159> @abvm;
+  markClass [\u0948.bindu.reph ] <anchor -226 1138> @abvm;
+  markClass [\u0945 ] <anchor -225 1165> @abvm;
+  markClass [\u0901.alt ] <anchor 208 1134 <device NULL> <device 150 2>> @abvm;
+  markClass [\u0945.reph ] <anchor 198 1134 <device NULL> <device 150 2>> @abvm;
+  markClass [\u0945.bindu.reph ] <anchor 198 1152> @abvm;
+  pos base [\dottedcircle ] <anchor 538 1082> mark @abvm;
+  pos base [\u0915 ] <anchor 869 1123> mark @abvm;
+  pos base [\u0915_u094D_u0937 ] <anchor 1053 1147> mark @abvm;
+  pos base [\u0916 ] <anchor 1320 1147> mark @abvm;
+  pos base [\u0917 ] <anchor 907 1147> mark @abvm;
+  pos base [\u0918 ] <anchor 955 1144> mark @abvm;
+  pos base [\u0919 ] <anchor 908 1133> mark @abvm;
+  pos base [\u091A ] <anchor 1085 1133> mark @abvm;
+  pos base [\u091B ] <anchor 987 1144> mark @abvm;
+  pos base [\u091C ] <anchor 1102 1147> mark @abvm;
+  pos base [\u091D ] <anchor 1160 1147> mark @abvm;
+  pos base [\u091E ] <anchor 1080 1147> mark @abvm;
+  pos base [\u091F ] <anchor 812 1154> mark @abvm;
+  pos base [\u0920 ] <anchor 855 1133> mark @abvm;
+  pos base [\u0921 ] <anchor 828 1147> mark @abvm;
+  pos base [\u0922 ] <anchor 866 1147> mark @abvm;
+  pos base [\u0923 ] <anchor 1198 1133> mark @abvm;
+  pos base [\u0924 ] <anchor 958 1133> mark @abvm;
+  pos base [\u0925 ] <anchor 1023 1133> mark @abvm;
+  pos base [\u0926 ] <anchor 748 1144> mark @abvm;
+  pos base [\u0927 ] <anchor 936 1147> mark @abvm;
+  pos base [\u0928 \u0929 ] <anchor 881 1133> mark @abvm;
+  pos base [\u092A ] <anchor 838 1147> mark @abvm;
+  pos base [\u092B ] <anchor 731 1147> mark @abvm;
+  pos base [\u092C ] <anchor 902 1144> mark @abvm;
+  pos base [\u092D ] <anchor 1063 1147> mark @abvm;
+  pos base [\u092E ] <anchor 1052 1133> mark @abvm;
+  pos base [\u092F ] <anchor 915 1133> mark @abvm;
+  pos base [\u0930 ] <anchor 364 1144> mark @abvm;
+  pos base [\u0932 ] <anchor 1249 1133> mark @abvm;
+  pos base [\u0933 ] <anchor 1108 1147> mark @abvm;
+  pos base [\u0935 ] <anchor 948 1133> mark @abvm;
+  pos base [\u0936 ] <anchor 1172 1133> mark @abvm;
+  pos base [\u0937 ] <anchor 830 1144> mark @abvm;
+  pos base [\u0938 ] <anchor 1049 1144> mark @abvm;
+  pos base [\u0939.half ] <anchor 707 1147> mark @abvm;
+  pos base [\u0939 ] <anchor 732 1147> mark @abvm;
+  pos base [\u0939_u0943 ] <anchor 680 1133> mark @abvm;
+  pos base [\u0937_u094D_u0920 ] <anchor 627 1133> mark @abvm;
+  pos base [\u0937_u094D_u091F ] <anchor 640 1147> mark @abvm;
+  pos base [\u0939_u094D_u0928 ] <anchor 787 1133> mark @abvm;
+} abvmAboveBaseMarklookup2;
+
+lookup blwmBelowBaseMarkinDevanagarilookup0 {
+  lookupflag 0;
+  markClass [\u0930.alt ] <anchor -282 32> @vatu;
+  markClass [\u0930.vatu ] <anchor -4 432> @vatu;
+  markClass [\u093C ] <anchor -212 -30> @N;
+  markClass [\u094D ] <anchor -202 42> @blwm;
+  markClass [\u0941 ] <anchor -213 -40> @blwm;
+  markClass [\u0941.u093C ] <anchor -281 73> @blwm;
+  markClass [\u0941.vatu ] <anchor -174 14> @blwm;
+  markClass [\u0942 ] <anchor -360 -13> @blwm;
+  markClass [\u0942.u093C ] <anchor -187 -31> @blwm;
+  markClass [\u0942.vatu ] <anchor -177 31> @blwm;
+  markClass [\u0943 ] <anchor -229 -46> @blwm;
+  markClass [\u0944 ] <anchor -156 10> @blwm;
+  markClass [\u0962 ] <anchor 464 -7> @blwm;
+  markClass [\u0963 ] <anchor 470 -5> @blwm;
+  pos base [\dottedcircle ] <anchor 804 -140> mark @blwm
+	<anchor 200 32> mark @N
+	<anchor 832 -94> mark @vatu;
+  pos base [\u0915.half ] <anchor 867 -27> mark @blwm;
+  pos base [\u0915 ] <anchor 455 0> mark @N
+	<anchor 819 0> mark @blwm;
+  pos base [\u0915.vatu ] <anchor 867 -40> mark @blwm;
+  pos base [\u0915_u094D_u0937 ] <anchor 1134 -94> mark @vatu
+	<anchor 302 -83> mark @N
+	<anchor 907 -160> mark @blwm;
+  pos base [\u0915_u094D_u0937.half ] <anchor 842 -173> mark @blwm;
+  pos base [\u0916 ] <anchor 374 21> mark @N
+	<anchor 1307 -27> mark @blwm;
+  pos base [\u0916.half ] <anchor 973 -13> mark @blwm;
+  pos base [\u0917 ] <anchor 385 0> mark @N
+	<anchor 907 -40> mark @blwm;
+  pos base [\u0917.half ] <anchor 347 147> mark @blwm;
+  pos base [\u095A.half ] <anchor 387 -80> mark @blwm;
+  pos base [\u0917.half.vatu ] <anchor 453 53> mark @blwm;
+  pos base [\u0918 ] <anchor 487 10> mark @N
+	<anchor 987 -27> mark @blwm;
+  pos base [\u0918.half ] <anchor 587 133> mark @blwm;
+  pos base [\u0918.half.vatu ] <anchor 493 27> mark @blwm;
+  pos base [\u0919 ] <anchor 855 -27> mark @blwm
+	<anchor 703 -146> mark @N;
+  pos base [\u091A ] <anchor 672 0> mark @N
+	<anchor 1085 -27> mark @blwm;
+  pos base [\u091A.half ] <anchor 747 120> mark @blwm;
+  pos base [\u091A.half.vatu ] <anchor 720 -53> mark @blwm;
+  pos base [\u091B ] <anchor 1270 104> mark @N
+	<anchor 866 -27> mark @blwm;
+  pos base [\u091C ] <anchor 572 -10> mark @N
+	<anchor 1116 -40> mark @blwm;
+  pos base [\u091C.half ] <anchor 640 27> mark @blwm;
+  pos base [\u091C_u094D_u091E ] <anchor 987 -53> mark @blwm;
+  pos base [\u091C_u094D_u091E.half ] <anchor 520 -187> mark @blwm;
+  pos base [\u091D ] <anchor 770 -21> mark @N
+	<anchor 1173 -53> mark @blwm;
+  pos base [\u091D.half ] <anchor 733 -213> mark @blwm;
+  pos base [\u091E ] <anchor 1034 374> mark @vatu
+	<anchor 566 0> mark @N
+	<anchor 1080 -27> mark @blwm;
+  pos base [\u091E.half ] <anchor 640 40> mark @blwm;
+  pos base [\u091F ] <anchor 679 27> mark @blwm
+	<anchor 562 -74> mark @N;
+  pos base [\u0920 ] <anchor 522 -134> mark @N
+	<anchor 735 13> mark @blwm;
+  pos base [\u0921 ] <anchor 613 -208> mark @N
+	<anchor 722 0> mark @blwm;
+  pos base [\u0922 ] <anchor 593 -198> mark @N
+	<anchor 746 -13> mark @blwm;
+  pos base [\u0923 ] <anchor 1099 208> mark @vatu
+	<anchor 592 21> mark @N
+	<anchor 1184 -27> mark @blwm;
+  pos base [\u0923.half ] <anchor 441 200> mark @blwm;
+  pos base [\u0924 ] <anchor 256 -10> mark @N
+	<anchor 945 -27> mark @blwm;
+  pos base [\u0924.half ] <anchor 520 -93> mark @blwm;
+  pos base [\u0924_u094D_u0924.half ] <anchor 613 -107> mark @blwm;
+  pos base [\u0925 ] <anchor 426 10> mark @N
+	<anchor 1010 0> mark @blwm;
+  pos base [\u0925.half ] <anchor 634 173> mark @blwm;
+  pos base [\u0926 ] <anchor 540 -104> mark @N
+	<anchor 904 -198> mark @blwm;
+  pos base [\u0926_u094D_u0927 ] <anchor 1307 0> mark @blwm;
+  pos base [\u0927 ] <anchor 419 52> mark @N
+	<anchor 839 224> mark @vatu
+	<anchor 936 0> mark @blwm;
+  pos base [\u0927.half ] <anchor 603 160> mark @blwm;
+  pos base [\u0928 ] <anchor 343 21> mark @N
+	<anchor 761 392> mark @vatu
+	<anchor 881 13> mark @blwm;
+  pos base [\u0928.half ] <anchor 307 120> mark @blwm;
+  pos base [\u0929 ] <anchor 868 0> mark @blwm;
+  pos base [\u0929.half ] <anchor 387 -107> mark @blwm;
+  pos base [\u092A ] <anchor 350 52> mark @N
+	<anchor 825 0> mark @blwm;
+  pos base [\u092A.half ] <anchor 507 120> mark @blwm;
+  pos base [\u092B.half ] <anchor 693 0> mark @blwm;
+  pos base [\u095E.half ] <anchor 773 0> mark @blwm;
+  pos base [\u0915.vatu.alt ] <anchor 827 0> mark @blwm;
+  pos base [\u0926_u094D_u0918 ] <anchor 1120 -187> mark @blwm;
+  pos base [\u0926_u094D_u092D ] <anchor 1387 -187> mark @blwm;
+  pos base [\u0937_u094D_u091F_u094D_u0935 ] <anchor 467 -252> mark @vatu;
+  pos base [\u092B ] <anchor 731 0> mark @blwm
+	<anchor 476 62> mark @N;
+  pos base [\u092C ] <anchor 476 21> mark @N
+	<anchor 906 -13> mark @blwm;
+  pos base [\u092C.half ] <anchor 573 13> mark @blwm;
+  pos base [\u092C.half.vatu ] <anchor 573 -107> mark @blwm;
+  pos base [\u092D ] <anchor 509 52> mark @N
+	<anchor 1063 0> mark @blwm;
+  pos base [\u092D.half ] <anchor 538 147> mark @blwm;
+  pos base [\u092D.half.vatu ] <anchor 613 -53> mark @blwm;
+  pos base [\u092E ] <anchor 424 21> mark @N
+	<anchor 891 324> mark @vatu
+	<anchor 1052 0> mark @blwm;
+  pos base [\u092E.half ] <anchor 373 147> mark @blwm;
+  pos base [\u092F ] <anchor 332 10> mark @N
+	<anchor 800 240> mark @vatu
+	<anchor 915 0> mark @blwm;
+  pos base [\u092F.half ] <anchor 547 147> mark @blwm;
+  pos base [\u0930 ] <anchor 281 0> mark @N
+	<anchor 659 -27> mark @blwm;
+  pos base [\u0932 ] <anchor 306 -31> mark @N
+	<anchor 1136 392> mark @vatu
+	<anchor 1236 13> mark @blwm;
+  pos base [\u0932.half ] <anchor 1013 -80> mark @blwm;
+  pos base [\u0933.half ] <anchor 1027 -93> mark @blwm;
+  pos base [\u0933 ] <anchor 798 -125> mark @N
+	<anchor 1148 -13> mark @blwm;
+  pos base [\u0935 ] <anchor 436 -10> mark @N
+	<anchor 873 188> mark @vatu
+	<anchor 934 13> mark @blwm;
+  pos base [\u0935.half ] <anchor 560 120> mark @blwm;
+  pos base [\u0936 ] <anchor 330 -10> mark @N
+	<anchor 1015 352> mark @vatu
+	<anchor 1172 13> mark @blwm;
+  pos base [\u0936.half ] <anchor 667 -40> mark @blwm;
+  pos base [\u0937 \u0938 ] <anchor 456 10> mark @N
+	<anchor 780 244> mark @vatu
+	<anchor 840 0> mark @blwm;
+  pos base [\u0937.half ] <anchor 507 213> mark @blwm;
+  pos base [\u0938.half ] <anchor 667 -13> mark @blwm;
+  pos base [\u0939.half \u0939_u0943 ] <anchor 250 -1> mark @N
+	<anchor 671 530> mark @vatu
+	<anchor 747 -40> mark @blwm;
+  pos base [\u0939 ] <anchor 279 -1> mark @N
+	<anchor 683 450> mark @vatu
+	<anchor 772 -53> mark @blwm;
+  pos base [\u0939_u094D_u092E ] <anchor 1187 -13> mark @blwm;
+  pos base [\u0927.half.vatu ] <anchor 604 -13> mark @blwm;
+  pos base [\glottal ] <anchor 293 -67> mark @blwm;
+  pos base [\u092E_u094D_u0932 ] <anchor 813 -280> mark @blwm;
+  pos base [\u0923.archaic ] <anchor 1027 13> mark @blwm;
+  pos base [\u0924_u094D_u092A ] <anchor 1147 13> mark @blwm;
+  pos base [\u0937_u094D_u0920 ] <anchor 554 -2> mark @vatu;
+  pos base [\u0937_u094D_u091F ] <anchor 546 -8> mark @vatu;
+  pos base [\u0938_u094D_u0928 ] <anchor 1120 13> mark @blwm;
+  pos base [\u0939_u094D_u0928 ] <anchor 218 -1> mark @N
+	<anchor 639 530> mark @vatu
+	<anchor 827 -40> mark @blwm;
+  pos base [\u091C_u094D_u091C ] <anchor 1453 0> mark @blwm;
+  pos base [\u0923.archaic.half ] <anchor 773 200> mark @blwm;
+  pos base [\question ] <anchor 533 -227> mark @blwm;
+} blwmBelowBaseMarkinDevanagarilookup0;
+
+feature abvm {
+
+ script DFLT;
+     language dflt ;
+      lookup abvmAboveBaseMarklookup2;
+
+ script cyrl;
+     language dflt ;
+      lookup abvmAboveBaseMarklookup2;
+
+ script deva;
+     language dflt ;
+      lookup abvmAboveBaseMarklookup2;
+     language HIN  exclude_dflt;
+      lookup abvmAboveBaseMarklookup2;
+     language NEP  exclude_dflt;
+      lookup abvmAboveBaseMarklookup2;
+
+ script latn;
+     language dflt ;
+      lookup abvmAboveBaseMarklookup2;
+} abvm;
+
+feature blwm {
+
+ script deva;
+     language dflt ;
+      lookup blwmBelowBaseMarkinDevanagarilookup0;
+     language HIN  exclude_dflt;
+      lookup blwmBelowBaseMarkinDevanagarilookup0;
+     language NEP  exclude_dflt;
+      lookup blwmBelowBaseMarkinDevanagarilookup0;
+} blwm;
+#Mark attachment classes (defined in GDEF, used in lookupflags)
+
+@GDEF_Simple = [\.null \nonmarkingreturn \quotedbl \numbersign \dollar \percent 
+	\ampersand \quotesingle \asterisk \plus \less \equal \greater \at \A \B \C \D \E \F \G 
+	\H \I \J \K \L \M \N \O \P \Q \R \S \T \U \V \W \X \Y \Z \bracketleft \backslash 
+	\bracketright \asciicircum \underscore \glyph46 \a \b \c \d \e \f \g \h \i \j \k \l \m \n 
+	\o \p \q \r \s \t \u \v \w \x \y \z \braceleft \bar \braceright \asciitilde \nbspace 
+	\u200B \u200C \u200D \u2060 \space \exclam \quoteleft \dottedcircle \u0950 \u0903 
+	\quoteright \parenleft \parenright \u0964 \u0912 \u0912.bindu \u0912.reph 
+	\u0912.bindu.reph \u0913 \u0913.bindu \u0913.reph \u0913.bindu.reph \u0914 
+	\u0914.bindu \u0914.reph \u0914.bindu.reph \u0911 \u0911.bindu \u0911.reph 
+	\u0911.bindu.reph \u0906 \u0972 \u0904 \u0905 \comma \hyphen \period \slash 
+	\u0966 \u0967 \u0968 \u0969 \u096A \u096B \u096C \u096D \u096E \u096F \colon 
+	\semicolon \u0908 \u0907 \u0909 \u090A \u090B \u0960 \u090E \u0910 \u090D \u090F 
+	\u0915 \u0958 \u0916 \u097B \u0917 \u095A \u0918 \u0919 \u091A \u091B \u0979 \u097C 
+	\u091C \u095B \u091D \u091E \u091F \u0920 \u097E \u0921 \u095C \u0922 \u095D \u0923 
+	\u0924 \u0925 \u0926 \u0927 \u0928 \u0929 \u092A \zero \one \two \three \four \five 
+	\six \seven \eight \nine \u0961 \u090C \u0970 \u092B \u095E \u097F \u092C \u092D 
+	\u092E \u095F \u097A \u092F \u0930 \u0931 \u0932 \u0933 \u0934 \u0935 \u0936 \u0937 
+	\u0938 \u0939 \u0901 \u0902 \u0965 \u0959 \u0900 \glottal \quotedblleft 
+	\quotedblright \INR \endash \emdash \question \u093F.med \u093F.med.reph 
+	\u093F.med.bindu.reph \u093F.med.u0901.reph \NameMe.459 \NameMe.460 
+	\NameMe.461 \NameMe.462 \NameMe.463 \NameMe.464 \NameMe.465 \NameMe.466 
+	\NameMe.467 \NameMe.468 \NameMe.469 \NameMe.470 \NameMe.471 \NameMe.472 
+	\NameMe.473 \NameMe.475 \NameMe.476 \NameMe.477 \NameMe.478 ];
+@GDEF_Ligature = [\u0915.half \u0915.vatu \u0915_u094D_u0924 \u0915_u094D_u0937 
+	\u0915_u094D_u0937.half \u0916.half \u0916.vatu \u0916.half.vatu \u0917.half 
+	\u095A.half \u0917.vatu \u0917.half.vatu \u0918.half \u0918.vatu 
+	\u0918.half.vatu \u091A.half \u091A.vatu \u091A.half.vatu \u091C.half 
+	\u095B.half \u091C.vatu \u091C.half.vatu \u091C_u094D_u091E 
+	\u091C_u094D_u091E.half \u091D.half \u091D.vatu \u091D.half.vatu \u091E.half 
+	\u091F_u094D_u091F \u091F_u094D_u0920 \u0920_u094D_u0920 \u0921_u094D_u0921 
+	\u0921_u094D_u0922 \u0923.half \u0924.half \u0924.vatu \u0924.half.vatu 
+	\u0924_u094D_u0924 \u0924_u094D_u0924.half \u0925.half \u0925.vatu 
+	\u0925.half.vatu \u0926_u0943 \u0926.vatu \u0926_u094D_u0926 
+	\u0926_u094D_u0927 \u0926_u094D_u092E \u0926_u094D_u092F \u0926_u094D_u0935 
+	\u0927.half \u0928.half \u0928.vatu \u0928.half.vatu \u0928_u094D_u0928 
+	\u0928_u094D_u0928.half \u0929.half \u092A.half \u092A.vatu \u092A.half.vatu 
+	\u092B.half \u095E.half \u0915_u094D_u0915 \u0915_u094D_u0935 
+	\u0922_u094D_u0922 \u0915.vatu.alt \u0926_u094D_u0918 \u0926_u094D_u092C 
+	\u0926_u094D_u092D \u0921_u094D_u091F \u0952.alt 
+	\u0937_u094D_u091F_u094D_u0935 \u0939_u094D_u0932 \u0939_u094D_u0935 
+	\u0936.half.alt \u092B.vatu \u092C.half \u092C.vatu \u092C.half.vatu 
+	\u092D.half \u092D.vatu \u092D.half.vatu \u092E.half \u092E.vatu 
+	\u092E.half.vatu \u095F.half \u092F.half \u092F.vatu \u092F.half.vatu 
+	\u092F.alt \u092F.half.alt \u0930_u094D_u200D \u0930_u0941 \u0930_u0942 
+	\u0932.half \u0933.half \u0935.half \u0936.half \u0936_u094D_u0935 
+	\u0936_u094D_u0935.half \u0936.vatu \u0936.half.vatu \u0937.half \u0938.half 
+	\u0938.vatu \u0938.half.vatu \u0939.half \u0939_u0943 \u0939.vatu 
+	\u0939_u094D_u092E \u0939_u094D_u092F \u0958.half \u0959.half \u0927.vatu 
+	\u0927.half.vatu \u0935.vatu \u0935.half.vatu \u092E_u094D_u0932 \u091D.nep 
+	\u091D.archaic \u096B.nep \u096E.nep \u096F.nep \u0903.alt \u0904.archaic 
+	\u0923.archaic \u0915_u094D_u0937.alt \u0919_u094D_u0915 \u0919_u094D_u0916 
+	\u0919_u094D_u0917 \u0919_u094D_u0918 \u0919_u094D_u0919 \u0919_u094D_u0939 
+	\u0919_u094D_u092E \u0919_u094D_u0915_u094D_u0937 \u091A_u094D_u091A 
+	\u0924_u094D_u092A \u0932_u094D_u0932 \u0936_u094D_u091A \u0937_u094D_u0920 
+	\u0937_u094D_u091F \u0938_u094D_u0928 \u0939_u094D_u0928 \u0939_u094D_u0923 
+	\u091A_u094D_u091A.alt \u091C_u094D_u091C \u091F_u094D_u092F 
+	\u0920_u094D_u092F \u0921_u094D_u092F \u0915_u094D_u0937.archaic.half 
+	\u0923.archaic.half \u091D.nep.half \u091D.archaic.half 
+	\u091C_u094D_u091E.vatu \u0936.alt.vatu \onefourth \half \threefourth ];
+@GDEF_Mark = [\u093D \u0951 \u0952 \grave \acute \u094D \u093C \u0930.alt 
+	\u0930.reph \u0930.bindu.reph \u094A \u094A.bindu \u094A.reph 
+	\u094A.bindu.reph \u094B \u094B.bindu \u094B.reph \u094B.bindu.reph \u094C 
+	\u094C.bindu \u094C.reph \u094C.bindu.reph \u0949 \u0949.bindu \u0949.reph 
+	\u0949.bindu.reph \u093E \u093F \u093F.bindu \u093F.reph \u093F.bindu.reph 
+	\u093F.wide \u093F.wide.bindu \u093F.wide.reph \u093F.wide.bindu.reph \u0940 
+	\u0940.bindu \u0940.reph \u0940.bindu.reph \u0941 \u0941.u093C \u0941.vatu 
+	\u0942 \u0942.u093C \u0942.vatu \u0943 \u0944 \u0946 \u0946.bindu \u0946.reph 
+	\u0946.bindu.reph \u0947 \u0947.bindu \u0947.reph \u0947.bindu.reph \u0948 
+	\u0948.bindu \u0948.reph \u0948.bindu.reph \u0945 \u0901.alt \u0945.reph 
+	\u0945.bindu.reph \u1CDA \u094E \u0955 \high_dot \u0962 \u0963 \u0928.half.alt 
+	\u0940.wide \u0940.wide.reph.bindu \u0940.reph.u0901 \u0940.wide.reph.u0901 
+	\u0946.reph.u0901 \u0947.reph.u0901 \u0948.reph.u0901 \u094A.reph.u0901 
+	\u094B.reph.u0901 \u094C.reph.u0901 \u0940.wide.bindu \u0940.wide.reph 
+	\u0930.vatu \u0940.u0901 ];
+
+table GDEF {
+  GlyphClassDef @GDEF_Simple, @GDEF_Ligature, @GDEF_Mark, ;
+
+  LigatureCaretByPos \u092E_u094D_u0932 12 0;
+} GDEF;
+
