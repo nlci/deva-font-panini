@@ -1,5 +1,10 @@
 # panini
 
+# command line options
+opts = preprocess_args(
+    {'opt' : '-l'}, # build fonts from legacy for inclusion into final fonts
+    )
+
 # set folder names
 out='results'
 TESTDIR='tests'
@@ -23,19 +28,39 @@ DEBPKG='fonts-nlci-' + script
 TESTSTRING=u'\u0915'
 
 # set fonts to build
-#faces = ('Panini', 'Kautilya', 'Maurya')
-#styles = ('-R', '-B', '-I', '-BI')
-#stylesName = ('Regular', 'Bold', 'Italic', 'Bold Italic')
-
-faces = ('Panini',)
-styles = ('-R',)
-stylesName = ('Regular',)
+faces = ('Panini', 'Kautilya', 'Maurya')
+facesLegacy = ('PANI', 'KAUT', 'MAUR')
+styles = ('-R', '-B', '-I', '-BI')
+stylesName = ('Regular', 'Bold', 'Italic', 'Bold Italic')
+stylesLegacy = ('', 'BD', 'I', 'BI')
 
 # set build parameters
 fontbase = 'source/'
 generated = 'generated/'
 tag = script.upper()
 tuned = 'Nepali'
+
+if '-l' in opts:
+    for f, fLegacy in zip(faces, facesLegacy):
+        for (s, sn, sLegacy) in zip(styles, stylesName, stylesLegacy):
+            gentium = '../../../../latn/fonts/gentium_local/basic/1.102/zip/GenBkBas' + s.replace('-', '') + '.ttf'
+            charis = '../../../../latn/fonts/charis_local/5.000/zip/CharisSIL' + s + '.ttf'
+            font(target = process(f + '-' + sn.replace(' ', '') + '.ttf',
+                    # cmd('psfix ${DEP} ${TGT}'),
+                    ),
+                source = legacy(f + s + '.ttf',
+                                source = fontbase + 'archive/' + fLegacy + sLegacy + '.ttf',
+                                xml = fontbase + 'panini_unicode.xml',
+                                params = '-f ' + gentium,
+                                noap = ''),
+                fret = fret()
+                )
+
+faces = (faces[0],)
+facesLegacy = (facesLegacy[0],)
+styles = (styles[0],)
+stylesName = (stylesName[0],)
+stylesLegacy = (stylesLegacy[0],)
 
 for f in faces:
     for (s, sn) in zip(styles, stylesName):
