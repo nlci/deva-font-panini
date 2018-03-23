@@ -46,14 +46,14 @@ if '-l' in opts:
             gentium = '../../../../latn/fonts/gentium_local/basic/1.102/zip/GenBkBas' + s.replace('-', '') + '.ttf'
             charis = '../../../../latn/fonts/charis_local/5.000/zip/CharisSIL' + s + '.ttf'
             font(target = process(f + '-' + sn.replace(' ', '') + '.ttf',
-                    # cmd('psfix ${DEP} ${TGT}'),
+                    cmd('cp ${DEP} ${TGT}'),
                     ),
                 source = legacy(f + s + '.ttf',
                                 source = fontbase + 'archive/' + fLegacy + sLegacy + '.ttf',
-                                xml = fontbase + 'panini_unicode.xml',
+                                xml = fontbase + 'panini_annapurna.xml',
                                 params = '-f ' + gentium,
                                 noap = ''),
-                fret = fret()
+                fret = fret(params = '')
                 )
 
 faces = (faces[0],)
