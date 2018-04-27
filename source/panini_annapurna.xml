@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <font>
 <glyphs>
+<!--
+<glyph GID="0" PSName=".notdef"><base GID="0"><scale x="1.4" y="1.4"/></base></glyph>
+<glyph GID="1" PSName=".null"><base GID="1"></base></glyph>
+<glyph GID="2" PSName="nonmarkingreturn"><base GID="2"></base></glyph>
+-->
 <glyph UID='0020'><base UID='0020' font="1"/></glyph>
 <glyph UID='0021'><base UID='0021' font="1"/></glyph>
 <glyph UID='0022'><base UID='0022' font="1"/></glyph>
@@ -97,5 +102,9 @@
 <glyph UID='007D'><base UID='007D' font="1"/></glyph>
 <glyph UID='007E'><base UID='007E' font="1"/></glyph>
 <glyph UID="0915" PSName="u0915"><base UID="F045"><scale x="1.4" y="1.4"/></base></glyph>
+<glyph UID="0964" PSName="u0964"><base UID="F02A"><scale x="1.4" y="1.4"/></base></glyph>
+<glyph UID="0965" PSName="u0965"><base UID="F02A"><scale x="1.4" y="1.4"/></base><base UID="F02A"><scale x="1.4" y="1.4"/><shift x='-318' y='0'/></base></glyph>
+<glyph UID="0953" PSName="u0953"><base UID="F09A"><scale x="1.4" y="1.4"/></base></glyph>
+<glyph UID="0954" PSName="u0954"><base UID="F09B"><scale x="1.4" y="1.4"/></base></glyph>
 </glyphs>
 </font>

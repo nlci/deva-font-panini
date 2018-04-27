@@ -36,6 +36,7 @@ stylesLegacy = ('', 'BD', 'I', 'BI')
 
 # set build parameters
 fontbase = 'source/'
+archive = fontbase + 'archive/'
 generated = 'generated/'
 tag = script.upper()
 tuned = 'Nepali'
@@ -43,17 +44,17 @@ tuned = 'Nepali'
 if '-l' in opts:
     for f, fLegacy in zip(faces, facesLegacy):
         for (s, sn, sLegacy) in zip(styles, stylesName, stylesLegacy):
-            gentium = '../../../../latn/fonts/gentium_local/basic/1.102/zip/GenBkBas' + s.replace('-', '') + '.ttf'
-            charis = '../../../../latn/fonts/charis_local/5.000/zip/CharisSIL' + s + '.ttf'
-            font(target = process(f + '-' + sn.replace(' ', '') + '.ttf',
+            gentium = '../../../../latn/fonts/gentium_local/basic/1.102/zip/unhinted/GenBkBas' + s.replace('-', '') + '.ttf'
+            charis = '../../../../latn/fonts/charis_local/5.000/zip/unhinted/CharisSIL' + s + '.ttf'
+            font(target = process('ufo/' + f + '-' + sn.replace(' ', '') + '.ttf',
                     cmd('cp ${DEP} ${TGT}'),
+                    name(f, lang='en-US', subfamily=(sn))
                     ),
                 source = legacy(f + s + '.ttf',
-                                source = fontbase + 'archive/' + fLegacy + sLegacy + '.ttf',
+                                source = archive + 'unhinted/' + fLegacy + sLegacy + '.ttf',
                                 xml = fontbase + 'panini_annapurna.xml',
                                 params = '-f ' + gentium,
-                                noap = ''),
-                fret = fret(params = '')
+                                noap = '')
                 )
 
 faces = (faces[0],)
@@ -89,7 +90,7 @@ for f in faces:
             license = ofl('Panini', 'Kautilya', 'Maurya', 'NLCI'),
             woff = woff(),
             script= 'deva',
-            fret = fret(params = '-r')
+            fret = fret(params = '')
             )
 
         # Generate the Nepali (NEP) version from the newly created font
