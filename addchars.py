@@ -13,7 +13,7 @@ thiruvalluvar = '../../../taml/fonts/thiruvalluvar/source/ThiruValluvar'
 badami = '../badami/source'
 
 def runCommand(cmd, ifont, ofont):
-    cmd = 'ffcopyglyphs' + ' -f ' + cmd + ' ' + ifont+ ' ' + ofont
+    cmd = 'ffcopyglyphs' + ' -f ' + cmd + ' ' + ifont + ' ' + ofont
     print cmd
     os.system(cmd)
 
