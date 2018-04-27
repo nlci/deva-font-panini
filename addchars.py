@@ -8,10 +8,12 @@ from wscript import *
 charis = '../../../latn/fonts/charis_local/5.000/zip/unhinted/CharisSIL'
 gentium = '../../../latn/fonts/gentium_local/basic/1.102/zip/unhinted/GenBkBas'
 annapurna = '../../../deva/fonts/annapurna_local/1.203/zip/unhinted/AnnapurnaSIL-'
+panini = '../../../deva/fonts/panini/source/Panini'
+thiruvalluvar = '../../../taml/fonts/thiruvalluvar/source/ThiruValluvar'
 badami = '../badami/source'
 
-def runCommand(cmd, filenames):
-    cmd = 'ffcopyglyphs' + ' -f ' + cmd + ' ' + filenames
+def runCommand(cmd, ifont, ofont):
+    cmd = 'ffcopyglyphs' + ' -f ' + cmd + ' ' + ifont+ ' ' + ofont
     print cmd
     os.system(cmd)
 
@@ -21,7 +23,7 @@ def findFile(filename):
 def modifyFile(cmd, filename):
     tmp = 'tmp.sfd'
     os.rename(findFile(filename), tmp)
-    runCommand(cmd, tmp + ' ' + findFile(filename))
+    runCommand(cmd, tmp, findFile(filename))
     os.remove(tmp)
 
 def modifySource(sfd, f, s, sn):
