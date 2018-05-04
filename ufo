@@ -35,6 +35,8 @@ do
     ufo2="$(basename $sfd .sfd).ufo"
     fontforge -script ${nlci}/sfd2ufo.ff $sfd $ufo2
     psfnormalize -v 3 -p checkfix=none $ufo2
+    ufo3=$ufo2
+    ${nlci}/ufo_init.py $ufo3
 done
 popd
 

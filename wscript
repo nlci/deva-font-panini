@@ -3,6 +3,7 @@
 # command line options
 opts = preprocess_args(
     {'opt' : '-l'}, # build fonts from legacy for inclusion into final fonts
+    {'opt' : '-s'}  # only build a single font
     )
 
 # set folder names
@@ -34,12 +35,18 @@ styles = ('-R', '-B', '-I', '-BI')
 stylesName = ('Regular', 'Bold', 'Italic', 'Bold Italic')
 stylesLegacy = ('', 'BD', 'I', 'BI')
 
+if '-s' in opts:
+    faces = (faces[0],)
+    facesLegacy = (facesLegacy[0],)
+    styles = (styles[0],)
+    stylesName = (stylesName[0],)
+    stylesLegacy = (stylesLegacy[0],)
+
 # set build parameters
 fontbase = 'source/'
 archive = fontbase + 'archive/'
 generated = 'generated/'
 tag = script.upper()
-tuned = 'Nepali'
 
 if '-l' in opts:
     for f, fLegacy in zip(faces, facesLegacy):
@@ -57,26 +64,22 @@ if '-l' in opts:
                                 noap = '')
                 )
 
-faces = (faces[0],)
-facesLegacy = (facesLegacy[0],)
-styles = (styles[0],)
-stylesName = (stylesName[0],)
-stylesLegacy = (stylesLegacy[0],)
-
+if '-l' in opts:
+    faces = list()
 for f in faces:
     for (s, sn) in zip(styles, stylesName):
-        font(target = process(tag + f + '-' + sn.replace(' ', '') + '.ttf',
+        snf = '-' + sn.replace(' ', '')
+        fontfilename = tag + f + snf
+        font(target = process(fontfilename + '.ttf',
                 cmd('psfix ${DEP} ${TGT}'),
                 name(tag + ' ' + f, lang='en-US', subfamily=(sn))
                 ),
-            source = fontbase + f + s + '.sfd',
-            sfd_master = fontbase + 'master.sfd',
-            opentype = internal(),
+            source = fontbase + f + snf + '.ufo',
             # opentype = fea(fontbase + 'master.fea', no_make = True),
             # opentype = fea(generated + f + s + '.fea',
             #     old_make_fea = True,
             #     master = fontbase + 'master.fea',
-            #     make_params = '' # might need -z 8 to work around a FontForge bug
+            #     make_params = ''
             #     ),
             #graphite = gdl(fontbase + f + s + '.gdl',
             #    master = fontbase + 'master.gdl',
@@ -84,25 +87,11 @@ for f in faces:
             #    params = '-d -v2'
             #    ),
             #classes = fontbase + 'panini_classes.xml',
-            ap = f + s + '.xml',
+            ap = generated + f + s + '.xml',
             version = TTF_VERSION,
             copyright = COPYRIGHT,
             license = ofl('Panini', 'Kautilya', 'Maurya', 'NLCI'),
             woff = woff(),
             script= 'deva',
             fret = fret(params = '')
-            )
-
-        # Generate the Nepali (NEP) version from the newly created font
-        font(target = process(tag + f + tuned + '-' + sn.replace(' ', '') + '.ttf',
-                cmd('ttfdeflang -d NEP ${DEP} ${TGT}'),
-                cmd('ttfremap -r -c ${SRC[0].bldpath()} ${DEP} ${TGT}', [fontbase + 'nepali_chars.lst']),
-                name(tag + ' ' + f + ' ' + tuned, lang='en-US', subfamily=(sn))
-                ),
-            source = tag + f + '-' + sn + '.ttf',
-            opentype = internal(),
-            #graphite = internal(),
-            woff = woff(),
-            script = 'deva',
-            fret = fret(params = '-r')
             )
