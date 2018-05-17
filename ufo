@@ -17,11 +17,6 @@ do
     sfd="$(basename $ttf .ttf).sfd"
     fontforge -script ${nlci}/ttf2sfd.ff $ttf $sfd
 done
-for sfd in Maurya*.sfd
-do
-    echo $sfd
-    fontforge -script ${nlci}/emsize.ff $sfd
-done
 popd
 
 # sort -o cs/charis/pre.txt cs/charis/composite.txt cs/charis/decomposition.txt
@@ -43,3 +38,4 @@ popd
 rm -rf ${src}/*.ufo
 mv -v ${ufo}/*.ufo ${src}
 mv -v ${ufo}/*.sfd ${src}
+rm -rf ${src}/backups
