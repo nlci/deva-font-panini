@@ -1,11 +1,17 @@
 #!/bin/bash
 
+faces="Panini Kautilya Maurya"
+styles=(Regular Bold Italic "Bold Italic")
+desc_long="Pan Devanagari font designed to support all the languages using the Devanagari script."
+
 ufo=results/ufo
-src=source
-nlci=$HOME/script/tools
+export src=source
+export nlci=$HOME/script/tools
 # grep -E "faces|styles" wscript | grep = > wscript.py
 rm -f *.sfd
 
+
+export FLOWARGS=""
 smith distclean -l
 smith configure -l
 smith build -l
@@ -19,9 +25,9 @@ do
 done
 popd
 
-# sort -o cs/charis/pre.txt cs/charis/composite.txt cs/charis/decomposition.txt
-# sort -o cs/gentium/pre.txt cs/gentium/composite.txt cs/gentium/decomposition.txt
-# python addchars.py ${ufo}
+sort -o cs/charis/pre.txt cs/charis/composite.txt cs/charis/decomposition.txt
+sort -o cs/gentium/pre.txt cs/gentium/composite.txt cs/gentium/decomposition.txt
+python addchars.py ${ufo}
 
 pushd ${ufo}
 for sfd in *.sfd
@@ -29,13 +35,12 @@ do
     echo $sfd
     ufo2="$(basename $sfd .sfd).ufo"
     fontforge -script ${nlci}/sfd2ufo.ff $sfd $ufo2
-    psfnormalize -v 3 -p checkfix=none $ufo2
-    ufo3=$ufo2
-    ${nlci}/ufo_init.py $ufo3
 done
 popd
 
 rm -rf ${src}/*.ufo
 mv -v ${ufo}/*.ufo ${src}
 mv -v ${ufo}/*.sfd ${src}
-rm -rf ${src}/backups
+
+source ${nlci}/metadata.bash
+echo "done producing UFO sources"
