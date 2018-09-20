@@ -1,6 +1,6 @@
 #!/bin/bash
 
-faces="Panini Kautilya Maurya"
+faces=(Panini Kautilya Maurya)
 styles=(Regular Bold Italic "Bold Italic")
 desc_long="Pan Devanagari font designed to support all the languages using the Devanagari script."
 
