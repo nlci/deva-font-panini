@@ -11,6 +11,11 @@ font = OpenFont(ufo)
 danda = font['u0964']
 danda.name = 'danda'
 
+## Omega
+greek = font['uni03A9']
+greek.unicode = 0x03A9
+greek.unicodes = [greek.unicode]
+
 # Save UFO
 font.changed()
 font.save()
