@@ -16,8 +16,8 @@ ChangeLog
 
 Unreleased
 - Add many Latin and Devanagari characters
-- Latin glyphs are from Charis SIL (https://software.sil.org/charis/)
-- Indian Rupee Sign is from Annapurna SIL (https://software.sil.org/annapurna/)
+- Latin glyphs are from Charis SIL (https://software.sil.org/charis/) scaled 71%
+- Indian Rupee Sign is from Annapurna SIL (https://software.sil.org/annapurna/) scaled 71%
 17 Jun 2015 (Dev NLCI) NLCI Devanagari fonts version 0.100
 - Latin glyphs are from Charis SIL (http://scripts.sil.org/CharisSILfont)
 

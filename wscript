@@ -59,8 +59,6 @@ hackos2 = os2.hackos2(panose, codePageRange, unicodeRange)
 if '-l' in opts:
     for f, fLegacy in zip(faces, facesLegacy):
         for (s, sn, sLegacy) in zip(styles, stylesName, stylesLegacy):
-            gentium = '../../../../latn/fonts/gentium_local/basic/1.102/zip/unhinted/2048/GenBkBas' + s.replace('-', '') + '.ttf'
-            charis = '../../../../latn/fonts/charis_local/5.000/zip/unhinted/2048/CharisSIL' + s + '.ttf'
             font(target = process('ufo/' + f + '-' + sn.replace(' ', '') + '.ttf',
                     cmd(hackos2 + ' ${DEP} ${TGT}'),
                     name(f, lang='en-US', subfamily=(sn))
@@ -68,7 +66,7 @@ if '-l' in opts:
                 source = legacy(f + s + '.ttf',
                                 source = archive + 'unhinted/' + fLegacy + sLegacy + '.ttf',
                                 xml = fontbase + 'panini_annapurna.xml',
-                                params = '-f ' + charis,
+                                params = '',
                                 noap = '')
                 )
 
