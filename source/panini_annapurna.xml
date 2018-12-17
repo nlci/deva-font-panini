@@ -12,6 +12,14 @@
 <glyph UID="0028" PSName="parenleft"><base UID="F028"></base></glyph>
 <glyph UID="0029" PSName="parenright"><base UID="F029"></base></glyph>
 <glyph UID="0964" PSName="u0964"><base UID="F02A"></base></glyph>
+<!--
+Annapurna has a ratio (height of one edge of a danda/space between the dandas [corresponding points]) of
+Regular 1242/320 = 3.88
+Bold 1260/320 = 3.93
+The ratio for Regular was use to adjust the shifting below.
+-->
+<glyph PSName="u0965.tt"><base UID="F02A"></base><base UID="F02A"><shift x='-214' y='0'/></base></glyph>
+<glyph PSName="u0965.ps"><base UID="F02A"></base><base UID="F02A"><shift x='-379' y='0'/></base></glyph>
 <glyph UID="0912" PSName="u0912"><base UID="F02B"></base><base UID="F0C9"></base><base UID="F0E0"></base></glyph>
 <glyph PSName="u0912.bindu"><base UID="F02B"></base><base UID="F0C9"></base><base UID="F0E1"></base></glyph>
 <glyph PSName="u0912.rphf"><base UID="F02B"></base><base UID="F0C9"></base><base UID="F0E2"></base></glyph>

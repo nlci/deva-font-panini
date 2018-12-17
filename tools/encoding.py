@@ -8,8 +8,20 @@ ufo = sys.argv[1]
 font = OpenFont(ufo)
 
 # Modify UFO
-danda = font['u0964']
-danda.name = 'danda'
+
+## double danda
+if font.info.familyName == 'Maurya':
+    keep = font['u0965.ps']
+    remove = font['u0965.tt']
+else:
+    keep = font['u0965.tt']
+    remove = font['u0965.ps']
+
+keep.name = 'u0965'
+keep.unicode = 0x0965
+keep.unicodes = [keep.unicode]
+
+remove.name = 'dandas'
 
 ## Omega
 greek = font['uni03A9']
