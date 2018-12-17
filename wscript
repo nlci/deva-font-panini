@@ -47,7 +47,7 @@ if '-s' in opts:
 
 # set build parameters
 fontbase = 'source/'
-archive = fontbase + 'archive/'
+archive = fontbase + 'archive/unhinted/'
 generated = 'generated/'
 tag = script.upper()
 
@@ -64,7 +64,7 @@ if '-l' in opts:
                     name(f, lang='en-US', subfamily=(sn))
                     ),
                 source = legacy(f + s + '.ttf',
-                                source = archive + 'unhinted/' + fLegacy + sLegacy + '.ttf',
+                                source = archive + fLegacy + sLegacy + '.ttf',
                                 xml = fontbase + 'panini_annapurna.xml',
                                 params = '',
                                 noap = '')
