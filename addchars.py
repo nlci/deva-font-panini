@@ -8,14 +8,16 @@ def modifySource(sfd, f, s, sn):
     workshop = 1.4
     if f == 'Maurya':
         upm = 1000.0/2048.0
+        scaleSrc = '-s ' + str(upm) + ' '
     else:
         upm = 1.0
+        scaleSrc = ''
     scale = '-s ' + str(upm/workshop) + ' '
-    scaleSrc = scale
 
+    panini = '../../../deva/fonts/panini-master/source/Panini'
     ps = s
     ps = ps.replace('-BI', '-B')
-    cmd = scaleSrc + '-i ' + panini + ps + '.sfd' + ' --rangefile cs/panini/main4knda.txt'
+    cmd = scaleSrc + '-i ' + panini + ps + '.sfd' + ' --rangefile cs/panini/main4deva.txt'
     modifyFile(cmd, sfd)
 
     asn = sn
