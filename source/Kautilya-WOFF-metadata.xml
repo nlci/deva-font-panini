@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata version="1.0">
-  <uniqueid id="in.nlci.fonts.Kautilya.0.101" />
+  <uniqueid id="in.nlci.fonts.Kautilya.0.200" />
   <vendor name="NLCI" url="http://www.nlci.in/fonts/" />
   <credits>
     <credit
@@ -19,17 +19,17 @@
       
       Unreleased
       - Add many Latin and Devanagari characters
-      - Latin glyphs are from Charis SIL (https://software.sil.org/charis/)
-      - Indian Rupee Sign is from Annapurna SIL (https://software.sil.org/annapurna/)
+      - Latin glyphs are from Charis SIL (https://software.sil.org/charis/) scaled 71%
+      - Indian Rupee Sign is from Annapurna SIL (https://software.sil.org/annapurna/) scaled 71%
       17 Jun 2015 (Dev NLCI) NLCI Devanagari fonts version 0.100
       - Latin glyphs are from Charis SIL (http://scripts.sil.org/CharisSILfont)
     </text>
   </description>
   <license url="http://scripts.sil.org/OFL" id="org.sil.ofl.1.1">
     <text lang="en">
-      This Font Software is Copyright (c) 2009-2015, NLCI (http://www.nlci.in/fonts/)
+      This Font Software is Copyright (c) 2009-2019, NLCI (http://www.nlci.in/fonts/)
       with Reserved Font Names "Panini" and "Kautilya" and "Maurya" and "NLCI".
-      Additional Latin glyphs Copyright (c) 1997-2014, SIL International (http://www.sil.org/)
+      Latin glyphs Copyright (c) 1997-2019, SIL International (http://www.sil.org/)
       with Reserved Font Names "Charis" and "SIL".
       Indian Rupee Sign Copyright (c) 2007-2017, SIL International (http://www.sil.org/)
       with Reserved Font Names "Annapurna" and "SIL".
@@ -129,9 +129,9 @@
   </license>
   <copyright>
     <text lang="en">
-      This Font Software is Copyright (c) 2009-2015, NLCI (http://www.nlci.in/fonts/)
+      This Font Software is Copyright (c) 2009-2019, NLCI (http://www.nlci.in/fonts/)
       with Reserved Font Names "Panini" and "Kautilya" and "Maurya" and "NLCI".
-      Additional Latin glyphs Copyright (c) 1997-2014, SIL International (http://www.sil.org/)
+      Latin glyphs Copyright (c) 1997-2019, SIL International (http://www.sil.org/)
       with Reserved Font Names "Charis" and "SIL".
       Indian Rupee Sign Copyright (c) 2007-2017, SIL International (http://www.sil.org/)
       with Reserved Font Names "Annapurna" and "SIL".

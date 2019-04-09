@@ -7,8 +7,6 @@ desc_long="Pan Devanagari font designed to support all the languages using the D
 export nlci=$HOME/script/tools
 source ${nlci}/prepare.bash
 
-source ${nlci}/addchars.bash
-
 source ${nlci}/metadata.bash
 
 for ufo in ${src}/*.ufo

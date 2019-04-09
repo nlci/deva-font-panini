@@ -23,11 +23,6 @@ keep.unicodes = [keep.unicode]
 
 remove.name = 'dandas'
 
-## Omega
-greek = font['uni03A9']
-greek.unicode = 0x03A9
-greek.unicodes = [greek.unicode]
-
 # Save UFO
 font.changed()
 font.save()
