@@ -1,5 +1,2 @@
 faces = ('Panini', 'Kautilya', 'Maurya')
-facesLegacy = ('PANI', 'KAUT', 'MAUR')
-styles = ('-R', '-B', '-I', '-BI')
 stylesName = ('Regular', 'Bold', 'Italic', 'Bold Italic')
-stylesLegacy = ('', 'BD', 'I', 'BI')
