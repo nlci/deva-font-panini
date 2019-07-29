@@ -11,15 +11,14 @@ font = OpenFont(ufo)
 
 ## double danda
 if font.info.familyName == 'Maurya':
-    keep = font['u0965.ps']
-    remove = font['u0965.tt']
+    keep = font['dandadbl.ps']
+    remove = font['dandadbl.tt']
 else:
-    keep = font['u0965.tt']
-    remove = font['u0965.ps']
+    keep = font['dandadbl.tt']
+    remove = font['dandadbl.ps']
 
-keep.name = 'u0965'
-keep.unicode = 0x0965
-keep.unicodes = [keep.unicode]
+keep.name = 'dandadbl'
+keep.unicodes = [0x0965]
 
 remove.name = 'dandas'
 
