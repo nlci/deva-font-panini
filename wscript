@@ -27,6 +27,7 @@ DESC_SHORT='Devanagari Unicode font with OT and Graphite support'
 DESC_NAME='NLCI-' + script
 DEBPKG='fonts-nlci-' + script
 getufoinfo('source/Panini-Regular.ufo')
+BUILDLABEL = 'beta1'
 
 # set test parameters
 TESTSTRING=u'\u0915'
@@ -86,10 +87,10 @@ for f in faces:
                 name(tag + ' ' + f, lang='en-US', subfamily=(sn))
                 ),
             source = fontbase + f + snf + '.ufo',
-            # opentype = fea(f + snf + '.fea',
-            #     master = fontbase + 'master.fea',
-            #     make_params = ''
-            #     ),
+            opentype = fea(generated + f + snf + '.fea',
+                master = fontbase + 'master.feax',
+                make_params = ''
+                ),
             #graphite = gdl(generated + f + snf + '.gdl',
             #    master = fontbase + 'master.gdl',
             #    make_params = '-p 1 -s 2',
@@ -99,7 +100,7 @@ for f in faces:
             #ap = generated + f + snf + '.xml',
             version = VERSION,
             #woff = woff('woff/' + fontfilename + '.woff', params = '-v ' + VERSION + ' -m ../' + fontbase + f + '-WOFF-metadata.xml'),
-            #script= 'deva',
+            script= 'dev2', # 'deva'
             package = p,
             fret = fret(params = '-r -oi')
             )
