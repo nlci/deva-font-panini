@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # this is a smith configuration file
 
 # panini
@@ -12,12 +12,8 @@ opts = preprocess_args(
 
 import os2
 
-# set the default output folders
-out='results'
-
-# locations of files needed for some tasks
+# override the default folders
 DOCDIR = ['documentation', 'web']
-STANDARDS='tests/reference'
 
 # set meta-information
 script='deva'
@@ -25,12 +21,11 @@ APPNAME='nlci-' + script
 
 DESC_SHORT='Devanagari Unicode font with OT and Graphite support'
 DESC_NAME='NLCI-' + script
-DEBPKG='fonts-nlci-' + script
 getufoinfo('source/Panini-Regular.ufo')
-BUILDLABEL = 'beta1'
+# BUILDLABEL = 'beta1'
 
-# set test parameters
-TESTSTRING=u'\u0915'
+# Set up the FTML tests
+ftmlTest('tools/ftml-smith.xsl')
 
 # set fonts to build
 faces = ('Panini', 'Kautilya', 'Maurya')
@@ -83,7 +78,7 @@ for f in faces:
         snf = '-' + sn.replace(' ', '')
         fontfilename = tag + f + snf
         font(target = process(fontfilename + '.ttf',
-                cmd('${PSFCHANGETTFGLYPHNAMES} ${SRC} ${DEP} ${TGT}', [fontbase + f + snf + '.ufo']),
+                cmd('psfchangettfglyphnames ${SRC} ${DEP} ${TGT}', [fontbase + f + snf + '.ufo']),
                 name(tag + ' ' + f, lang='en-US', subfamily=(sn))
                 ),
             source = fontbase + f + snf + '.ufo',
@@ -102,8 +97,5 @@ for f in faces:
             #woff = woff('woff/' + fontfilename + '.woff', params = '-v ' + VERSION + ' -m ../' + fontbase + f + '-WOFF-metadata.xml'),
             script= 'dev2', # 'deva'
             package = p,
-            fret = fret(params = '-r -oi')
+            pdf = fret(params = '-r -oi')
             )
-
-def configure(ctx):
-    ctx.find_program('psfchangettfglyphnames')
