@@ -18,7 +18,7 @@ else:
     remove = font['dandadbl.ps']
 
 keep.name = 'dandadbl'
-keep.unicodes = [0x0965]
+keep.unicode = 0x0965
 
 remove.name = 'dandas'
 
