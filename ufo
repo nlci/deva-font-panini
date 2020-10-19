@@ -2,7 +2,7 @@
 
 faces=(Panini Kautilya Maurya)
 styles=(Regular Bold Italic "Bold Italic")
-desc_long="Pan Devanagari font designed to support all the languages using the Devanagari script."
+desc_long="Devanagari script font for all languages using the Devanagari script"
 
 export nlci=$HOME/script/tools
 export src=source
