@@ -14,3 +14,4 @@ fi
 
 psfcopyglyphs -f --rename rename --unicode usv -i ../cs/panini/main4deva.csv -s "${deva}/${face}-${style}.ufo" ${ufo}
 psfcopyglyphs -f --rename rename --unicode usv -i ../cs/thiruvalluvar/main.csv -s "${taml}/${tamlf}-${style}.ufo" ${ufo}
+${nlci}/reverse-fix-direction.py $ufo import
