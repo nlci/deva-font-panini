@@ -9,37 +9,9 @@
       role="NLCI designers and font engineers"
     />
   </credits>
-  <description>
+  <description url="http://www.nlci.in/fonts/">
     <text lang="en">
       Pan Devanagari font designed to support all the languages using the Devanagari script.
-      
-      Known issues
-      ------------
-      U+0900 needs to be inverted
-      U+093B needs a top stem
-      U+094E needs top bar trimmed
-      U+094F needs the second top part rotated
-      U+0955 need the line moved up
-      U+0956 needs to be lower
-      U+0957 needs glyph parts separated and moved lower
-      U+0973 needs a top stem
-      U+0974 needs a top stem
-      U+0975 needs the second top part rotated
-      U+0976 needs to be lower
-      U+0977 needs glyph parts separated and moved lower
-      U+0978 need lower left part removed
-      U+097D remove dot
-      
-      ChangeLog
-      ---------
-      (This should list both major and minor changes, most recent first.)
-      
-      Unreleased
-      - Add many Latin and Devanagari characters
-      - Latin glyphs are from Charis SIL (https://software.sil.org/charis/) scaled 71%
-      - Indian Rupee Sign is from Annapurna SIL (https://software.sil.org/annapurna/) scaled 71%
-      17 Jun 2015 (Dev NLCI) NLCI Devanagari fonts version 0.100
-      - Latin glyphs are from Charis SIL (http://scripts.sil.org/CharisSILfont)
     </text>
   </description>
   <license url="http://scripts.sil.org/OFL" id="org.sil.ofl.1.1">
