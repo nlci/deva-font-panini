@@ -1,0 +1,19 @@
+#!/bin/bash
+
+faces=(Panini Kautilya Maurya)
+styles=(Regular Bold Italic "Bold Italic")
+desc_long="Devanagari script font for all languages using the Devanagari script"
+
+export nlci=$HOME/script/tools
+export src=source
+source ${nlci}/prepare.bash
+
+source ${nlci}/metadata.bash
+
+for ufo in ${src}/*.ufo
+do
+    psfdeleteglyphs -i source/delete_glyphs.txt $ufo
+done
+
+rm -f ${src}/*-???*.sfd*
+echo "done producing UFO sources"

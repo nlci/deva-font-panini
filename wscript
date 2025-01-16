@@ -1,31 +1,31 @@
+#!/usr/bin/python3
+# this is a smith configuration file
+
 # panini
 
 # command line options
 opts = preprocess_args(
     {'opt' : '-l'}, # build fonts from legacy for inclusion into final fonts
+    {'opt' : '-p'}, # do not run psfix on the final fonts
+    {'opt' : '-s'}  # only build a single font
     )
 
-# set folder names
-out='results'
-TESTDIR='tests'
-STANDARDS='tests/reference'
+import os2
+
+# override the default folders
+DOCDIR = ['documentation', 'web']
 
 # set meta-information
 script='deva'
 APPNAME='nlci-' + script
-VERSION='0.100'
-TTF_VERSION='0.100'
-COPYRIGHT='Copyright (c) 2009-2015, NLCI (http://www.nlci.in/fonts/)'
 
 DESC_SHORT='Devanagari Unicode font with OT and Graphite support'
-DESC_LONG='''
-Pan Devanagari font designed to support all the languages using the Devanagari script.
-'''
 DESC_NAME='NLCI-' + script
-DEBPKG='fonts-nlci-' + script
+getufoinfo('source/Panini-Regular.ufo')
+# BUILDLABEL = 'beta1'
 
-# set test parameters
-TESTSTRING=u'\u0915'
+# Set up the FTML tests
+ftmlTest('tools/ftml-smith.xsl')
 
 # set fonts to build
 faces = ('Panini', 'Kautilya', 'Maurya')
@@ -34,74 +34,67 @@ styles = ('-R', '-B', '-I', '-BI')
 stylesName = ('Regular', 'Bold', 'Italic', 'Bold Italic')
 stylesLegacy = ('', 'BD', 'I', 'BI')
 
+if '-s' in opts:
+    faces = (faces[0],)
+    facesLegacy = (facesLegacy[0],)
+    styles = (styles[0],)
+    stylesName = (stylesName[0],)
+    stylesLegacy = (stylesLegacy[0],)
+
 # set build parameters
 fontbase = 'source/'
+archive = fontbase + 'archive/unhinted/'
 generated = 'generated/'
 tag = script.upper()
-tuned = 'Nepali'
+
+panose = [2, 0, 0, 3]
+codePageRange = [0, 29]
+unicodeRange = [0, 1, 2, 3, 4, 5, 6, 7, 15, 29, 31, 32, 33, 35, 38, 39, 40, 45, 60, 62, 67, 69, 91]
+hackos2 = os2.hackos2(panose, codePageRange, unicodeRange)
 
 if '-l' in opts:
     for f, fLegacy in zip(faces, facesLegacy):
         for (s, sn, sLegacy) in zip(styles, stylesName, stylesLegacy):
-            gentium = '../../../../latn/fonts/gentium_local/basic/1.102/zip/GenBkBas' + s.replace('-', '') + '.ttf'
-            charis = '../../../../latn/fonts/charis_local/5.000/zip/CharisSIL' + s + '.ttf'
-            font(target = process(f + '-' + sn.replace(' ', '') + '.ttf',
-                    # cmd('psfix ${DEP} ${TGT}'),
+            font(target = process('ufo/' + f + '-' + sn.replace(' ', '') + '.ttf',
+                    cmd(hackos2 + ' ${DEP} ${TGT}'),
+                    name(f, lang='en-US', subfamily=(sn))
                     ),
                 source = legacy(f + s + '.ttf',
-                                source = fontbase + 'archive/' + fLegacy + sLegacy + '.ttf',
-                                xml = fontbase + 'panini_unicode.xml',
-                                params = '-f ' + gentium,
-                                noap = ''),
-                fret = fret()
+                                source = archive + fLegacy + sLegacy + '.ttf',
+                                xml = fontbase + 'panini_annapurna.xml',
+                                params = '',
+                                noap = '')
                 )
 
-faces = (faces[0],)
-facesLegacy = (facesLegacy[0],)
-styles = (styles[0],)
-stylesName = (stylesName[0],)
-stylesLegacy = (stylesLegacy[0],)
-
+if '-l' in opts:
+    faces = list()
 for f in faces:
-    for (s, sn) in zip(styles, stylesName):
-        font(target = process(tag + f + '-' + sn.replace(' ', '') + '.ttf',
-                cmd('psfix ${DEP} ${TGT}'),
-                name(tag + ' ' + f, lang='en-US', subfamily=(sn))
+    p = package(
+        appname = APPNAME + '-' + f.lower(),
+        version = VERSION,
+        docdir = DOCDIR # 'documentation'
+    )
+    for dspace in ('Roman', 'Italic'):
+        d = designspace('source/' + f + dspace + '.designspace',
+            target = process('${DS:FILENAME_BASE}.ttf',
+                cmd('psfchangettfglyphnames ${SRC} ${DEP} ${TGT}', ['source/${DS:FILENAME_BASE}.ufo'])
+            ),
+            opentype=fea(generated + '${DS:FILENAME_BASE}.gdl',
+                mapfile = generated + '${DS:FILENAME_BASE}.map',
+                master = fontbase + 'master.feax',
+                make_params = ''
                 ),
-            source = fontbase + f + s + '.sfd',
-            sfd_master = fontbase + 'master.sfd',
-            opentype = internal(),
-            # opentype = fea(fontbase + 'master.fea', no_make = True),
-            # opentype = fea(generated + f + s + '.fea',
-            #     old_make_fea = True,
-            #     master = fontbase + 'master.fea',
-            #     make_params = '' # might need -z 8 to work around a FontForge bug
-            #     ),
-            #graphite = gdl(fontbase + f + s + '.gdl',
+            #graphite = gdl(generated + '${DS:FILENAME_BASE}.gdl',
             #    master = fontbase + 'master.gdl',
-            #    make_params = '-p 1 -s 2 -l first',
-            #    params = '-d -v2'
+            #    make_params = '-p 1 -s 2',
+            #    params =  '-e ${DS:FILENAME_BASE}_gdlerr.txt'
             #    ),
             #classes = fontbase + 'panini_classes.xml',
-            ap = f + s + '.xml',
-            version = TTF_VERSION,
-            copyright = COPYRIGHT,
-            license = ofl('Panini', 'Kautilya', 'Maurya', 'NLCI'),
-            woff = woff(),
-            script= 'deva',
-            fret = fret(params = '-r')
-            )
-
-        # Generate the Nepali (NEP) version from the newly created font
-        font(target = process(tag + f + tuned + '-' + sn.replace(' ', '') + '.ttf',
-                cmd('ttfdeflang -d NEP ${DEP} ${TGT}'),
-                cmd('ttfremap -r -c ${SRC[0].bldpath()} ${DEP} ${TGT}', [fontbase + 'nepali_chars.lst']),
-                name(tag + ' ' + f + ' ' + tuned, lang='en-US', subfamily=(sn))
-                ),
-            source = tag + f + '-' + sn + '.ttf',
-            opentype = internal(),
-            #graphite = internal(),
-            woff = woff(),
-            script = 'deva',
-            fret = fret(params = '-r')
+            #ap = generated + '${DS:FILENAME_BASE}.xml',
+            version = VERSION,
+            woff = woff('woff/${DS:FILENAME_BASE}', type='woff2',
+                metadata = '../source/${DS:FAMILYNAME_NOSPC}-WOFF-metadata.xml'),
+            script= 'dev2', # 'deva'
+            package = p,
+            pdf = fret(params = '-r -oi')
             )
